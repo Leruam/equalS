@@ -1,4 +1,3 @@
 class Search < ApplicationRecord
-  belongs_to :user
-  # has_one :user
+  belongs_to :user, optional: true
 end
