@@ -8,6 +8,6 @@ class User < ApplicationRecord
   has_many :supports, dependent: :destroy
   has_many :charities, through: :supports
   has_one_attached :photo
-  validates :email, presence: true
+  validates :email, presence: true # devise le gere probablement mais ça ne coûte rien de rajouter des validations sur le modèle user
   validates :email, uniqueness: true
 end
