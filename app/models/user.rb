@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_many :searches, dependent: :nullify
   has_many :supports, dependent: :destroy
-  has_many :charities, through: :supports
+  has_many :charities, through: :supports, source: :charity # source --> sinon active record ne comprend pas la commande user1.charities
   has_one_attached :photo
   validates :email, presence: true # devise le gere probablement mais ça ne coûte rien de rajouter des validations sur le modèle user
   validates :email, uniqueness: true
