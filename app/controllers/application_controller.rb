@@ -19,5 +19,8 @@ class ApplicationController < ActionController::Base
 
   def skip_pundit?
     devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)|(^results$)/
+    # rajout ici du controler result (avec |(^results$) --> regex) qu'on veut laisser autorise pour tous
+    # devise_controller? --> check si on est dans le controller de devise (true or false)
+    # params[:controller] --> renvoie le controller dans lequel on est sur la page actuelle
   end
 end
