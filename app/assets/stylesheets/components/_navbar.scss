@@ -1,6 +1,17 @@
+@mixin boxShadow($colour, $length){
+  $value: ();
+  @for $i from 1 through $length{
+    $px: $i + px;
+    $shadow: $px $px $colour;
+    $value: append($value, $shadow, comma)
+
+  }
+  box-shadow: $value;
+}
+
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: none;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,5 +19,16 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 30px;
+}
+
+.dropdown-menu {
+	font-family: 'Inter', sans-serif;
+	font-size: 14px;
+	@include boxShadow($purple-other, 2); 
+}
+
+.item:hover {
+	color: #6200DE;
+	transition-duration: 0.3s;
 }
