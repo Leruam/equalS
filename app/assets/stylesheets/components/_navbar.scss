@@ -25,6 +25,7 @@
 .dropdown-menu {
 	font-family: 'Inter', sans-serif;
 	font-size: 14px;
+    border: 0px; 
 	@include boxShadow($purple-other, 2); 
 }
 

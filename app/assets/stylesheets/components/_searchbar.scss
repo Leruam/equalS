@@ -1,0 +1,64 @@
+@mixin boxShadow($colour, $length){
+  $value: ();
+  @for $i from 1 through $length{
+    $px: $i + px;
+    $shadow: $px $px $colour;
+    $value: append($value, $shadow, comma)
+
+  }
+  text-shadow: $value;
+}
+
+.searchbar {
+   width: 800px;
+   margin: 0 auto;
+   .logo {
+  text-align: center; 
+  letter-spacing: -6px;
+  font-size: 44px;
+  color: white;
+  font-family: 'Archivo', sans-serif;
+  }
+}
+
+.searchbar:hover {
+    #E{
+    @include boxShadow(#6200de, 55);
+    transition-duration: 0.5s
+    }
+    #Q{
+    @include boxShadow(#f9db6d, 55);
+    transition-duration: 0.5s
+    }
+    #U{
+    @include boxShadow(#36827f, 55);
+    transition-duration: 0.5s
+    }
+    #A{
+    @include boxShadow(#d57a66, 55);
+    transition-duration: 0.5s
+    }
+    #L{
+    @include boxShadow(#74a4bc, 55);
+    transition-duration: 0.5s
+    }
+    #S{
+    @include boxShadow(#6200de, 55);
+    transition-duration: 0.5s
+    }
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.form-control::placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+.loop {
+  color: $purple-text
+}
+
