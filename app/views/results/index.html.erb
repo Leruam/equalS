@@ -1,1 +1,11 @@
-<h1>index de results</h1>
+<div class="container">
+  <div class="results">
+    <% @webpages_results.each do |result|%>
+      <%= render "results/result_card", result: result %>
+    <% end %>
+
+  </div>
+  <div class="focus">
+
+  </div>
+</div>
