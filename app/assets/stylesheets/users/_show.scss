@@ -1,0 +1,49 @@
+.counter-container {
+  text-align: center;
+}
+.first-infos-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.left-infos {
+  width: 30%;
+}
+.you-infos {
+border: solid 1px lightgrey;
+text-align: center;
+}
+
+.us-infos {
+  border: solid 1px lightgrey;
+  text-align: center;
+}
+
+.right-infos {
+  border: solid 1px lightgrey;
+  width: 70%;
+  text-align: center;
+}
+.user-charities > img {
+  width: 80px;
+  border-radius: 50%;
+}
+
+.second-infos-container {
+  text-align: center;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  // grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+.row > img {
+  width: 100px;
+}
+
+
