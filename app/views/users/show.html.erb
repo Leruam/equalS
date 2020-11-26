@@ -5,69 +5,63 @@
   Thank you!
 </div>
 <div class="container">
-<div class="container-profil">
-  <div class=container-insights>
-    <div class="card-insights">
-      <div class="you-infos">
-        <h2>You</h2>
-        <p>total number of searches:</p>
-        <%= @user_total_search_count %>
-        <p>number of searches today:</p>
-        <%= @user_today_search_count %>
-        <p>charities you're supporting: </p>
-        <%= @user_charity_count %>
+  <div class="container-profil">
+    <div class=container-insights>
+      <div class="card-insights">
+          <h5>You</h5>
+          <p><strong><%= @user_total_search_count %></strong> searches in total</p>
+          <p><strong><%= @user_today_search_count %></strong>  of searches today</p>
+          <p><strong><%= @user_charity_count %></strong>  charities supported</p>
+      </div>
+      <div class="card-insights">
+        <h5>Our community</h5>
+          <p><strong><%= @global_charity_count %></strong> of charities supported by EqualS</p>
+          <p><strong><%= @user_today_search_count %></strong> total searches today</p>
+          <p><strong><%= @global_search_count %></strong> total searches since EqualS was born</p>
       </div>
     </div>
-    <div class="card-insights">
-      <div class="us-infos">
-        <h2>Our community</h2>
-        <p>total charities supported:</p>
-        <%= @global_charity_count %>
-        <p>total number of searches since EqualS was born:</p>
-        <%= @global_search_count %>
-      </div>
-    </div>
-  </div>
-  <div class="card-container-supports">
-    <div class="user-charities">
-      <% @user.charities.each do |charity| %>
-      <div class="card-charity-circle" style="background-image: url(<%=cl_image_path charity.photo.key%>)">
-        <div class="overlay-supports"></div>
-          <div class="display-card-charity-circle">
-            <p>hello</p>
-            <p>short description</p>
-            <div>
-              <a href="#" class="btn-principal">INFO</a>
+    <div class="card-container-supports">
+        <% @user.supports.each do |support| %>
+        <div class="card-charity-circle" style="background-image: url(<%=cl_image_path support.charity.photo.key %>)">
+          <div class="overlay-supports"></div>
+            <div class="display-card-charity-circle">
+              <h6 class="mb-1"><%= support.charity.name %></h6>
+              <p class="mb-1"><%=  support.charity.category%></p>
+              <div class="d-flex flex-column justify-content-center align-items-center">
+                <a href="#" class="btn-principal ml-auto mr-auto">INFO</a>
+                <%= link_to "Remove", support_path(support), method: :delete, class: "btn-third ml-auto mr-auto"%>
+              </div>
             </div>
           </div>
+        <% end %>
+    </div>
+  </div>
+
+  <div class="second-infos-container">
+    <h4>More charities...</h4>
+      <div class="row">
+        <% @other_charities.each do |charity| %>
+        <div class="col-4 d-flex justify-content-center">
+          <div class="card-charity image" style="background-image: url(<%=cl_image_path charity.photo.key, width: 250, height: 300, crop: :fill %>)">
+          <div class="overlay-charity"></div>
+            <!-- <div class="image" style="background-image: url(<%=cl_image_path charity.photo.key%>)"></div> -->
+            <div class="display-card-charity">
+              <h6><%= charity.name %></h6>
+              <p><%= charity.category %></p>
+              <div class="d-flex flex-column justify-content-center align-items-center">
+                <%= link_to "Support", charity_supports_path(charity), method: :post, class: "btn-principal"%>
+                <a href="#" class="btn-third">INFORMATION</a>
+              </div>
+            </div>
+            <!-- <div class="association-name"><p><%= charity.name %></p></div> -->
+          </div>
         </div>
-      <% end %>
-      </div>
+        <% end %>
+     </div>
   </div>
 </div>
 
-<div class="second-infos-container">
-  <h2>OTHER CHARITIES</h2>
-  <div class="wrapper">
-    <% @other_charities.each do |charity| %>
-    <div class="row">
-      <div class="card-charity image" style="background-image: url(<%=cl_image_path charity.photo.key%>)">
-      <div class="overlay-charity"></div>
-        <!-- <div class="image" style="background-image: url(<%=cl_image_path charity.photo.key%>)"></div> -->
-        <div class="display-card-charity">
-          <p>hello</p>
-          <p>short description</p>
-          <div card-charity-button>
-            <div class="btn"><a class="btn-principal" href="#">SUPPORT</a></div>
-            <div>
-              <a href="#" class="btn-third">INFORMATION</a>
-            </div>
-          </div>
-        </div>
-        <div class="association-name"><p>HelloAsso</p></div>
-      </div>
-    </div>
-    <% end %>
- </div>
-</div>
-</div>
+
+
+
+
