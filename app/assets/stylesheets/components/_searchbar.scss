@@ -10,10 +10,10 @@
 }
 
 .searchbar {
-   width: 800px;
+   width: 80%;
    margin: 0 auto;
    .logo {
-  text-align: center; 
+  text-align: center;
   letter-spacing: -6px;
   font-size: 44px;
   color: white;
@@ -62,3 +62,8 @@
   color: $purple-text
 }
 
+.search-position-top {
+  position: relative;
+  top: 10vw; // pas vh, petite feinte pour la position en y en fonction de 10% de la largeur
+              // (il faudra faire du responsive pour les tailles mobiles)
+}

@@ -1,0 +1,48 @@
+#full-screen-picture {
+  background-image: url(https://res.cloudinary.com/antoine83/image/upload/v1606406626/EqualS/DEMI-SIMONE_zz7puj.png);
+  height: 100vh;
+  background-color: $back-screen;
+  position: relative;
+  top: -58px;
+  z-index: -1;
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-position-y: 6vh;
+}
+
+.legend-size { // pour la légende sur la page d'accueil pour la photo
+  width: 50%;
+  position: absolute; // par rapport au container
+  bottom: 10px;
+  right: 50px;
+}
+
+.legend-size h2 { // pour la légende sur la page d'accueil pour la photo
+  font-size: 32px;
+}
+
+.legend-size p { // pour la légende sur la page d'accueil pour la photo
+  font-size: 15px;
+}
+
+.text-under-search h1 {
+  color: $purple-text;
+  font-size: 50px;
+}
+
+.text-under-search h2 {
+  color: black;
+  font-size: 20px;
+}
+
+.text-under-search p,span {
+  font-size: 15px;
+  p {
+    color: $grey-text;
+  }
+  span {
+    color: $green-text;
+  }
+}
+

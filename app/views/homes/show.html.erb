@@ -1,27 +1,47 @@
-<h1>show de homes</h1>
+
+<div id="full-screen-picture">
+  <div class="container d-flex flex-column" style="height:100%; position:relative;">
+    <div class="d-flex flex-column align-items-center search-position-top" >
+      <%= render 'shared/searchbar' %>
+      <div class="d-flex flex-column align-items-center text-under-search">
+        <h1> 11,234,654 €</h1>
+        <p>raised to support equality on <span>Earth</span> thanks to your <span>5,3 billion</span> searches</p>
+        <h2>thank you !</h2>
+      </div>
+    </div>
+    <div class="align-self-end legend-size">
+      <h2 class="underline"> Simone Veil</h1>
+      <p> En 1974, elle est nommée ministre de la Santé par le président Valéry Giscard d'Estaing, qui la charge de faire adopter la loi dépénalisant le recours à l'interruption volontaire de grossesse (IVG), loi qui sera ensuite couramment désignée comme la « loi Veil ». Elle apparaît dès lors comme icône de la lutte contre la discrimination des femmes en France. </p>
+    </div>
+  </div>
+
+</div>
+
+<div id="bellow-fold">
+
+</div>
 
 
-<form class="form-inline my-2 my-lg-0" action="/search" method="GET">
-  <!-- convention REST: si on cherche des infos c'est un GET -->
-  <input class="form-control mr-sm-2 search-bar-hp" name="q" type="search" placeholder="Search the web to support equality" aria-label="Search" value="<%= params[:q] %>">
-  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-</form>
 
 
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<h1> ------------------------------------------ </h1>
+<h1> briques pour le front </h1>
 
 <!-- ELEMENTS POUR LE FRONT -->
 
-<div class = "searchbar">
-<h1 class="logo">
-  <span  id="E">E</span>
-  <span  id="Q">Q</span>
-  <span  id="U">U</span>
-  <span  id="A">A</span>
-  <span  id="L">L</span>
-  <span  id="S">S</span>
-</h1>
- <%= render 'shared/searchbar' %>
-</div>
+
 
 
 <div class="container-profil">
