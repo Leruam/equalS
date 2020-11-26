@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to root_path, class: "navbar-brand" do %>
-    <img src="../../assets/images/logo.png">
+    <%= image_tag 'LOGO-LITTLE.png' %>
     <% end %>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -8,7 +8,13 @@
       <% if user_signed_in? %>  
       <li class="counter nav-item dropdown">
         <a href="#" class="nav-link" id="container-counter">
-            <span class="item" id="count"><%= @user_total_search_count %></span>
+            <span class="item" id="count">
+            <% if @user_total_search_count  != nil %>
+              <%= @user_total_search_count %>
+            <% else %>
+            0
+            <%end %>    
+            </span>
             <span> </span>
             <span class="item fas fa-venus-double"></span>
           </i> 
