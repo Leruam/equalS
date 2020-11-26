@@ -11,7 +11,7 @@
 
 .navbar-lewagon {
   justify-content: space-between;
-  background: none;
+  background: transparent;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -25,8 +25,8 @@
 .dropdown-menu {
 	font-family: 'Inter', sans-serif;
 	font-size: 14px;
-    border: 0px; 
-	@include boxShadow($purple-other, 2); 
+    border: 0px;
+	@include boxShadow($purple-other, 2);
 }
 
 .item:hover {
