@@ -1,1 +1,7 @@
 <h1>show de homes</h1>
+
+<form class="form-inline my-2 my-lg-0" action="/search" method="GET">
+  <!-- convention REST: si on cherche des infos c'est un GET -->
+  <input class="form-control mr-sm-2 search-bar-hp" name="q" type="search" placeholder="Search the web to support equality" aria-label="Search" value="<%= params[:q] %>">
+  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form>
