@@ -5,39 +5,58 @@
   Thank you!
 </div>
 
-<div class="first-infos-container">
-
-  <div class="left-infos">
-    <div class="you-infos">
-      <h2>You</h2>
-      <p>total number of searches:</p>
-      <%= @user_total_search_count %>
-      <p>number of searches today:</p>
-      <%= @user_today_search_count %>
-      <p>charities you're supporting: </p>
-      <%= @user_charity_count %>
+<div class="container-profil">
+  <div class=container-insights>
+    <div class="card-insights">
+      <div class="you-infos">
+        <h2>You</h2>
+        <p>total number of searches:</p>
+        <%= @user_total_search_count %>
+        <p>number of searches today:</p>
+        <%= @user_today_search_count %>
+        <p>charities you're supporting: </p>
+        <%= @user_charity_count %>
+      </div>
     </div>
-    <div class="us-infos">
-      <h2>Our community</h2>
-      <p>total charities supported:</p>
-      <%= @global_charity_count %>
-      <p>total number of searches since EqualS was born:</p>
-      <%= @global_search_count %>
+    <div class="card-insights">
+      <div class="us-infos">
+        <h2>Our community</h2>
+        <p>total charities supported:</p>
+        <%= @global_charity_count %>
+        <p>total number of searches since EqualS was born:</p>
+        <%= @global_search_count %>
+      </div>
     </div>
   </div>
-
-  <div class="right-infos">
-    <h2>YOUR CHARITIES</h2>
+  <div class="card-container-supports">
     <div class="user-charities">
-    <% @user.charities.each do |charity| %>
-    <%= charity.name %>
-    <%= cl_image_tag charity.photo.key, crop: :pad %>
-    <% end %>
+      <% @user.charities.each do |charity| %>
+      <div class="card-charity-circle" style="background-image: url(<%=cl_image_path charity.photo.key%>)">
+          <div class="display-card-charity-circle">
+            <p>hello</p>
+            <p>short description</p>
+            <div>
+              <a href="#" class="btn-principal">INFO</a>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      </div>
   </div>
-
-    </div>
-
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -46,10 +65,22 @@
   <div class="wrapper">
     <% @other_charities.each do |charity| %>
     <div class="row">
-      <%= cl_image_tag charity.photo.key, crop: :pad %>
+      <div class="card-charity image" style="background-image: url(<%=cl_image_path charity.photo.key%>)">
+        <!-- <div class="image" style="background-image: url(<%=cl_image_path charity.photo.key%>)"></div> -->
+        <div class="display-card-charity">
+          <p>hello</p>
+          <p>short description</p>
+          <div card-charity-button>
+            <div class="btn"><a class="btn-principal" href="#">SUPPORT</a></div>
+            <div>
+              <a href="#" class="btn-third">INFORMATION</a>
+            </div>
+          </div>
+        </div>
+        <div class="association-name"><p>HelloAsso</p></div>
+      </div>
     </div>
     <% end %>
-  </div>
+ </div>
 </div>
-
 
