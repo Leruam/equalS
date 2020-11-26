@@ -3,8 +3,8 @@ Rails.application.routes.draw do
 
   root to: 'homes#show' # cette route pas avec resources sinon on aurait un :id avec show dans la route
   get 'search', to: 'results#index', as: 'search' # à la place de resources :results, only: :index
-  resources :supports, only: [:show, :destroy]
-  resources :charities, only: [:index] do
+  resources :supports, only: [:destroy]
+  resources :charities do
     resources :supports, only: [:create]
   end
   resources :users, only: [:show]
