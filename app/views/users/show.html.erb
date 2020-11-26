@@ -4,7 +4,7 @@
   thanks to 5.3 billion searches <br>
   Thank you!
 </div>
-
+<div class="container">
 <div class="container-profil">
   <div class=container-insights>
     <div class="card-insights">
@@ -32,6 +32,7 @@
     <div class="user-charities">
       <% @user.charities.each do |charity| %>
       <div class="card-charity-circle" style="background-image: url(<%=cl_image_path charity.photo.key%>)">
+        <div class="overlay-supports"></div>
           <div class="display-card-charity-circle">
             <p>hello</p>
             <p>short description</p>
@@ -45,27 +46,13 @@
   </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="second-infos-container">
   <h2>OTHER CHARITIES</h2>
   <div class="wrapper">
     <% @other_charities.each do |charity| %>
     <div class="row">
       <div class="card-charity image" style="background-image: url(<%=cl_image_path charity.photo.key%>)">
+      <div class="overlay-charity"></div>
         <!-- <div class="image" style="background-image: url(<%=cl_image_path charity.photo.key%>)"></div> -->
         <div class="display-card-charity">
           <p>hello</p>
@@ -83,4 +70,4 @@
     <% end %>
  </div>
 </div>
-
+</div>
