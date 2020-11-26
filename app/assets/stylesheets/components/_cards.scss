@@ -29,19 +29,24 @@
 
 .card-insights {
   background-color: white;
-  width: 400px;
-  height: 190px;
+  width: 350px;
+  height: 45%;
   padding: 20px;
   @include boxShadow($purple-other, 5);
 }
 
 .card-container-supports {
   background-color: white;
-  width: 800px;
-  height: 400px;
+  width: 850px;
+  min-height: 400px;
+  display: flex;
+  flex-wrap: wrap;
   padding: 20px;
   margin-left: 20px;
   @include boxShadow($purple-other, 5);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 // card pour chaque association:
@@ -114,7 +119,7 @@
   width: 200px;
   height: 200px;
   background-size: cover;
-  margin-top: 50px;
+  margin: 10px;
   box-shadow: 2px 2px 12px 0px #bfbbbb;
 }
 
@@ -123,9 +128,13 @@
   color: white;
   font-weight:300;
   text-align: center;
-  padding-top: 50px;
-  width: 250px;
-  height: 300px;
+  width: 100%;
+  position: relative;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .overlay-supports {
