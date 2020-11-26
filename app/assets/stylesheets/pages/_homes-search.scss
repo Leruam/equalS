@@ -1,9 +1,12 @@
+
+$width-navbar: 47px;
+
 #full-screen-picture {
   background-image: url(https://res.cloudinary.com/antoine83/image/upload/v1606406626/EqualS/DEMI-SIMONE_zz7puj.png);
   height: 100vh;
   background-color: $back-screen;
   position: relative;
-  top: -47px;
+  top: -$width-navbar;
   background-size: contain;
   background-position: left;
   background-repeat: no-repeat;
@@ -32,15 +35,24 @@
 
 .text-under-search h2 {
   color: black;
-  font-size: 20px;
+  font-size: 1.8rem;
 }
 
 .text-under-search p,span {
-  font-size: 15px;
+  font-size: 1rem;
+  width: 65%;
+  text-align: center;
   p {
     color: $grey-text;
   }
   span {
     color: $green-text;
   }
+}
+
+#bellow-fold {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  margin-top: -$width-navbar;
 }
