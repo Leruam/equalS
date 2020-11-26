@@ -9,9 +9,14 @@
   box-shadow: $value;
 }
 
+.nav-bar {
+  color: $purple-elements;
+  opacity: 0.7;
+}
+
 .navbar-lewagon {
   justify-content: space-between;
-  background: transparent;
+  background: none;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -19,17 +24,59 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 30px;
+  width: 150px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 .dropdown-menu {
 	font-family: 'Inter', sans-serif;
-	font-size: 14px;
-    border: 0px;
-	@include boxShadow($purple-other, 2);
+	font-size: 14px; 
+	@include boxShadow($purple-other, 2); 
 }
 
-.item:hover {
-	color: #6200DE;
+.nav-link {
+  padding: 0.23rem 1rem;
+}
+
+.nav-item{
+  border-color: $purple-text;
+  opacity: 0.8;
+  padding-top: 0px;
+  margin-right: 20px; 
+  .item {
+  color: $purple-elements;
+  }
+}
+
+.nav-item:hover {
+  border-color: $purple-text;
+  transition-duration: 0.3s;
+  .item { 
+	color: $purple-text;
 	transition-duration: 0.3s;
+  }
+}
+
+#container-counter {
+    text-align: center;
+}
+
+.counter {
+  display: inline-block;;
+  height: 30px;
+  width: 70px;
+  padding: 0px;
+  border: 1px solid #b7b3b3;
+  border-radius: 20px;
+}
+
+#count {
+  font-family: "Rubik", "sans-serif";
+  font-weight: 300;
+  font-size: 12px;
+  padding-top: 0px;
+  color: $purple-elements;
+  padding-right: 3px; 
 }
