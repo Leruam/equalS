@@ -1,0 +1,32 @@
+
+.results {
+  width: 60%;
+}
+
+.focus {
+  width: 40%;
+}
+
+.result-card-web  h2 {
+  color: #1a0dab;
+  font-size: 16px;
+}
+
+.result-card-web  h3 {
+  color: #00644d;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.result-card-web  p {
+  color: #353535;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.result-card-web:hover {
+  h2 {
+    text-decoration: underline;
+  }
+  text-decoration: none !important;
+}
