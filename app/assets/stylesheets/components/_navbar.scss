@@ -24,12 +24,45 @@
 
 .dropdown-menu {
 	font-family: 'Inter', sans-serif;
-	font-size: 14px;
-    border: 0px; 
+	font-size: 14px; 
 	@include boxShadow($purple-other, 2); 
 }
 
-.item:hover {
-	color: #6200DE;
+.nav-link {
+  padding: 0.23rem 1rem;
+}
+
+.nav-item{
+  padding-top: 0px;
+  margin-right: 20px; 
+}
+
+.nav-item:hover {
+  border-color: $purple-text;
+  transition-duration: 0.3s;
+  .item { 
+	color: $purple-text;
 	transition-duration: 0.3s;
+  }
+}
+
+#container-counter {
+    text-align: center;
+}
+
+.counter {
+  display: inline-block;;
+  height: 30px;
+  width: 70px;
+  padding: 0px;
+  border: 1px solid #b7b3b3;
+  border-radius: 20px;
+}
+
+#count {
+  font-family: "Rubik", "sans-serif";
+  font-weight: 300;
+  font-size: 15px;
+  color: $purple-elements;
+  padding-right: 3px; 
 }
