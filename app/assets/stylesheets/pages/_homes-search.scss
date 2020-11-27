@@ -3,14 +3,39 @@ $width-navbar: 47px;
 
 #full-screen-picture {
   background-image: url(https://res.cloudinary.com/antoine83/image/upload/v1606406626/EqualS/DEMI-SIMONE_zz7puj.png);
-  height: 100vh;
+  height: 107vh;
   background-color: $back-screen;
   position: relative;
-  top: -$width-navbar;
+  top: -110px;
   background-size: contain;
   background-position: left;
   background-repeat: no-repeat;
   background-position-y: 6vh;
+}
+
+.container-searchbar {
+  margin-top: 10vh;
+}
+
+#counter {
+  color: $purple-text;
+  font-weight: 500;
+  font-size: 27px;
+}
+
+#sentence {
+  text-align: center;
+  width: 300px;
+}
+
+.green-text {
+  font-weight: 500;
+  color: $green-text;
+}
+
+.text-under-search {
+  margin-top: 50px;
+  font-weight: 300; 
 }
 
 .legend-size { // pour la légende sur la page d'accueil pour la photo
@@ -18,6 +43,7 @@ $width-navbar: 47px;
   position: absolute; // par rapport au container
   bottom: 10px;
   right: 50px;
+  font-weight: 300; 
 }
 
 .legend-size h2 { // pour la légende sur la page d'accueil pour la photo
@@ -26,28 +52,6 @@ $width-navbar: 47px;
 
 .legend-size p { // pour la légende sur la page d'accueil pour la photo
   font-size: 15px;
-}
-
-.text-under-search h1 {
-  color: $purple-text;
-  font-size: 50px;
-}
-
-.text-under-search h2 {
-  color: black;
-  font-size: 1.8rem;
-}
-
-.text-under-search p,span {
-  font-size: 1rem;
-  width: 65%;
-  text-align: center;
-  p {
-    color: $grey-text;
-  }
-  span {
-    color: $green-text;
-  }
 }
 
 #bellow-fold {
