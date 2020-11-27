@@ -10,39 +10,46 @@
 }
 
 .searchbar {
-   width: 80%;
-   margin: 0 auto;
+  width: 80%;
+  margin: 0 auto;
+  color: $back-screen;
    .logo {
   text-align: center;
   letter-spacing: -6px;
+  margin-left: -7%;
   font-size: 44px;
-  color: white;
   font-family: 'Archivo', sans-serif;
   }
 }
 
 .searchbar:hover {
     #E{
+    color: white;
     @include boxShadow(#6200de, 55);
     transition-duration: 0.5s
     }
     #Q{
+    color: white;  
     @include boxShadow(#f9db6d, 55);
     transition-duration: 0.5s
     }
     #U{
+    color: white;  
     @include boxShadow(#36827f, 55);
     transition-duration: 0.5s
     }
     #A{
+    color: white;  
     @include boxShadow(#d57a66, 55);
     transition-duration: 0.5s
     }
     #L{
+    color: white;  
     @include boxShadow(#74a4bc, 55);
     transition-duration: 0.5s
     }
     #S{
+    color: white;  
     @include boxShadow(#6200de, 55);
     transition-duration: 0.5s
     }
