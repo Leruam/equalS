@@ -10,16 +10,21 @@
 }
 
 .searchbar {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   color: $back-screen;
    .logo {
+  z-index: -1;
   text-align: center;
   letter-spacing: -6px;
   margin-left: -7%;
   font-size: 44px;
   font-family: 'Archivo', sans-serif;
   }
+}
+
+.searchbar-form {
+  position: relative;
 }
 
 .searchbar:hover {
