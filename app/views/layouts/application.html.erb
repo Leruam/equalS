@@ -14,7 +14,8 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar', total_user_search: current_user.total_user_search %>
+
+    <%= render 'shared/navbar' %>
     <div class="content-wraper" style="min-height: calc(100vh - 70px - 80px)">
       <%= yield %>
     </div>

@@ -75,7 +75,7 @@ le_refuge = Charity.create!(
     website:"https://www.le-refuge.org/"
     )
 
-le_refuge_photo = URI.open('https://res.cloudinary.com/du9wezv2c/image/upload/v1606310175/equalS/Logo_de_la_Fondation_Le_Refuge_qhidmo.jpg')
+le_refuge_photo = URI.open('https://upload.wikimedia.org/wikipedia/commons/4/41/Logo_de_la_Fondation_Le_Refuge.jpg')
 le_refuge.photo.attach(io: le_refuge_photo, filename: '#{le_refuge.name}.jpg', content_type: 'image/jpg')
 le_refuge.save!
 

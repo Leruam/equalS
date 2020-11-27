@@ -30,9 +30,13 @@
 .card-insights {
   background-color: white;
   width: 350px;
-  height: 45%;
+  height: 48%;
   padding: 20px;
   @include boxShadow($purple-other, 5);
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-container-supports {
@@ -47,6 +51,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 // card pour chaque association:
