@@ -87,7 +87,7 @@ osez_le_feminisme = Charity.create!(
     website:"http://osezlefeminisme.fr/"
     )
 
-osez_le_feminisme_photo = URI.open('https://res.cloudinary.com/du9wezv2c/image/upload/v1606311404/equalS/VoeuxOLF2019-1-300x214_ov5wey.jpg')
+osez_le_feminisme_photo = URI.open('https://osezlefeminisme.fr/wp-content/uploads/2019/07/VoeuxOLF2019-1-300x214.jpg')
 osez_le_feminisme.photo.attach(io: osez_le_feminisme_photo, filename: '#{osez_le_feminisme.name}.jpg', content_type: 'image/jpg')
 osez_le_feminisme.save!
 
@@ -99,7 +99,7 @@ causette = Charity.create!(
     website:"https://www.causette.fr/"
     )
 
-causette_photo = URI.open("https://res.cloudinary.com/du9wezv2c/image/upload/v1606311648/equalS/images_bs35yx.png")
+causette_photo = URI.open("https://www.causette.fr/wp-content/uploads/2020/08/causette-carre-rouge-948x515.jpg")
 causette.photo.attach(io: causette_photo, filename: '#{causette.name}.jpg', content_type: 'image/jpg')
 causette.save!
 
@@ -111,7 +111,7 @@ solidarites_femmes = Charity.create!(
     website:"https://www.solidaritefemmes.org/"
     )
 
-solidarites_femmes_photo = URI.open('https://res.cloudinary.com/du9wezv2c/image/upload/v1606311738/equalS/AAUvwnhJNpEi0lNG6_Fr6aZ5-GYlNR8U_vf_nIWF6KirMA_s900-c-k-c0x00ffffff-no-rj_t5ux1e.jpg')
+solidarites_femmes_photo = URI.open('https://ideas.asso.fr/wp-content/uploads/2019/07/LogoFNSF-profilTW2.png')
 solidarites_femmes.photo.attach(io: solidarites_femmes_photo, filename: '#{solidarites_femmes.name}.jpg', content_type: 'image/jpg')
 solidarites_femmes.save!
 
@@ -123,7 +123,7 @@ nous_toutes = Charity.create!(
     website:"https://www.noustoutes.org/"
     )
 
-nous_toutes_photo = URI.open('https://res.cloudinary.com/du9wezv2c/image/upload/v1606311786/equalS/image1-2_kj8q1n.jpg')
+nous_toutes_photo = URI.open('https://i0.wp.com/www.50-50magazine.fr/_19/wp-content/uploads/2020/02/image1-2.jpg?fit=1069%2C913&ssl=1')
 nous_toutes.photo.attach(io: nous_toutes_photo, filename: '#{nous_toutes.name}.jpg', content_type: 'image/jpg')
 nous_toutes.save!
 
@@ -135,7 +135,7 @@ happy_period = Charity.create!(
     website:"https://hashtaghappyperiod.org/"
     )
 
-happy_period_photo = URI.open('https://res.cloudinary.com/du9wezv2c/image/upload/v1606324632/equalS/ityrjbqadk83vrp6yxfa.png')
+happy_period_photo = URI.open('https://happymenstruation.fairgaze.com/Content/SachiSaheli/images/form_img.jpg')
 happy_period.photo.attach(io: happy_period_photo, filename: '#{happy_period.name}.jpg', content_type: 'image/jpg')
 happy_period.save!
 
@@ -147,7 +147,7 @@ pro_mujer = Charity.create!(
     website:"https://promujer.org/"
     )
 
-pro_mujer_photo = URI.open('https://res.cloudinary.com/du9wezv2c/image/upload/v1606324816/equalS/161965LOGO_js2ejp.jpg')
+pro_mujer_photo = URI.open('https://cdn.shopify.com/s/files/1/1842/4701/files/white_logo_on_red_box186u-w_EN_tag.jpg')
 pro_mujer.photo.attach(io: pro_mujer_photo, filename: '#{pro_mujer.name}.jpg', content_type: 'image/jpg')
 pro_mujer.save!
 
@@ -159,7 +159,7 @@ world_pulse = Charity.create!(
     website:"https://www.worldpulse.com/"
     )
 
-world_pulse_photo = URI.open('https://res.cloudinary.com/du9wezv2c/image/upload/v1606325276/equalS/iw9ju3k1vne9xeircv7o.png')
+world_pulse_photo = URI.open('https://www.channelfoundation.org/wp-content/uploads/2017/02/world-pulse-vertical.png')
 world_pulse.photo.attach(io: world_pulse_photo, filename: '#{world_pulse.name}.jpg', content_type: 'image/jpg')
 world_pulse.save!
 
@@ -171,7 +171,7 @@ london_gaymers = Charity.create!(
     website:"https://www.londongaymers.co.uk/"
     )
 
-lg_photo = URI.open('https://res.cloudinary.com/du9wezv2c/image/upload/v1606325650/equalS/uvjdhw4coy0lgzesrrui.png')
+lg_photo = URI.open('https://scontent-cdt1-1.xx.fbcdn.net/v/t31.0-8/19477731_1329797300406924_685468511506910776_o.png?_nc_cat=106&ccb=2&_nc_sid=174925&_nc_ohc=cQB6RtvsKAYAX-DY3v3&_nc_ht=scontent-cdt1-1.xx&oh=fd25ebe55106de14bfe9090d6fcc8649&oe=5FE7DDFF')
 london_gaymers.photo.attach(io: lg_photo, filename: '#{london_gaymers.name}.jpg', content_type: 'image/jpg')
 london_gaymers.save!
 
@@ -183,7 +183,7 @@ center_for_be = Charity.create!(
     website:"https://www.centerforblackequity.net/"
     )
 
-center_for_be_photo = URI.open('https://res.cloudinary.com/du9wezv2c/image/upload/v1606325995/equalS/screen-shot-2020-06-19-at-3-48-35-pm-1592596130.png_a5oyyy.png')
+center_for_be_photo = URI.open('https://www.capitalpride.org/wp-content/uploads/Center_Black_Equity_logo_square-500x321.png')
 center_for_be.photo.attach(io: center_for_be_photo, filename: '#{center_for_be.name}.jpg', content_type: 'image/jpg')
 center_for_be.save!
 
@@ -196,7 +196,7 @@ marsha_pj_inst = Charity.create!(
     website:"https://marshap.org/"
     )
 
-marsha_photo = URI.open('https://res.cloudinary.com/du9wezv2c/image/upload/v1606326406/equalS/zN5M2k4x_400x400_s8jtlu.jpg')
+marsha_photo = URI.open('https://pbs.twimg.com/profile_images/1240662361477992448/zN5M2k4x_400x400.jpg')
 marsha_pj_inst.photo.attach(io: marsha_photo, filename: '#{marsha_pj_inst.name}.jpg', content_type: 'image/jpg')
 marsha_pj_inst.save!
 
