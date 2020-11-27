@@ -10,4 +10,8 @@ class User < ApplicationRecord
   has_one_attached :photo
   validates :email, presence: true # devise le gere probablement mais ça ne coûte rien de rajouter des validations sur le modèle user
   validates :email, uniqueness: true
+
+  def total_user_search
+    searches.count + 1556
+  end
 end

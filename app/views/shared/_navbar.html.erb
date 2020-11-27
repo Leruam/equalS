@@ -5,20 +5,20 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>  
+      <% if user_signed_in? %>
       <li class="counter nav-item dropdown">
         <a href="#" class="nav-link" id="container-counter">
             <span class="item" id="count">
-            <% if @user_total_search_count  != nil %>
-              <%= @user_total_search_count %>
+            <% if total_user_search  != nil %>
+              <%= total_user_search %>
             <% else %>
             0
-            <%end %>    
+            <%end %>
             </span>
             <span> </span>
             <span class="item fas fa-venus-double"></span>
-          </i> 
-        </a> 
+          </i>
+        </a>
       </li>
       <li class="nav-item dropdown">
         <a href="#" class="nav-link"><i class="item far fa-bell"></i></a>
