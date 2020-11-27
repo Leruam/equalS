@@ -7,7 +7,8 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
       <li class="counter nav-item dropdown">
-        <a href="#" class="nav-link" id="container-counter">
+        <%= link_to user_path(current_user), class: "nav-link", id: "container-counter" do %>
+       <!--  <a href="#" class="nav-link" id="container-counter"> -->
             <span class="item" id="count">
             <% if total_user_search  != nil %>
               <%= total_user_search %>
@@ -18,7 +19,8 @@
             <span> </span>
             <span class="item fas fa-venus-double"></span>
           </i>
-        </a>
+        <!-- </a> -->
+        <% end %>
       </li>
       <li class="nav-item dropdown">
         <a href="#" class="nav-link"><i class="item far fa-bell"></i></a>
