@@ -1,22 +1,24 @@
-<div class="counter-container">
-  11 234 654 $ <br>
-  raised to support equality on Earth <br>
-  thanks to 5.3 billion searches <br>
-  Thank you!
+ <div class="d-flex flex-column align-items-center text-under-search">
+  <h1 id="counter"> 11,234,654 €</h1>
+  <div id="sentence">
+    <p>raised to support equality on <span class="green-text">Earth</span>
+    thanks to your <span class="green-text">5,3 billion </span >searches.</p>
+  </div>
+  <h4 style="margin-bottom: 25px;">Thank you !</h4>
 </div>
 <div class="container">
   <div class="container-profil">
     <div class=container-insights>
       <div class="card-insights">
-          <h5>You</h5>
-          <p><strong><%= @user_total_search_count %></strong> searches in total</p>
-          <p><strong><%= @user_today_search_count %></strong>  of searches today</p>
+          <div class="underline"><h4>You</h4></div>
+          <div class="topline"><p><strong><%= @user_total_search_count %></strong> searches in total</p></div>
+          <p><strong><%= @user_today_search_count %></strong> searches today</p>
           <p><strong><%= @user_charity_count %></strong>  charities supported</p>
       </div>
       <div class="card-insights">
-        <h5>Our community</h5>
-          <p><strong><%= @global_charity_count %></strong> of charities supported by EqualS</p>
-          <p><strong><%= @user_today_search_count %></strong> total searches today</p>
+        <div class="underline"><h4>Our community</h4></div>
+          <div class="topline"><p><strong><%= @global_charity_count %></strong> charities supported by EqualS</p></div>
+          <p><strong><%= @global_search_count_today %></strong> total searches today</p>
           <p><strong><%= @global_search_count %></strong> total searches since EqualS was born</p>
       </div>
     </div>
@@ -29,7 +31,7 @@
               <p class="mb-1"><%=  support.charity.category%></p>
               <div class="d-flex flex-column justify-content-center align-items-center">
                 <a href="#" class="btn-principal ml-auto mr-auto">INFO</a>
-                <%= link_to "Remove", support_path(support), method: :delete, class: "btn-third ml-auto mr-auto"%>
+                <%= link_to "remove", support_path(support), method: :delete, class: "btn-third ml-auto mr-auto"%>
               </div>
             </div>
           </div>
@@ -38,7 +40,7 @@
   </div>
 
   <div class="second-infos-container">
-    <h4>More charities...</h4>
+    <div class="underline"><h4>More charities...</h4></div>
       <div class="row">
         <% @other_charities.each do |charity| %>
         <div class="col-4 d-flex justify-content-center">
@@ -49,8 +51,8 @@
               <h6><%= charity.name %></h6>
               <p><%= charity.category %></p>
               <div class="d-flex flex-column justify-content-center align-items-center">
-                <%= link_to "Support", charity_supports_path(charity), method: :post, class: "btn-principal"%>
-                <a href="#" class="btn-third">INFORMATION</a>
+                <%= link_to "SUPPORT", charity_supports_path(charity), method: :post, class: "btn-principal"%>
+                <a href="#" class="btn-third">info</a>
               </div>
             </div>
             <!-- <div class="association-name"><p><%= charity.name %></p></div> -->

@@ -15,6 +15,12 @@ class ApplicationController < ActionController::Base
   # end
   # liens cours le wagon: https://kitt.lewagon.com/camps/500/lectures/05-Rails%2F07-Airbnb-Facebook-connect#source
 
+  def total_user_search
+    if user_signed_in?
+      @total_user_search = current_user.total_user_search
+    end
+  end
+
   private
 
   def skip_pundit?
