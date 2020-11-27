@@ -15,7 +15,7 @@
 
   <body>
 
-    <%= render 'shared/navbar' %>
+    <%= render 'shared/navbar', total_search: user_signed_in? ? (current_user.searches.count + 1562) : 400 %>
     <div class="content-wraper" style="min-height: calc(100vh - 70px - 80px)">
       <%= yield %>
     </div>
