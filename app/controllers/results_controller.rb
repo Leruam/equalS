@@ -22,10 +22,18 @@ class ResultsController < ApplicationController
     # cree un tableau avec un hash par resultat
     # mapper les keys qu'on veut recuperer
     # mettre dans variable d'instance qu'on passera a la view
-    @webpages_results = bing_webpages.map do |search|
-      { title: search["name"], link: search["url"], link_display: search["displayUrl"], snippet: search["snippet"] }
-      # on pourra rajouter les deeplinks plus tard au besoin deeplinks: search["deepLinks"]
-    end
+    @webpages_results = bing_webpages.empty? ? # pour ne pas péter le code si on a un retour d'API array vide
+      []
+      :
+      bing_webpages.map do |search|
+        { title: search["name"], link: search["url"], link_display: search["displayUrl"], snippet: search["snippet"] }
+        # on pourra rajouter les deeplinks plus tard au besoin deeplinks: search["deepLinks"]
+      end
+
+        Search.create(content: params[:q], user: current_user) #cree  une ligne dans search
+    # increment search mais pas propre ! pas REST -  A CHANGER POUR DEMO 2
+    # il faudra implementer:
+    # au clic créer un post pour creer la search, puis rediriger vers index de results
   end
 end
 
