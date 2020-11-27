@@ -10,8 +10,8 @@
         <%= link_to user_path(current_user), class: "nav-link", id: "container-counter" do %>
        <!--  <a href="#" class="nav-link" id="container-counter"> -->
             <span class="item" id="count">
-              <% if @total_user_search  != nil %>
-                <%= @total_user_search %>
+              <% if total_search  != nil %>
+                <%= total_search %>
               <% else %>
                 0
               <%end %>
