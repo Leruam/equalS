@@ -90,6 +90,20 @@
   align-items: center;
 }
 
+.card-container-supports-badges {
+  background-color: white;
+  width: 850px;
+  min-height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 // card pour chaque association:
 
 .card-charity {
@@ -107,7 +121,7 @@
     bottom: -45px;
     text-align: center;
     p {
-      color: $green-text;
+      color: $purple-elements;
     }
   }
 
