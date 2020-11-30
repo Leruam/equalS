@@ -10,7 +10,6 @@ class SupportsController < ApplicationController
     @support.user = current_user
     authorize @support
     @support.save
-    redirect_to user_path(current_user)
   end
 
   def destroy
@@ -18,7 +17,6 @@ class SupportsController < ApplicationController
     @support = Support.find(params[:id])
     authorize @support
     @support.destroy
-    redirect_to user_path(current_user)
   end
 
 

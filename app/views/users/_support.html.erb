@@ -1,0 +1,11 @@
+ <div class="card-charity-circle" style="background-image: url(<%=cl_image_path support.charity.photos.first.key %>)">
+  <div class="overlay-supports"></div>
+    <div class="display-card-charity-circle">
+      <h6 class="mb-1"><%= support.charity.name %></h6>
+      <p class="mb-1"><%=  support.charity.category%></p>
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <a href="#" class="btn-principal ml-auto mr-auto">INFO</a>
+        <%= link_to "remove", support_path(support), method: :delete, remote: true, class: "btn-third ml-auto mr-auto"%>
+      </div>
+    </div>
+  </div>
