@@ -200,4 +200,29 @@
 
 }
 
+.card-badges {
+  position: absolute;
+  border-radius: 100px;
+  width: 125px;
+  height: 125px;
+  top: -60px;
+  left: 20px;
+  background-color: pink;
+  background-size: cover;
+  border: 2px solid white;
+}
+
+.card-about {
+  width: 50%;
+  background-color: white;
+  height: 500px;
+  padding: 20px;
+  margin-top: 20px;
+  @include boxShadow($purple-other, 5);
+  font-weight: 300;
+  p {
+    margin: 30px auto;
+  }
+}
+
 
