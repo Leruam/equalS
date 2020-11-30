@@ -8,4 +8,5 @@ class SearchesController < ApplicationController
     # il faut mettre une cle / valeur dans le path ou un objet
     # params[:search] --> simple form range tout ce que renvoie le form dans une key correspondant au nom du model
   end
+
 end
