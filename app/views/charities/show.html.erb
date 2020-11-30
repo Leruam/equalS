@@ -1,1 +1,75 @@
-<h1>show de charities</h1>
+<div class="container">
+	<div class=container-profile>
+	  <div class=container-cover></div>
+	  <div class= container-info>
+	  	<div class=card-badges></div>
+	  	<div class=info-principal>
+	  	 <h4 class="underline"><%= @charity.name %></h4>
+	  	 <ul class=info-list>
+	  	 	<li><p><%= @charity.category %></p></li>
+	  	 	<li><p><%=@charity.address %></p></li>
+	  	 	<li><p><%= @charity.supports.count %> supports</p></li>
+	  	 </ul>
+	  	</div>
+	  	<div class="container-buttons-info">
+	  	  <div class="container-buttons">
+	      <a href="#" class="btn-principal">SUPPORT</a>
+	      <a href="@charity.website" class="btn-second">WEBSITE</a>
+	      </div>
+	      <p><span id="amount">100$</span> recolted for <span id="association">association name</span></p>
+	      </div>
+		</div>
+	</div>	
+	<div class="card-about">
+	<h5 class=underline id="title-about">About</h5>
+	<p> <%= @charity.description %></p>
+	</div>
+
+
+<div class ="container-carroussel">
+<div class="slider">
+<div class="slider-wrapper flex">
+  <div class="slide flex">
+    <div class="slide-image slider-link prev"><img src="https://goranvrban.com/codepen/img2.jpg"><div class="overlay"></div></div>
+    <div class="slide-content">
+      <div class="slide-date">30.07.2017.</div>
+      <div class="slide-title">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</div>
+      <div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
+      <div class="read-more"><a href="@charity.website" class="btn-second ">READ MORE</a></div>
+    </div>  
+  </div>
+  <div class="slide flex">
+    <div class="slide-image slider-link next"><img src="https://goranvrban.com/codepen/img3.jpg"><div class="overlay"></div></div>
+    <div class="slide-content">
+      <div class="slide-date">30.08.2017.</div>
+      <div class="slide-title">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</div>
+      <div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
+      <div class="read-more"><a href="@charity.website" class="btn-second">READ MORE</a></div>
+    </div>  
+  </div>  
+  <div class="slide flex">
+    <div class="slide-image slider-link next"><img src="https://goranvrban.com/codepen/img5.jpg"><div class="overlay"></div></div>
+    <div class="slide-content">
+      <div class="slide-date">30.09.2017.</div>
+      <div class="slide-title">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</div>
+      <div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
+      <div class="read-more"><a href="@charity.website" class="btn-second">READ MORE</a></div>
+    </div>  
+  </div>
+    <div class="slide flex">
+    <div class="slide-image slider-link next"><img src="https://goranvrban.com/codepen/img6.jpg"><div class="overlay"></div></div>
+    <div class="slide-content">
+      <div class="slide-date">30.10.2017.</div>
+      <div class="slide-title">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</div>
+      <div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
+      <div class="read-more"><a href="@charity.website" class="btn-second">READ MORE</a></div>
+    </div>  
+  </div>
+</div>
+<div class="arrows">
+<a href="#" title="Previous" class="arrow slider-link prev"></a>
+<a href="#" title="Next" class="arrow slider-link next"></a>
+</div>
+</div>
+</div>
+</div>
