@@ -15,6 +15,17 @@ class ApplicationController < ActionController::Base
   # end
   # liens cours le wagon: https://kitt.lewagon.com/camps/500/lectures/05-Rails%2F07-Airbnb-Facebook-connect#source
 
+  def global_search
+    # on calcule le total des search (le Seed_search correspond a SEEDED_AMOUNT / 0,005)
+    seed_search = 1_245_584_200
+    Search.count + seed_search
+  end
+
+  def global_search_today
+    # on calcule le total des search aujourd'hui
+    Search.where(created_at: Date.today.beginning_of_day..Date.today.end_of_day).count + 8326
+  end
+
   def global_money
     # on calcule le total via les charities
     total_money = []

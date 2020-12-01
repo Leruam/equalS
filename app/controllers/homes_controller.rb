@@ -4,5 +4,6 @@ class HomesController < ApplicationController
   def show
     skip_authorization # pour ne pas bloquer via pundit
     @global_money = global_money
+    @global_search_count = global_search
   end
 end
