@@ -24,7 +24,7 @@ require("channels")
 
 // External imports
 import "bootstrap";
-import { changeClassLogo } from '../components/logo';
+import { Carroussel } from '../components/carroussel';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -32,5 +32,5 @@ import { changeClassLogo } from '../components/logo';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  changeClassLogo()
+  Carroussel();
 });

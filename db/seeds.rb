@@ -75,8 +75,12 @@ le_refuge = Charity.create!(
     website:"https://www.le-refuge.org/"
     )
 
-le_refuge_photo = URI.open('https://upload.wikimedia.org/wikipedia/commons/4/41/Logo_de_la_Fondation_Le_Refuge.jpg')
-le_refuge.photo.attach(io: le_refuge_photo, filename: '#{le_refuge.name}.jpg', content_type: 'image/jpg')
+le_refuge_logo = URI.open('https://upload.wikimedia.org/wikipedia/commons/4/41/Logo_de_la_Fondation_Le_Refuge.jpg')
+le_refuge.photos.attach(io: le_refuge_logo, filename: '#{le_refuge.name}.jpg', content_type: 'image/jpg')
+le_refuge.save!
+
+le_refuge_photo = URI.open('https://pbs.twimg.com/media/En3GAxGXUAsfXzM?format=jpg&name=large')
+le_refuge.photos.attach(io: le_refuge_photo, filename: '#{le_refuge.name}photo.jpg', content_type: 'image/jpg')
 le_refuge.save!
 
 osez_le_feminisme = Charity.create!(
@@ -87,8 +91,13 @@ osez_le_feminisme = Charity.create!(
     website:"http://osezlefeminisme.fr/"
     )
 
-osez_le_feminisme_photo = URI.open('https://osezlefeminisme.fr/wp-content/uploads/2019/07/VoeuxOLF2019-1-300x214.jpg')
-osez_le_feminisme.photo.attach(io: osez_le_feminisme_photo, filename: '#{osez_le_feminisme.name}.jpg', content_type: 'image/jpg')
+osez_le_feminisme_logo = URI.open('https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/126430517_10158848310339510_1482260284427430573_n.png?_nc_cat=111&ccb=2&_nc_sid=85a577&_nc_ohc=_6pJllLsrjsAX801DDc&_nc_ht=scontent-cdg2-1.xx&oh=8fea265297acd3e131e367c12e51a0d7&oe=5FE86E8A')
+osez_le_feminisme.photos.attach(io: osez_le_feminisme_logo, filename: '#{osez_le_feminisme.name}.jpg', content_type: 'image/jpg')
+osez_le_feminisme.save!
+
+
+osez_le_feminisme_photo = URI.open('https://pbs.twimg.com/media/EKEFElMXkAEkVPv.jpg')
+osez_le_feminisme.photos.attach(io: osez_le_feminisme_photo, filename: '#{osez_le_feminisme.name}photo.jpg', content_type: 'image/jpg')
 osez_le_feminisme.save!
 
 causette = Charity.create!(
@@ -99,8 +108,12 @@ causette = Charity.create!(
     website:"https://www.causette.fr/"
     )
 
-causette_photo = URI.open("https://www.causette.fr/wp-content/uploads/2020/08/causette-carre-rouge-948x515.jpg")
-causette.photo.attach(io: causette_photo, filename: '#{causette.name}.jpg', content_type: 'image/jpg')
+causette_logo = URI.open("https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/29133315_1911830475503144_3564836144684385822_n.png?_nc_cat=111&ccb=2&_nc_sid=85a577&_nc_ohc=bWQVDPCTXr4AX_kRm4A&_nc_ht=scontent-cdg2-1.xx&oh=c7437c34bd4d9340ed6cf826c4385808&oe=5FE99385")
+causette.photos.attach(io: causette_logo, filename: '#{causette.name}.jpg', content_type: 'image/jpg')
+causette.save!
+
+causette_photo = URI.open("https://www.causette.fr/wp-content/uploads/2020/10/CAUSETTE-116-COUVsanscode-bassedef.jpg")
+causette.photos.attach(io: causette_photo, filename: '#{causette.name}photo.jpg', content_type: 'image/jpg')
 causette.save!
 
 solidarites_femmes = Charity.create!(
@@ -111,8 +124,12 @@ solidarites_femmes = Charity.create!(
     website:"https://www.solidaritefemmes.org/"
     )
 
-solidarites_femmes_photo = URI.open('https://ideas.asso.fr/wp-content/uploads/2019/07/LogoFNSF-profilTW2.png')
-solidarites_femmes.photo.attach(io: solidarites_femmes_photo, filename: '#{solidarites_femmes.name}.jpg', content_type: 'image/jpg')
+solidarites_femmes_logo = URI.open('https://ideas.asso.fr/wp-content/uploads/2019/07/LogoFNSF-profilTW2.png')
+solidarites_femmes.photos.attach(io: solidarites_femmes_logo, filename: '#{solidarites_femmes.name}.jpg', content_type: 'image/jpg')
+solidarites_femmes.save!
+
+solidarites_femmes_photo = URI.open('https://cdn.radiofrance.fr/s3/cruiser-production/2019/11/323bc993-0436-4afd-ad3a-052946fa28a0/870x489_maxstockworld393348_2.jpg')
+solidarites_femmes.photos.attach(io: solidarites_femmes_photo, filename: '#{solidarites_femmes.name}photo.jpg', content_type: 'image/jpg')
 solidarites_femmes.save!
 
 nous_toutes = Charity.create!(
@@ -123,8 +140,12 @@ nous_toutes = Charity.create!(
     website:"https://www.noustoutes.org/"
     )
 
-nous_toutes_photo = URI.open('https://i0.wp.com/www.50-50magazine.fr/_19/wp-content/uploads/2020/02/image1-2.jpg?fit=1069%2C913&ssl=1')
-nous_toutes.photo.attach(io: nous_toutes_photo, filename: '#{nous_toutes.name}.jpg', content_type: 'image/jpg')
+nous_toutes_logo = URI.open('https://pbs.twimg.com/profile_images/1017339129691037696/54oU7ppZ_400x400.jpg')
+nous_toutes.photos.attach(io: nous_toutes_logo, filename: '#{nous_toutes.name}.jpg', content_type: 'image/jpg')
+nous_toutes.save!
+
+nous_toutes_photo = URI.open('https://medias.liberation.fr/photo/1174845-prodlibe.jpg?modified_at=1543084700&width=960')
+nous_toutes.photos.attach(io: nous_toutes_photo, filename: '#{nous_toutes.name}photo.jpg', content_type: 'image/jpg')
 nous_toutes.save!
 
 happy_period = Charity.create!(
@@ -135,8 +156,12 @@ happy_period = Charity.create!(
     website:"https://hashtaghappyperiod.org/"
     )
 
-happy_period_photo = URI.open('https://happymenstruation.fairgaze.com/Content/SachiSaheli/images/form_img.jpg')
-happy_period.photo.attach(io: happy_period_photo, filename: '#{happy_period.name}.jpg', content_type: 'image/jpg')
+happy_period_logo = URI.open('https://pbs.twimg.com/profile_images/1268936001084207104/PD3UAlDI_400x400.jpg')
+happy_period.photos.attach(io: happy_period_logo, filename: '#{happy_period.name}.jpg', content_type: 'image/jpg')
+happy_period.save!
+
+happy_period_photo = URI.open('https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/67565688_1286275891543913_8374501832751316992_o.jpg?_nc_cat=109&ccb=2&_nc_sid=dd9801&_nc_ohc=kmiYTmdwDCYAX95tGIS&_nc_ht=scontent-cdt1-1.xx&oh=b9e14506b20f0e712afc0f107c3aa107&oe=5FE9801A')
+happy_period.photos.attach(io: happy_period_photo, filename: '#{happy_period.name}photo.jpg', content_type: 'image/jpg')
 happy_period.save!
 
 pro_mujer = Charity.create!(
@@ -147,8 +172,12 @@ pro_mujer = Charity.create!(
     website:"https://promujer.org/"
     )
 
-pro_mujer_photo = URI.open('https://cdn.shopify.com/s/files/1/1842/4701/files/white_logo_on_red_box186u-w_EN_tag.jpg')
-pro_mujer.photo.attach(io: pro_mujer_photo, filename: '#{pro_mujer.name}.jpg', content_type: 'image/jpg')
+pro_mujer_logo = URI.open('https://pbs.twimg.com/profile_images/930202066680606720/7zY1yL0t_400x400.jpg')
+pro_mujer.photos.attach(io: pro_mujer_logo, filename: '#{pro_mujer.name}.jpg', content_type: 'image/jpg')
+pro_mujer.save!
+
+pro_mujer_photo = URI.open('https://promujer.org/content/uploads/2020/02/headerhomeok30engmob.jpg')
+pro_mujer.photos.attach(io: pro_mujer_photo, filename: '#{pro_mujer.name}photo.jpg', content_type: 'image/jpg')
 pro_mujer.save!
 
 world_pulse = Charity.create!(
@@ -159,8 +188,12 @@ world_pulse = Charity.create!(
     website:"https://www.worldpulse.com/"
     )
 
-world_pulse_photo = URI.open('https://www.channelfoundation.org/wp-content/uploads/2017/02/world-pulse-vertical.png')
-world_pulse.photo.attach(io: world_pulse_photo, filename: '#{world_pulse.name}.jpg', content_type: 'image/jpg')
+world_pulse_logo = URI.open('https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/15094289_10154508048795041_6149651786243851136_n.png?_nc_cat=101&ccb=2&_nc_sid=85a577&_nc_ohc=mmfstdQKijsAX-BZPFC&_nc_ht=scontent-cdt1-1.xx&oh=d2bbf2ae7466be85a91e5eb97f7b65eb&oe=5FE8C47B')
+world_pulse.photos.attach(io: world_pulse_logo, filename: '#{world_pulse.name}.jpg', content_type: 'image/jpg')
+world_pulse.save!
+
+world_pulse_photo = URI.open('https://world-pulse.s3.amazonaws.com/Jensine_plus_3_d1c2a9e64d.jpeg')
+world_pulse.photos.attach(io: world_pulse_photo, filename: '#{world_pulse.name}photo.jpg', content_type: 'image/jpg')
 world_pulse.save!
 
 london_gaymers = Charity.create!(
@@ -171,35 +204,114 @@ london_gaymers = Charity.create!(
     website:"https://www.londongaymers.co.uk/"
     )
 
-lg_photo = URI.open('https://scontent-cdt1-1.xx.fbcdn.net/v/t31.0-8/19477731_1329797300406924_685468511506910776_o.png?_nc_cat=106&ccb=2&_nc_sid=174925&_nc_ohc=cQB6RtvsKAYAX-DY3v3&_nc_ht=scontent-cdt1-1.xx&oh=fd25ebe55106de14bfe9090d6fcc8649&oe=5FE7DDFF')
-london_gaymers.photo.attach(io: lg_photo, filename: '#{london_gaymers.name}.jpg', content_type: 'image/jpg')
+lg_logo = URI.open('https://scontent-cdt1-1.xx.fbcdn.net/v/t31.0-8/19477731_1329797300406924_685468511506910776_o.png?_nc_cat=106&ccb=2&_nc_sid=174925&_nc_ohc=cQB6RtvsKAYAX-DY3v3&_nc_ht=scontent-cdt1-1.xx&oh=fd25ebe55106de14bfe9090d6fcc8649&oe=5FE7DDFF')
+london_gaymers.photos.attach(io: lg_logo, filename: '#{london_gaymers.name}.jpg', content_type: 'image/jpg')
 london_gaymers.save!
 
-center_for_be = Charity.create!(
-    name: "Center for Black Equity",
-    description: "The Center for Black Equity recognizes this and promotes itself as being the leading center of Black LGBTQ+ equality. The best thing about this agency is that it gets deep within communities and centers their issues with its own. The best way to help is to spread awareness. Alongside Black-owned business, Black LGBTQ+ organizations need to be lifted too. And help with donating money whenever you can.",
-    address: "Washington DC, USA",
-    category: "lgbt+",
-    website:"https://www.centerforblackequity.net/"
+lg_photo = URI.open('https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2018/10/10/88b9e15a-f847-4af9-a28c-baeb3256ae52/london-gaymers')
+london_gaymers.photos.attach(io: lg_photo, filename: '#{london_gaymers.name}photo.jpg', content_type: 'image/jpg')
+london_gaymers.save!
+
+girls_who_code = Charity.create!(
+    name: "Girls Who Code",
+    description: "Girls Who Code is a nonprofit organization which aims to support and increase the number of women in computer science by equipping young women with the necessary computing skills to pursue 21st century opportunities.",
+    address: "New-York NY, USA",
+    category: "feminist",
+    website:"https://girlswhocode.com/"
     )
 
-center_for_be_photo = URI.open('https://www.capitalpride.org/wp-content/uploads/Center_Black_Equity_logo_square-500x321.png')
-center_for_be.photo.attach(io: center_for_be_photo, filename: '#{center_for_be.name}.jpg', content_type: 'image/jpg')
-center_for_be.save!
+girls_who_code_logo = URI.open('https://pbs.twimg.com/profile_images/1256217094745657344/G8Byq6Ws_400x400.jpg')
+girls_who_code.photos.attach(io: girls_who_code_logo, filename: '#{girls_who_code.name}.jpg', content_type: 'image/jpg')
+girls_who_code.save!
 
+
+girls_who_code_photo = URI.open('https://girlswhocode.com/assets/images/craft-prod/images/3-2/_1200x800_crop_center-center_82_line/2132/campus_wagner_31.jpg.webp')
+girls_who_code.photos.attach(io: girls_who_code_photo, filename: '#{girls_who_code.name}photo.jpg', content_type: 'image/jpg')
+girls_who_code.save!
 
 marsha_pj_inst = Charity.create!(
-    name: "The Marsha P. Johnson Institute ",
+    name: "The Marsha P. Johnson Institute",
     description: "The Marsha P. Johnson Institute defends the rights of Black transgender people all over. This type of service is needed right now. Johnson was a crucial piece of the Stonewall uprising in 1969 and lives on as an important part of BIPOC LGBTQ+ history.",
     address: "Richmond, California, USA",
     category: "lgbt+",
     website:"https://marshap.org/"
     )
 
-marsha_photo = URI.open('https://pbs.twimg.com/profile_images/1240662361477992448/zN5M2k4x_400x400.jpg')
-marsha_pj_inst.photo.attach(io: marsha_photo, filename: '#{marsha_pj_inst.name}.jpg', content_type: 'image/jpg')
+marsha_logo = URI.open('https://pbs.twimg.com/profile_images/1240662361477992448/zN5M2k4x_400x400.jpg')
+marsha_pj_inst.photos.attach(io: marsha_logo, filename: '#{marsha_pj_inst.name}.jpg', content_type: 'image/jpg')
 marsha_pj_inst.save!
 
+
+marsha_photo = URI.open('https://marshap.org/wp-content/uploads/2019/06/marshap-illo.jpg')
+marsha_pj_inst.photos.attach(io: marsha_photo, filename: '#{marsha_pj_inst.name}photo.jpg', content_type: 'image/jpg')
+marsha_pj_inst.save!
+
+every_mother_counts = Charity.create!(
+    name: "Every Mother Counts",
+    description: "Every Mother Counts works to make pregnancy and childbirth safe for every mother, everywhere. We raise awareness, invest in solutions and mobilize aciton.",
+    address: "New York NY, USA",
+    category: "feminist",
+    website:"https://everymothercounts.org/"
+    )
+
+every_mother_logo = URI.open('https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/45513361_1982139005167505_6141686629212880896_o.jpg?_nc_cat=105&ccb=2&_nc_sid=85a577&_nc_ohc=NEEoJSbAQ-MAX8owSuf&_nc_ht=scontent-cdt1-1.xx&oh=48e3da58723bf2a654cb0bd6491e986d&oe=5FEA87A0')
+every_mother_counts.photos.attach(io: every_mother_logo, filename: '#{every_mother_counts.name}.jpg', content_type: 'image/jpg')
+every_mother_counts.save!
+
+every_mother_photo = URI.open('https://pbs.twimg.com/profile_banners/285681923/1602474243/1500x500')
+every_mother_counts.photos.attach(io: every_mother_photo, filename: '#{every_mother_counts.name}photo.jpg', content_type: 'image/jpg')
+every_mother_counts.save!
+
+orchid_project = Charity.create!(
+    name: "Orchid Project",
+    description: "Orchid Project is a British charity which works to end to female genital cutting. Orchid Project is based in London and primarily works to advocate for increased resources towards ending FGC and raising awareness about how the practice can end.",
+    address: "London, UK",
+    category: "feminist",
+    website:"https://www.orchidproject.org/"
+    )
+
+op_logo = URI.open('https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/10298776_1155681691124582_5417372005681807827_n.jpg?_nc_cat=108&ccb=2&_nc_sid=85a577&_nc_ohc=o94wEC9TiPEAX8ikXn7&_nc_ht=scontent-cdg2-1.xx&oh=218cd68b7495afc6c3452b146d4ef97d&oe=5FEC3425')
+orchid_project.photos.attach(io: op_logo, filename: '#{orchid_project.name}.jpg', content_type: 'image/jpg')
+orchid_project.save!
+
+
+op_photo = URI.open('https://pbs.twimg.com/media/ElBv5UOXgAA5jwg?format=jpg&name=large')
+orchid_project.photos.attach(io: op_photo, filename: '#{orchid_project.name}photo.jpg', content_type: 'image/jpg')
+orchid_project.save!
+
+
+dress_for_success = Charity.create!(
+    name: "Dress For Success",
+    description: "The mission of Dress for Success is to empower women to achieve economic independence by providing a network of support, professional attire and the development tools to help women thrive in work and in life.",
+    address: "New York NY, USA",
+    category: "feminist",
+    website:"https://dressforsuccess.org/"
+    )
+
+dress_logo = URI.open('https://pbs.twimg.com/profile_images/2857266807/ae0282a5d0eb825fa613ab02f01ad884_400x400.jpeg')
+dress_for_success.photos.attach(io: dress_logo, filename: '#{dress_for_success.name}.jpg', content_type: 'image/jpg')
+dress_for_success.save!
+
+dress_photo = URI.open('https://dressforsuccess.org/wp-content/themes/dfs/library/images//about-us/about-us-who-we-are-resized.jpg')
+dress_for_success.photos.attach(io: dress_photo, filename: '#{dress_for_success.name}photo.jpg', content_type: 'image/jpg')
+dress_for_success.save!
+
+
+gnb = Charity.create!(
+    name: "Girls Not Brides",
+    description: "Girls Not Brides: The Global Partnership to End Child Marriage is an international non-governmental organization with the mission to end child marriage throughout the world. The organization was created by The Elders to enable small groups from around the world to address the common issue of early marriage.",
+    address: "London UK",
+    category: "feminist",
+    website:"https://www.girlsnotbrides.org/"
+    )
+
+gnb_logo = URI.open('https://pbs.twimg.com/profile_images/752782027448020993/txV3-cFF_400x400.jpg')
+gnb.photos.attach(io: gnb_logo, filename: '#{gnb.name}.jpg', content_type: 'image/jpg')
+gnb.save!
+
+gnb_photo = URI.open('https://pbs.twimg.com/profile_banners/360046324/1531212484/1500x500')
+gnb.photos.attach(io: gnb_photo, filename: '#{gnb.name}photo.jpg', content_type: 'image/jpg')
+gnb.save!
 
 puts "Creating articles..."
 puts "------------------------------------"
@@ -326,6 +438,44 @@ london_gaymers_article = Article.create!(
 
 It's a sentiment shared by Matthew Hardwick, co-founder of the on- and offline LGBT+ community London Gaymers; 'Online spaces can be generally quite a negative experience for minorities as it is,' he says, 'but with insults like 'fag', 'queer', and 'gay' often thrown around in a derogatory manner, it can be particularly hard for LGBT people.' By way of illustration, Hardwick relates one of his own experiences, when someone he'd played online with for over a year immediately bombarded him with abuse on finding out he was gay in party chat. '[He] said I should 'die of AIDS' and 'ass cancer' before threatening to come to my home to murder me.")
 
+girls_who_code_article = Article.create!(
+  title: "Groundbreaking Research From Girls Who Code and Accenture Outlines Steps to Double Women in Tech in 10 Years",
+  date: '2020-11-20',
+  url: "https://girlswhocode.com/news/groundbreaking-research-from-girls-who-code-and-accenture-outlines-steps-to-double-women-in-tech-in-10-years",
+  charity: girls_who_code,
+  content: "According to research, SHROs twice as likely as female employees to say that it is easy for women to thrive in tech
+
+Joint report indicates that more inclusive company cultures could drop annual attrition rate of women in tech by 70 percent, leading to 3 million women in tech by 2030
+
+NEW YORK (September 29, 2020) – Girls Who Code, the international non-profit leading efforts to close the gender gap in tech, today released a report in partnership with Accenture (NYSE: ACN) indicating an inclusive culture is key to unlocking opportunities for women who are studying and working in technology,
+
+Importantly, the report pointed to a disconnect between what women experience in their roles and what Senior Human Resource Officers (SHROs) believe about their organizations. Specifically, SHROs (45%) are twice as likely as women (21%) to say that it is easy for women to thrive in technology. In fact, just 38% of SHROs identify building a more inclusive culture as an effective way to retain and advance women in technology roles.
+
+The research showed that a cultural reset would have far-reaching positive results. The analysis highlighted that if every company scored high on measures of an inclusive culture — specifically, if they were on par with those in the top 20% of the study — the annual attrition rate of women in technology would drop 70%.
+
+“Girls Who Code has 80,000 college-aged alumni, and more on the way, who will be entering the tech workforce in the coming years—and we’re committed to making sure they’re set up for success,” said Reshma Saujani, founder and CEO of Girls Who Code. “Thanks to this partnership with Accenture, we’re able to provide companies and colleges with concrete steps to retain and advance women in technology. And it all starts with creating an inclusive culture.”
+
+The report, “Resetting Tech Culture,” analyzed the journey for women in IT, from college to successful mid-career. It uncovered specific environment characteristics to help women in technology advance and thrive. The research revealed that, while women leave technology for various reasons, a non-inclusive company culture accounts for 37% of those — making it the number one cause.
+
+“Our research over the past three years has identified three pillars of an inclusive culture: bold leadership, comprehensive action and an empowering environment. We hope to inspire other companies to understand that with a stronger focus on these pillars, the more likely women are to thrive,” said Kathryn Ross, global Open Innovation lead and the Black Founders Development Program lead for Accenture Ventures. “By raising awareness through our findings and action through our recommendations, we hope to advance gender equality in the workplace.”
+
+A nationwide adoption of five cultural practices could help retain 1.4 million young women in tech roles by 2030, which include:
+
+Make it a metric: Set external goals and targets to increase diversity and hold leaders accountable.
+Promote equal parenting: Encourage all parents to take leave and make sure they see senior leaders doing the same
+Send reinforcements: Provide women with targeted workplace support including mentors, sponsors and employee resource networks
+Encode creativity: Reward employees for creativity and innovation as many women who enter technology seek fulfillment and to make a difference in the world
+Provide inclusive networking: Schedule opportunities to promote networking with colleagues and senior leaders when everyone can join
+Research Methodology
+
+The results are based on three online surveys combined with Accenture’s inclusive workplace culture model. The surveys were conducted online between February and July 2019 and cover three distinct groups across the United States: 1,990 tech employees; 500 senior HR leaders in companies employing people in technology roles; and 2,700 college students.
+
+About Girls Who Code
+
+Girls Who Code is an international nonprofit organization working to close the gender gap in technology, and leading the movement to inspire, educate and equip young women with the computing skills needed to pursue 21st century opportunities. Since launching in 2012, Girls Who Code has reached 500 million people through its work and 300,000 girls through its in-person programming. College-aged alumni of Girls Who Code are declaring majors in computer science and related fields at 15 times the U.S. average. In 2019, the organization was named the #1 Most Innovative Non-Profit on Fast Company’s Most Innovative Companies list. Follow the organization on social media @GirlsWhoCode.
+
+")
+
 marsha_pj_inst_article = Article.create!(
   title: "No pride without liberation",
   date: '2020-11-20',
@@ -336,6 +486,109 @@ marsha_pj_inst_article = Article.create!(
 …
 
 Elle Hearns, founder and the executive director of the Marsha P. Johnson Institute, explains to Yahoo Life that Black people cannot be excluded from a movement they started. “The reality is Pride was started during the civil rights movement. … There was no way to disassociate the Stonewall rebellion with the rebellion of the acts and sacrifices of Black people. During that time, a lot of the tactics that Stonewall utilized in the fight for gay liberation were the tactics that were utilized from the civil rights movement.” The organization, named after the Stonewall pioneer, works to “protect and defend the human rights of black transgender people here in the United States.”")
+
+every_mother_article = Article.create!(
+  title: "We all must be accountable.",
+  date: '2020-11-20',
+  url: "https://everymothercounts.org/on-the-front-lines/we-all-must-be-accountable/",
+  charity: every_mother_counts,
+  content: "In the week since the devastating death of George Floyd, we’ve borne witness to an unbelievable spectrum of emotions play out across our country. With despair pouring out from aching hearts everywhere, many of us find ourselves asking: where is the humanity? What we can do? How can we take greater accountability toward change? Is change even possible?
+
+All of us at EMC believe that change is, indeed, possible. But we must start by changing ourselves and addressing the systems that have allowed the injustice to reach this point. We must move beyond intention toward actionable impact. We not only have the power to change, we have the potential. The time is now and we must recognize that this is long overdue.
+
+So, that’s what we’re doing…we’re starting. Here’s how.
+
+
+We’re examining our language.
+Words are critical, and for years we’ve been hearing that “race affects maternal health experiences and outcomes.” The truth is, race does NOT affect experiences and outcomes. Racism does. It is exposure to implicit bias and structural and interpersonal racism that makes pregnancy and childbirth more dangerous for Black and Indigenous mothers.
+
+We’re getting comfortable with being uncomfortable.
+Having real conversations can be hard, and hard conversations are uncomfortable. This week, we’re doing both. Instead of focusing our annual staff retreat on the usual subjects of budgets, strategies and roadmaps, our team will participate in a day-long (virtual) workshop this week focused on achieving equity and justice in all its forms.
+
+We’re taking accountability.
+Change requires accountability which begins with taking responsibility. We are re-examining what it means to be a responsible non-profit organization in this day and age, and will work harder than ever to replace outdated colonial models with trust-based giving and shared decision-making, listening to partners from marginalized communities every step of the way.
+
+We’re uplifting and amplifying our partners.
+For years, we have supported community-based organizations on the front lines of racial and birth justice—partners that include Ancient Song Doula Services, Changing Woman Initiative, SisterWeb and Village Birth International. Our job is not only to help sustain their work to have the greatest possible impact for mothers, everywhere, but to uplift and amplify our partners as leading examples of equitable, compassionate care to be emulated.
+
+We’re centering the voices of Black, Indigenous, People of Color communities.
+To do our work transparently and inclusively, we must continuously center the voices of individuals and communities historically harmed by systems of oppression. We are renewing our commitment to create front-and-center space at a collective table for all stakeholders, not just our own community, in all we do.
+
+We’re taking action.
+We know that there is a direct relationship between racism and the disproportionate rates of maternal deaths among Black and Brown communities in the United States—the only developed country in the world with a worsening maternal mortality rate. To end this inexcusable trend, we must relentlessly demand better from our leaders. Take action today by joining us in calling on State and Federal leaders to act to protect and uplift the needs of mothers and families.
+
+As members of our community and supporters of our work, we welcome you to join us. And if you’re not sure where to start, we’ve put together this Black Maternal Health reading list as a starting point for self-education.
+
+With gratitude,
+
+Christy Turlington Burns
+
+Founder, Every Mother Counts")
+
+
+orchid_project_article = Article.create!(
+  title: "We all must be accountable.",
+  date: '2020-10-20',
+  url: "https://www.orchidproject.org/different-evidence-same-community-putting-female-genital-cutting-research-into-practice/",
+  charity: orchid_project,
+  content:"Translating research evidence into practice can be a protracted, complicated process.  We need sufficient funds to do it effectively, and have buy-in from those implementing the changes; changes that must be seen as acceptable and achievable by our target audiences.
+
+Cultural, religious and gender-based sensitivities, such as those we see around female genital cutting (FGC), complicate that process further, as does the perception that the type of evidence is important, too.  A divide has traditionally existed between ‘academic’ and ‘community-based’ research.  Academic research is often maligned for its lack of real-world relevance and applicability beyond rarefied scholarly conferences or obscure journals littering dusty library bookshelves.
+
+But it doesn’t have to be that way. It’s a deliberate choice and choices aren’t fixed. Academic and community-based research aren’t necessarily polar opposites.  When conducted well, the data they produce can echo each other, producing synergised lessons and harmonised action points that can be implemented in community-level programmes.
+
+As part of a five-year FGC research programme funded by the United Kingdom’s Department for International Development—the Evidence to End FGM/C: Research to Help Girls and Women Thrive—primary data was collected on the practice in Somaliland by academics from Population Council. The headline findings from that work, and how it resonated with existing community-based research, suggest how they can be implemented in communities to end FGC.
+
+Against a background of near-universal prevalence of female genital cutting in Somaliland, two studies conducted between 2016-19 sought to determine if there were any attitudinal or behavioural changes in the practice and the drivers of those changes. Among their main findings were a two-fold change in the practice for health reasons:
+
+The type of cut was changing —moving from the pharaonic (WHO type III) to what was referred to as the Sunna cut (WHO type I or IV – even though this was interpreted differently among people), especially in urban areas.
+This change was attributed to awareness generation and sensitisation in the community by healthcare workers and religious leaders. Most respondents were convinced the change was a positive development, improving the health of girls by minimising harmful health complications; despite the fact that all forms of cutting are harmful and a violation of human rights. It remained unknown whether this change could lead to total abandonment of the practice.
+
+The cut was being medicalised—linked to the Sunna cut—with health professionals as cutters and cutting occurring at facilities or at individuals’ homes.
+Underpinning these changes was a parental need—produced by the medical narrative of anti-FGC campaigns and spiritual leaders promoting the Sunna cut—to find an acceptable balance between health preservation of girls and the socio-cultural and religious normative expectation that a cut is undertaken.
+
+Crucially, only 2% of community members supported abandoning female genital cutting entirely. Changes are happening to the practice but only in the sense that the Sunna cut has emerged as a new norm, a more socially acceptable type of FGC that is justified by religious teachings and perceived health messaging. Consequently, the study found that while existing FGC norms are being contested in Somaliland, there is a need to engage at the community level with religious leaders, health professionals, older members of society (especially influential grandmothers) and young people.
+
+The research conducted by Population Council at the academic level is vital, and it’s crucial to the movement to end female genital cutting that more research is carried out so we understand the scale, impacts and changing dynamics of the practice at a local, national and global level. Crucially it can also complement and validate community-originated research—such as that conducted by the Somaliland Family Health Association (SOFHA) with Orchid Project support—that can be more easily applied within programming.")
+
+dress_article = Article.create!(
+  title: "Dress for Success Worldwide CEO Joi Gordon Discusses Going Virtual with ABC News",
+  date: '2020-10-20',
+  url: "https://dressforsuccess.org/news/dress-for-success-worldwide-ceo-joi-gordon-discusses-going-virtual-with-abc-news/",
+  charity: dress_for_success,
+  content:"Dress for Success Worldwide CEO Joi Gordon discusses providing virtual programming in response to the COVID-19 pandemic and how Dress for Success Oklahoma City plans to rebuild after being vandalized in the midst of nationwide civil unrest.")
+
+gnb_article = Article.create!(
+  title: "We are not longer alone",
+  date: '2020-10-20',
+  url: "https://www.girlsnotbrides.org/girls-adolescents-young-women-and-injustice-in-lac/",
+  charity: gnb,
+  content:"I still remember when I was a girl – small, taciturn and shy – slipping unnoticed through the crowd. From that small child, I’ve grown into a woman who knows the strength of her own voice, and who speaks out against injustices.
+
+Being around and learning from other women has been key to my personal development and liberation, helping me to feel I belong to a group and know that – even from a distance – my friends stand with me in the struggle.
+
+Growing up and becoming more aware of my reality brought indignation and anger, but also a desire to take action. I was spurred by the cold facts and painful stories of the girls, adolescents, young women and women whose bodies have been cut through by the violence of a patriarchal and sexist system. And the racism and classism that are rooted in our justice systems and societies affect us Indigenous women more seriously. The COVID-19 pandemic is laying bare the precarious reality of Latin America and the Caribbean. It’s highlighting social and economic inequalities and shedding light on the marginalisation, repression and subjugation of women and Indigenous peoples.
+
+Lockdowns affect us all differently. The number of girls, adolescents, young women and women being sexually assaulted has increased. Communities have been criminalised and supressed for defending their natural resources, as other forces seek to further their territorial control. Access to services such as water is still a privilege, and Indigenous women’s access to justice – through its bureaucratic and monolingual processes – is coloured by discrimination and racism. Our justice officials are co-opted and distanced from our communities, making it difficult to file complaints and access information.
+
+On top of this, girls, adolescents, young women and women shoulder more household chores, including providing food and care. This discrimination – which is aggravated by lockdowns – is a significant driver of child, early and forced marriages and unions (CEFMU).
+
+I am aware of the challenges, but also believe the pandemic could be a window of opportunity for analysing how we’ve been living and the nature of our justice and government systems – do they work or have they created impoverished societies and weak institutions?
+
+I firmly believe we can make progress and positive changes in our territories. Knowing that we are no longer alone fuels my hope: even at a distance, we stand together as girls, adolescents, young women and women, and there are more of us every day.
+
+As long as there are voices speaking out against injustice, there’s hope. Girls, adolescents, young women and women play a fundamental role in these processes. That’s why we need to help others recognise the strength of their voices, encourage them to get involved and create spaces for participation.
+
+As a girl I was indifferent to the world of activism, but gaining access to information changed my life. Since then, I’ve worked on community and national advocacy, in processes that bring together stakeholders, educators, field experts and young women to raise awareness and take actions that favour girls and adolescents in Guatemala.
+
+That’s why I think we need to strengthen a generation of empowered women who recognise themselves as political subjects and agents of change; who demand that their States take responsibility for guaranteeing better living conditions for the girls, adolescents, young women and women of Latin America and the Caribbean, legislating and investing in – rather than against – their interests.
+
+Despite the murky outlook, I find a beacon of hope in those who denounce, rebel and speak out, resisting in different ways: in the streets; through journalism, research, art and youth collectives; as Indigenous, Garífuna and Xinca women; as feminists; in academia; on the radio and social media; and – for those who have been unjustly imprisoned for defending their territories – from jail.
+
+As long as there are voices speaking out, there’s hope. It’s so important that we form networks and that there are more of us every day.
+
+")
+
 
 puts "Creating supports..."
 puts "------------------------------------"
@@ -356,7 +609,7 @@ Support.create!(user: manon, charity: marsha_pj_inst)
 
 Support.create!(user: manon, charity: london_gaymers)
 
-Support.create!(user: manon, charity: center_for_be)
+Support.create!(user: manon, charity: girls_who_code)
 
 
 puts "Creating projects..."
