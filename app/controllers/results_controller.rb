@@ -16,6 +16,7 @@ class ResultsController < ApplicationController
     response = Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == 'https') do |http| # start la requete
       http.request(request) # lance la requete request qu'on a construit avant et renvoi le JSON dans "response"
     end
+    raise
     bing_webpages = JSON(response.body)["webPages"]["value"] # renvoie un array de hashes
     # pour entities:
     #   entities_results = JSON(response.body)["entities"]["value"]
