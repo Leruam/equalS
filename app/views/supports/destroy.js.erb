@@ -1,0 +1,7 @@
+document.querySelector("#support<%= @support.charity.id %>").remove();
+document.querySelector("#other-charities")
+        .insertAdjacentHTML("beforeend",
+         "<%= j render 'users/charity_card', charity: @support.charity %>")
+
+
+
