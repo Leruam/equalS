@@ -24,6 +24,10 @@ class ApplicationController < ActionController::Base
     total_money.sum.round
   end
 
+  def default_url_options
+    { host: ENV["DOMAIN"] || "localhost:3000" }
+  end
+
   private
 
   def skip_pundit?
