@@ -1,0 +1,15 @@
+<div class="col-4 d-flex justify-content-center" id="charity<%= charity.id %>">
+  <div class="card-charity image" style="background-image: url(<%=cl_image_path charity.photos.last.key, width: 250, height: 300, crop: :fill %>)">
+  <div class="overlay-charity"></div>
+    <div class="display-card-charity">
+      <h6><%= charity.name %></h6>
+      <p><%= charity.category %></p>
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <%= link_to "SUPPORT", charity_supports_path(charity), method: :post, remote: true, class: "btn-principal"%>
+        <%= link_to "INFO", charity_path(charity), method: :get, class: "btn-third"%>
+      </div>
+    </div>
+    <div class="association-name"><p><%= charity.name%></p></div>
+  </div>
+</div>
+

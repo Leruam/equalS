@@ -2,16 +2,16 @@
   <div class="container-profil">
     <div class=container-insights>
       <div class="card-insights">
-          <h4 class="underline">You</h4>
-          <div class="topline"><p><strong><%= number_with_delimiter(@user_total_search_count, :delimiter => ',') %></strong> searches in total</p></div>
-          <p><strong><%= @user_today_search_count %></strong> searches today</p>
-          <p><strong><%= @user_charity_count %></strong>  charities supported</p>
+          <h4 class="underline">Your contribution</h4>
+          <div class="topline"><p><strong style="color: #1c6a75; font-size: 17px;"><%= number_with_delimiter(@user_total_search_count, :delimiter => ',') %></strong> searches in total</p></div>
+          <p><strong style="color: #1c6a75; font-size: 17px;"><%= @user_today_search_count %></strong> searches today</p>
+          <p><strong style="color: #1c6a75; font-size: 17px;"><%= @user_charity_count %></strong>  charities supported</p>
       </div>
       <div class="card-insights">
         <h4 class="underline">Our community</h4>
-        <div class="topline"><p><strong><%= @global_charity_count %></strong> charities supported by EqualS</p></div>
-          <p><strong><%= number_with_delimiter(@global_search_count_today, :delimiter => ',') %></strong> total searches today</p>
-          <p><strong><%= number_with_delimiter(@global_search_count, :delimiter => ',') %></strong> total searches since EqualS was born</p>
+        <div class="topline"><p><strong style="color: #1c6a75; font-size: 17px;"><%= @global_charity_count %></strong> charities supported by EqualS</p></div>
+          <p><strong style="color: #1c6a75; font-size: 17px;"><%= number_with_delimiter(@global_search_count_today, :delimiter => ',') %></strong> total searches today</p>
+          <p><strong style="color: #1c6a75; font-size: 17px;"><%= number_with_delimiter(@global_search_count, :delimiter => ',') %></strong> total searches since EqualS was born</p>
       </div>
     </div>
     <div class="card-container-supports">
@@ -23,26 +23,11 @@
       </div>
     </div>
   </div>
-
   <div class="second-infos-container">
     <h4 class="underline">Support more charities...</h4>
-      <div class="row">
+      <div class="row" id="other-charities">
         <% @other_charities.each do |charity| %>
-        <div class="col-4 d-flex justify-content-center">
-          <div class="card-charity image" style="background-image: url(<%=cl_image_path charity.photos.last.key, width: 250, height: 300, crop: :fill %>)">
-          <div class="overlay-charity"></div>
-            <!-- <div class="image" style="background-image: url(<%=cl_image_path charity.photos.first.key%>)"></div> -->
-            <div class="display-card-charity">
-              <h6><%= charity.name %></h6>
-              <p><%= charity.category %></p>
-              <div class="d-flex flex-column justify-content-center align-items-center">
-                <%= link_to "SUPPORT", charity_supports_path(charity), method: :post, remote: true, class: "btn-principal"%>
-                <a href="#" class="btn-third">info</a>
-              </div>
-            </div>
-            <div class="association-name"><p><%= charity.name%></p></div>
-          </div>
-        </div>
+          <%= render "users/charity_card", charity: charity %>
         <% end %>
      </div>
   </div>
