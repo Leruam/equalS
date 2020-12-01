@@ -3,4 +3,5 @@ class Article < ApplicationRecord
   has_one_attached :photo
   validates :title, :url, :date, :content, presence: true
   validates :url, uniqueness: true
+  has_one_attached :photo
 end
