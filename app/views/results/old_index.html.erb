@@ -1,3 +1,4 @@
+<!-- ancien index avant modif pour entities -->
 
 <div class="container">
   <div class="results-60 mb-3">
@@ -5,19 +6,16 @@
   </div>
 
   <%= render 'results/navbar_results' %>
-</div>
-
-<div class="container d-flex">
 
   <div class="results-60">
-
     <% @webpages_results.each do |result|%>
       <%= render "results/result_card", result: result %>
     <% end %>
 
   </div>
   <div class="focus-40">
-      <%= render "results/entity_card", result: @entities_results.first unless @entities_results.empty?%>
-  </div>
 
+  </div>
 </div>
+
+
