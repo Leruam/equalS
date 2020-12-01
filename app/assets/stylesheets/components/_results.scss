@@ -1,9 +1,9 @@
 
-.results {
+.results-60 {
   width: 60%;
 }
 
-.focus {
+.focus-40 {
   width: 40%;
 }
 
@@ -30,3 +30,55 @@
   }
   text-decoration: none !important;
 }
+
+.navbar-tabs {
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.navbar-item {
+  padding: 0px 10px 0px 0px;
+}
+
+.navbar-item-active {
+  // classe à rajouter en js
+  // probablement mettre le surlignage violet
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: $grey-text;
+}
+
+.navbar-link:hover {
+  text-decoration: none;
+  color: $purple-text;
+}
+
+.images-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.images-results-grid {
+  width: 200px;
+}
+
+@media(max-width: 992px) {
+  .images-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .images-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+

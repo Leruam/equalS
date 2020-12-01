@@ -1,6 +1,6 @@
 class ResultsController < ApplicationController
 
-  skip_before_action :authenticate_user!, only: :index
+  skip_before_action :authenticate_user!, only: [:index, :image_index]
 
   def index
     access_key = ENV["BING_ACCESS_KEY"] # va chercher le token dans le fichier .env
@@ -31,7 +31,29 @@ class ResultsController < ApplicationController
         { title: search["name"], link: search["url"], link_display: search["displayUrl"], snippet: search["snippet"] }
         # on pourra rajouter les deeplinks plus tard au besoin deeplinks: search["deepLinks"]
       end
-   end
+  end
+
+  def image_index
+    access_key = ENV["BING_ACCESS_KEY"]
+    uri = "https://api.bing.microsoft.com"
+    path = "/v7.0/images/search"
+    term = params[:q]
+    uri = URI(uri + path + "?q=" + CGI.escape(term))
+
+    request = Net::HTTP::Get.new(uri)
+    request['Ocp-Apim-Subscription-Key'] = access_key
+
+    response = Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == 'https') do |http|
+      http.request(request)
+    end
+    bing_images = JSON(response.body)["value"]
+    @images_results = bing_images.empty? ?
+      []
+      :
+      bing_images.map do |search|
+        { title: search["name"], link: search["contentUrl"], link_thumbnail: search["thumbnailUrl"], thumbnail_size: search["thumbnail"] }
+      end
+  end
 end
 
   # JSON::pretty_generate(JSON(response.body)) --> pour voir le resultat de la requete en JSON dans le terminal

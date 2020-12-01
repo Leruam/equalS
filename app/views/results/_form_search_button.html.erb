@@ -1,0 +1,12 @@
+<!-- ce bout de code n'est plus utilisé mais pourra servir plus tard pour rendre le code modulable quand on voudra mettre des filtres sur les recherches -->
+
+<%= simple_form_for :search, url: form_path, method: :get do |f| %>
+  <%= f.input :q, label: false, input_html: {class: "d-none", value: params[:q]} %>
+  <%# d-none permet de ne pas afficher le champ dans le form  %>
+  <%= f.submit button_text, class: "navbar-link" %>
+  <% end %>
+
+<!-- on utilise les paramètres form_path et button_text pour pouvoir réutiliser la partial avec d'autres usages -->
+<!-- par exemple vidéo... -->
+<!-- on pourrait aller plus loin en mettant un affichate dynamique avec des formule du type : {class: "#{"d-none" unless shown_input == "q" }"-->
+<!-- qui permettrait d'afficher ou non l'input en fonction de ce qu'on veut faire, par exemple sur les filtres -->
