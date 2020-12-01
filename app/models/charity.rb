@@ -6,16 +6,14 @@ class Charity < ApplicationRecord
   has_many_attached :photos
   validates :name, :description, :address, :category, presence: true
 
-  EUROS_PER_SEARCH = 1246.6 # c'est nawak mais mieux pour seeder les montants des assoces
-  SEEDED_AMOUNT = 11239598
+  SEEDED_AMOUNT = 6_227_921
+  Euros_per_search = 1_246.6 # c'est nawak mais mieux pour seeder les montants des assoces
 
-  def money_charity(charity_id)
+  def money_charity
     total_generated_user = []
-    SEEDED_AMOUNT / Charity.all.count
-
-    Charity.find(charity_id).users.each do |user|
-      total_generated_user << user.searches.count * EUROS_PER_SEARCH
+    self.users.each do |user|
+      total_generated_user << user.searches.count * Euros_per_search
     end
+    (total_generated_user.sum + (SEEDED_AMOUNT / Charity.all.count)).round
   end
-
 end

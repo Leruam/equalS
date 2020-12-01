@@ -15,6 +15,15 @@ class ApplicationController < ActionController::Base
   # end
   # liens cours le wagon: https://kitt.lewagon.com/camps/500/lectures/05-Rails%2F07-Airbnb-Facebook-connect#source
 
+  def global_money
+    # on calcule le total via les charities
+    total_money = []
+    Charity.all.each do |charity|
+      total_money << charity.money_charity
+    end
+    total_money.sum.round
+  end
+
   private
 
   def skip_pundit?
