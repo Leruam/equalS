@@ -125,7 +125,7 @@ solidarites_femmes = Charity.create!(
     address: "Paris, France",
     category: "Domestic violence",
     website:"https://www.solidaritefemmes.org/",
-    video: "https://vimeo.com/vimeo/295607946"
+    video: "https://www.youtube.com/embed/YExYbh4ly38?list=PLrfXq2BsNVaBmnJ5hD6mwsssDXm4G5kzX"
     )
 
 solidarites_femmes_logo = URI.open('https://ideas.asso.fr/wp-content/uploads/2019/07/LogoFNSF-profilTW2.png')
@@ -335,274 +335,356 @@ le_refuge_article = Article.create!(
   title: "The foundation le refuge calls for solidarity during lockdown.",
   date: '2020-11-18',
   url: "https://www.le-refuge.org/actu/communique-la-fondation-le-refuge-appelle-a-la-solidarite-pendant-le-confinement.html",
-  charity: le_refuge,
-  content: "Fondation Le Refuge is launching its winter donation campaign to allow its teams to support young LGBT+ youth rejected by their loved ones because of their sexual orientation or gender. With 500 euros, Le Refuge will shelter, feed and accompany two young people for one month. The public can contribute to the Foundation's mission of public utility on le-refuge.org/urgence. In the 22 reception facilities of the Fondation Le Refuge, calls and requests for accommodation have been increasing since the beginning of the year. The urgency for the Foundation is to be operational for the winter, when a second period of lockdown has just opened. We have received 6,003 calls on the emergency line since January,' says Nicolas Noguier, President of Fondation Le Refuge. This represents a 15% increase in one year. Requests for accommodation have increased by 13% (801 received since January). 'Le Refuge has more than 16,000 donors to date: a crucial mobilization each year because private donations represent 80% of the Foundation's resources."
-  )
+  charity_id: le_refuge.id,
+  content: "Fondation Le Refuge is launching its winter donation campaign to allow its teams to support young LGBT+ youth rejected by their loved ones because of their sexual orientation or gender. With 500 euros, Le Refuge will shelter, feed and accompany two young people for one month...")
+
+le_refuge_article_photo = URI.open('https://www.le-refuge.org/wp-content/uploads/2020/11/le-refuge_appel_aux_dons_2020-1155x570.jpg')
+le_refuge_article.photo.attach(io: le_refuge_article_photo, filename: '#{le_refuge_article.title}.jpg', content_type: 'image/jpg')
+le_refuge_article.save!
+
+le_refuge_article_two = Article.create!(
+  title: "DECEMBER 1 - FRED COLBY: THANK YOU! - LE REFUGE FOUNDATION",
+  date: '2020-12-01',
+  url: "https://www.le-refuge.org/actu/1er-decembre-fred-colby-merci.html",
+  charity_id: le_refuge.id,
+  content: "A moving testimony,
+Fred Colby tells his story, after all classic in our homo journey, without complex or tongue in cheek but with a touching truth.
+And yes HIV can happen to anyone: especially when you start your sex life....")
+
+le_refuge_article_photo_two = URI.open('https://www.le-refuge.org/wp-content/uploads/2020/12/fred-colby-serophobie-serofierte-1155x570.jpg')
+le_refuge_article_two.photo.attach(io: le_refuge_article_photo_two, filename: '#{le_refuge_article_two.title}.jpg', content_type: 'image/jpg')
+le_refuge_article_two.save!
+
 
 osez_le_feminisme_article = Article.create!(
   title: "Send this open letter to the government to end impunity.",
   date: '2020-11-20',
   url: "http://osezlefeminisme.fr/envoyez-cette-lettre-ouverte-au-gouvernement-pour-que-cesse-limpunite-justicepourl/",
-  charity: osez_le_feminisme,
-  content: "The Criminal Chamber of the Court of Cassation denied the victim the qualification of rape on the pretext that the penetrations had not been 'sufficiently deep'. The Court thus added a new restrictive condition to the qualification of rape.
-In a decision of October 14, 2020, the Court of Cassation required a victim who was 13 years old at the time of the events to justify the depth of the penetrations imposed by her father-in-law in order to qualify the rape.
+  charity_id: osez_le_feminisme.id,
+  content: "The Criminal Chamber of the Court of Cassation denied the victim the qualification of rape on the pretext that the penetrations had not been 'sufficiently deep'...")
 
-However, the penal code does not require any requirement of depth. Judges invent law and ensure the impunity of child rapists.
+osez_le_feminisme_article_photo = URI.open('https://static.lexpress.fr/medias_11939/w_2048,h_1146,c_crop,x_0,y_68/w_480,h_270,c_fill,g_north/v1546594964/des-manifestants-portent-une-banderole-femmes-battues-justice-complice-assez-lors-d-un-rassemblement-organise-par-l-actrice-muriel-robin-contre-les-violences-faites-aux-femmes-le-6-octobre-2018-a-paris_6112940.jpg')
+osez_le_feminisme_article.photo.attach(io: osez_le_feminisme_article_photo, filename: '#{osez_le_feminisme_article.title}.jpg', content_type: 'image/jpg')
+osez_le_feminisme_article.save!
 
-How can we continue to demand that girls and women entrust their security, trust and reparation to a system that persists in denying them justice?
+osez_le_feminisme_article_two = Article.create!(
+  title: "#25 November: The fight to end male violence continues!.",
+  date: '2020-11-25',
+  url: "https://osezlefeminisme.fr/25novembre-la-lutte-pour-lelimination-des-violences-masculines-continue/",
+  charity_id: osez_le_feminisme.id,
+  content: "
+As every year, on November 25, the international day against male violence, we are outraged by the figures: 225,000 women victims of domestic violence, 94,000 women victims of rape, 165,000 minors victims of child rape, 40,000 women in prostitution, 146 women victims of feminicides...")
 
-We have written an open letter so that you can send it to the government and demand justice for L.
-You can copy the letter below:
+osez_le_feminisme_article_photo_two = URI.open('https://osezlefeminisme.fr/wp-content/uploads/2020/11/Capture-d%E2%80%99e%CC%81cran-2020-11-24-a%CC%80-11.15.24-601x445.png')
+osez_le_feminisme_article_two.photo.attach(io: osez_le_feminisme_article_photo_two, filename: '#{osez_le_feminisme_article_two.title}.jpg', content_type: 'image/jpg')
+osez_le_feminisme_article_two.save!
 
-Mr. President of the Republic,
-
-Mr. Prime Minister,
-
-Mr. Keeper of the Seals,
-
-In a decision of October 14, 2020, the Criminal Chamber of the Court of Cassation created a new restrictive condition for the qualification of rape, going beyond its power of interpretation, ensuring even more impunity for rapists who are already only 1 percent (1) convicted for their crimes.
-
-L. was 13 years old when his stepfather began to impose sexual acts on him. She describes the sexual violence that lasted several years, including penetrations with the tongue. Nevertheless, the trial judges required the victim to give details 'in terms of intensity, depth, duration or movement' failing which, according to these judges, this 'does not sufficiently characterize a voluntary introduction beyond the edge of the vagina, deep enough to characterize an act of penetration.'
-
-The Court of Cassation, the highest court in the French judicial system, has validated this argument, going beyond the criteria required by the Penal Code to qualify a rape.
-
-Indeed, article 222-23 of the Penal Code provides that 'any act of sexual penetration, of any nature whatsoever, committed on the person of another or on the person of the perpetrator by violence, coercion, threat or surprise is rape'. The criterion is therefore the act of penetration and not its depth; this case law makes the legal definition of rape in French law even more restrictive, even though it is already in violation of the Istanbul Convention because it is too restrictive.(2)
-
-How can we continue to demand that girls and women entrust their safety, trust and reparation to a system that persists in denying them justice?
-
-70 percent of complaints of rape of minors are dismissed.
-52 percent of the complaints investigated are subsequently de-qualified and corrected.
-0.3 per cent of rapes of minors are prosecuted for rape.(3)
-We want an end to impunity for sexual violence.
-
-This is urgent.")
 
 causette_article = Article.create!(
   title: "Violence against women: is 3919 in danger?",
   date: '2020-11-21',
   url: "https://www.causette.fr/societe/en-france/violences-faites-aux-femmes-le-3919-en-danger/",
-  charity: causette,
-  content: "To extend the hours of the hotline dedicated to women victims of violence, the government wants to launch a public market. A decision that alarms the National Federation for Women Solidarity (FNSF), which has been in charge of the line since its creation.
+  charity_id: causette.id,
+  content: "To extend the hours of the hotline dedicated to women victims of violence, the government wants to launch a public market. A decision that alarms the National Federation for Women Solidarity (FNSF), which has been in charge of the line since its creation...")
 
-This time, the threat is on their doorstep. For several months now, the National Federation for Women's Solidarity (FNSF) has been concerned about the willingness of the Ministry in charge of Equality between women and men to use a public contract to manage 3919, the hotline for women who are victims of violence. A few days before the publication of the specifications for this public contract, scheduled for before the end of the year, the federation is scandalized.")
+causette_article_photo = URI.open('https://intermountainhealthcare.org/-/media/images/modules/blog/posts/2020/04/intimate-partner-violence.jpg?mw=1600')
+causette_article.photo.attach(io: causette_article_photo, filename: '#{causette_article.title}.jpg', content_type: 'image/jpg')
+causette_article.save!
+
+causette_article_two = Article.create!(
+  title: "Anne Sylvestre's ideal female playlist",
+  date: '2020-11-20',
+  url: "https://www.causette.fr/culture/musique/la-playlist-feminine-ideale-danne-sylvestre",
+  charity_id: causette.id,
+  content: "We know her funny or serious texts, but always poetic and engaged. Much less its talent scout side. For Causette, she tells about the artists she discovered - here in a cabaret, there in a bistro - and whom she presents as sisters or cousins ...")
+
+causette_article_photo_two = URI.open('https://images.genius.com/33e0c966cda25aef637cb95580f4b2be.865x865x1.jpg')
+causette_article_two.photo.attach(io: causette_article_photo_two, filename: '#{causette_article_two.title}.jpg', content_type: 'image/jpg')
+causette_article_two.save!
 
 
 solidarites_femmes_article = Article.create!(
   title: "The TOMBOY label supports Solidarité Femmes",
   date: '2020-11-20',
   url: "https://www.solidaritefemmes.org/actualites/le-label-tomboy-soutient-solidarite-femmes",
-  charity: solidarites_femmes,
+  charity_id: solidarites_femmes.id,
   content: "For the first edition of its TOMBOY CARITATIF project, the label is mobilizing alongside the Fédération Nationale Solidarité Femmes.
-Exclusively for this collaboration, TOMBOY proposes a rewriting of its signature t-shirt, limited to 250 copies. The model has been on sale on the TOMBOY website since October 26th. 100% of the profits are donated to Solidarité Femmes.")
+Exclusively for this collaboration, TOMBOY proposes a rewriting of its signature t-shirt, limited to 250 copies...")
+
+solidarites_femmes_article_photo = URI.open('http://www.solidaritefemmes.org/upload/_medium/tomboy2.JPG')
+solidarites_femmes_article.photo.attach(io: solidarites_femmes_article_photo, filename: '#{solidarites_femmes_article.title}.jpg', content_type: 'image/jpg')
+solidarites_femmes_article.save!
+
+solidarites_femmes_article_two = Article.create!(
+  title: "Domestic violence: 'Take the plunge, we will accompany you'",
+  date: '2020-11-25',
+  url: "https://www.dna.fr/societe/2020/11/24/violences-domestiques-franchissez-le-cap-nous-vous-accompagnerons",
+  charity_id: solidarites_femmes.id,
+  content: "The departmental association Solidarité Femmes 68 marks 30 years of action towards women and children who are victims of domestic and intra-family violence. In Saint-Louis, it perpetuates its structure and professionalises it today through new operations and tools...")
+
+solidarites_femmes_article_photo_two = URI.open('http://www.helloasso.com/assets/img/photos/33698.jpg?format=mediaslider')
+solidarites_femmes_article_two.photo.attach(io: solidarites_femmes_article_photo_two, filename: '#{solidarites_femmes_article_two.title}.jpg', content_type: 'image/jpg')
+solidarites_femmes_article_two.save!
+
 
 nous_toutes_article = Article.create!(
   title: "#21novembre schedule",
   date: '2020-11-18',
   url: "https://www.noustoutes.org/21novembre/",
-  charity: nous_toutes,
-  content: "Saturday, November 21, #WeAll calls for a day of mobilization, online, to say stop to gender-based and sexual violence, denounce impunity and the lack of ambition of public authorities.
+  charity_id: nous_toutes.id,
+  content: "Saturday, November 21, #WeAll calls for a day of mobilization, online, to say stop to gender-based and sexual violence, denounce impunity and the lack of ambition of public authorities...")
 
-On the program of this day of mobilization: trainings, actions of interpellation, lives with inspiring feminists and concerts!
-Download and share these visuals on the social networks and don't forget to indicate the links to register.")
+nous_toutes_article_photo = URI.open('https://www.anousparis.fr/app/uploads/2018/11/Femmes2-e1543233823293.jpg')
+nous_toutes_article.photo.attach(io: nous_toutes_article_photo, filename: '#{nous_toutes_article.title}.jpg', content_type: 'image/jpg')
+nous_toutes_article.save!
+
+nous_toutes_article_two = Article.create!(
+  title: "Gender-based and sexual violence: the Nous tous collective is organizing an online mobilization",
+  date: '2020-11-21',
+  url: "https://www.francebleu.fr/infos/societe/violences-sexistes-et-sexuelles-le-collectif-nous-toutes-organise-une-mobilisation-en-ligne-1605945098",
+  charity_id: nous_toutes.id,
+  content: "No marches bringing together tens of thousands of people, as in 2019: this year, because of the coronavirus, the #NousToutes collective is mobilizing online to fight against sexual and gender-based violence.
+...")
+
+nous_toutes_article_photo_two = URI.open('https://cdn.radiofrance.fr/s3/cruiser-production/2020/11/8dcbb8e8-2eb1-4ef5-80f2-e7a995daa301/870x489_noustoutes.webp')
+nous_toutes_article_two.photo.attach(io: nous_toutes_article_photo_two, filename: '#{nous_toutes_article_two.title}.jpg', content_type: 'image/jpg')
+nous_toutes_article_two.save!
+
 
 happy_period_article = Article.create!(
   title: "Happy period founder chelsea vonchaz on why she founded the organization and her period routine",
   date: '2020-11-25',
   url: "https://www.getrael.com/blogs/r-blog/happy-period-founder-chelsea-vonchaz-on-why-she-founded-the-organization-and-her-period-routine",
-  charity: happy_period,
-  content: "If there's anyone that loves and celebrates periods as much as we do, it's Chelsea VonChaz. She is the founder of Happy Period, an organization we partner with that provides menstrual hygiene kits to local women who are homeless, low-income, or living in poverty. Founded in 2015, Happy Period began as a movement in Downtown Los Angeles's Skid Row.
+  charity_id: happy_period.id,
+  content: "If there's anyone that loves and celebrates periods as much as we do, it's Chelsea VonChaz. She is the founder of Happy Period, an organization we partner with that provides menstrual hygiene kits to local women who are homeless, low-income, or living in poverty...")
 
-Like Rael, VonChaz and Happy Period believe no one should go without menstrual care and are on a mission to end the stigma around menstruation. That's precisely why we were excited to chat with VonChaz to learn more about how the organization came to be, her relationship with her period, and what Happy Period is working on next.
+happy_period_article_photo = URI.open('https://assets.entrepreneur.com/content/3x2/2000/20180817184958-chelsea-vonchaz.jpeg')
+happy_period_article.photo.attach(io: happy_period_article_photo, filename: '#{happy_period_article.title}.jpg', content_type: 'image/jpg')
+happy_period_article.save!
 
-What sparked the idea to start Happy Period?
+happy_period_article_two = Article.create!(
+  title: "We can all help homeless women get the menstrual hygiene products they desperately need",
+  date: '2016-11-25',
+  url: "https://hellogiggles.com/lifestyle/can-help-homeless-women-get-menstrual-hygiene-products-desperately-need/#read",
+  charity_id: happy_period.id,
+  content: "When you see a homeless woman, I doubt the first thing that crosses your mind is whether she’s on her period. For most of us, actually, menstruation is the last thing we think about when we see someone who doesn’t have a home...")
 
-'I basically told all my girlfriends what I saw—a homeless woman bleeding through her pants. From there, it was a collaborative effort. My mom and I and five girlfriends pitched in on the idea. It kind of just came together like a huge puzzle within the span of a week or two. My mom came up with the name. One girlfriend was volunteering with another organization and we decided to come together to do a distribution day and then go by shelters. We just figured things out as we went. After the first donation, there was such a positive and overwhelming feeling that it led us to want to do it again. After four months of packing and going to shelters, I decided to create Happy Period as an official charity.'")
+happy_period_article_photo_two = URI.open('https://imgix.bustle.com/rehost/2016/9/14/3f72b32e-548f-4444-ab10-caaa9144b149.jpg?w=800&auto=format%2Ccompress&cs=srgb&q=70&fit=crop&crop=faces&dpr=2')
+happy_period_article_two.photo.attach(io: happy_period_article_photo_two, filename: '#{happy_period_article_two.title}.jpg', content_type: 'image/jpg')
+happy_period_article_two.save!
 
 pro_mujer_article = Article.create!(
   title: "Celebrating 30 years empowering women in Latin America",
   date: '2020-11-20',
   url: "https://promujer.org/30-anniversary/",
-  charity: pro_mujer,
-  content: "For 30 years, Pro Mujer has been working hand in hand with women and our allies in Latin America to break the barriers that limit their potential- high rates of gender-based violence and teen pregnancy, migration crises, discrimination, lack of health care access to name a few. As we begin a new decade, it is time for us to look back on the past and reflect on what we have achieved collectively and where we must redirect our efforts. Our mandate is to become a large-scale sustainable platform that delivers relative and transformative tools and resources to women across life cycle allowing us to expand our services and reach exponentially more women.")
+  charity_id: pro_mujer.id,
+  content: "For 30 years, Pro Mujer has been working hand in hand with women and our allies in Latin America to break the barriers that limit their potential- high rates of gender-based violence and teen pregnancy, migration crises, discrimination, lack of health care access to name a few....")
+
+pro_mujer_article_photo = URI.open('https://borgenproject.org/wp-content/uploads/Pro-Mujer-845x675.jpg')
+pro_mujer_article.photo.attach(io: pro_mujer_article_photo, filename: '#{pro_mujer_article.title}.jpg', content_type: 'image/jpg')
+pro_mujer_article.save!
+
+pro_mujer_article_two = Article.create!(
+  title: "The 'Pro mujer' association gives a voice to women in Latin America",
+  date: '2019-08-20',
+  url: "https://information.tv5monde.com/terriennes/l-association-pro-mujer-donne-une-voix-aux-femmes-d-amerique-latine-306135",
+  charity_id: pro_mujer.id,
+  content: "Abortion prohibited and punishable by prison in some countries, women at the head of the poorest populations, access to health strewn with pitfalls: the condition of women is far from being in good shape on the South American continent...")
+
+pro_mujer_article_photo_two = URI.open('https://bolivia.promujer.org/content/uploads/sites/6/2016/09/PM_santa_cruz_client_kitchen_wr.jpg')
+pro_mujer_article_two.photo.attach(io: pro_mujer_article_photo_two, filename: '#{pro_mujer_article_two.title}.jpg', content_type: 'image/jpg')
+pro_mujer_article_two.save!
+
 
 world_pulse_article = Article.create!(
   title: "My Journey to Virtual Volunteering",
   date: '2020-11-20',
   url: "https://www.worldpulse.com/community/users/jcravens/posts/95840",
-  charity: world_pulse,
-  content: "My first exposure to computers was in a typing class in high school in 1983: half the class had typewriters, half had computers, and then we all switched to the other machine midway through the school year. I wasn't especially entranced by the computers - I liked the typewriters better. I had a job at the newspaper in my hometown at that time and used a computer there to input my stories. A computer was just a word-processing tool to me. After university, I went into marketing and PR for nonprofits, and computers were just something to type on. But then, in the early 1990s, I saw my first Apple Macintosh, and ended up going into debt to buy one in 1993. Now, I could DESIGN ads on my computer, not hand it over to a printing house to typeset. I could create my own presentations. I could also access something I couldn't at my job: a new thing called the Internet, via America Online. I loved the AOL communities and I especially loved USENET Newsgroups. Because of all that interaction with others online, my life has never been the same!
+  charity_id: world_pulse.id,
+  content: "My first exposure to computers was in a typing class in high school in 1983: half the class had typewriters, half had computers, and then we all switched to the other machine midway through the school year...")
 
-I learned to use all this tech in my own little apartment. At another job, I was the internal communications manager, and the head of PR at the company, a consultant, said he didn't want anything to do with the Internet. As a result, I was in charge of putting together 11 websites, one for each affiliate. Since I was still learning HTML, I recruited some students from a nearby university to help me. I found two, and one suggested they do the work from their own computers in their dorms, because ours were so ancient. I said 'Sure!' I had no idea this was virtual volunteering. My online community experience and my work with these two volunteers landed me a job with what was then Impact Online (now VolunteerMatch), directing the new Virtual Volunteering Project. Four years into that job, I got recruited by the United Nations to run the online volunteering arm of NetAid, which became www.onlinevolunteering.org. I've been all over the world, working in Germany, Egypt, Afghanistan, Poland, Hungary, Ukraine and more, I've written a book, and I've met untold numbers of people, all because of my journey with tech. Digital tools have been completely tied up with my professional life since the 1990s. And on a personal level, online communities regarding my personal interests have brought me friends, played a role in how I met my husband, prompted me to attend all sorts of wonderful events and travel to some amazing places.
+world_pulse_article_photo = URI.open('https://www.good-deeds-day.org/wp-content/uploads/2020/03/virtual-volunteering-1.jpg')
+world_pulse_article.photo.attach(io: world_pulse_article_photo, filename: '#{world_pulse_article.title}.jpg', content_type: 'image/jpg')
+world_pulse_article.save!
 
-I cannot imagine my life without the Internet and computers.
 
-Interest in my expertise in virtual volunteering and online communities really waned around 2015. I felt that virtual volunteering was so mainstream now, people didn't really need me anymore. And then came COVID-19. I am overwhelmed with inquiries and requests. I've ended up creating a series of free videos on my YouTube channel to train up people new to virtual volunteering, so they can begin creating roles and activities immediately - things are too urgent now for me to try to fill every request for basic training.
+world_pulse_article_two = Article.create!(
+  title: "KENYA: I Grew Up Romanticizing America. Now I Mourn.",
+  date: '2020-07-21',
+  url: "https://www.worldpulse.com/voices-rising/stories/kenya-i-grew-romanticizing-america-now-i-mourn",
+  charity_id: world_pulse.id,
+  content: "Growing up in rural Kenya, two and a half hours outside of Nairobi, we spoke of America in reverent tones: America was generous. She was kind. She sent plenty of aid in corn oil and dried yellow corn to keep our bellies full in times of drought and famine....")
 
-For more women to be online, we need much more training for women, in women-only spaces if possible, and increased access. Training shouldn't just be how a particular app works: women need training in how to establish themselves online, how to assume leadership roles online, how to handle harassment, how to present themselves professionally, how to be an activist online, how to recognize misinformation, how to promote online civility, how to know when you are being manipulated online, how to recognize when a young person is being radicalized, etc.
+world_pulse_article_photo_two = URI.open('https://www.worldpulse.com/sites/default/files/styles/teaser_thumbnail/public/editorial/96055/hero/nini.jpg?itok=PTtTL1Oe')
+world_pulse_article_two.photo.attach(io: world_pulse_article_photo_two, filename: '#{world_pulse_article_two.title}.jpg', content_type: 'image/jpg')
+world_pulse_article_two.save!
 
-I want every woman to know where to find the credible information she needs most, whether that's weather information, market information for whatever she grows in a garden, health care information, how to get in touch with an elected official, and on and on. In a world where technology could be leveraged to its highest potential, women are able to pursue their dreams regarding careers, regarding personal interests, regarding personal needs, and if she chooses, a family.")
 
 london_gaymers_article = Article.create!(
   title: "The continuing importance of LGBT+ spaces in gaming.",
   date: '2020-06-26',
   url: "https://www.eurogamer.net/articles/2020-06-26-pride-week-down-and-out-in-orgrimmar-and-london",
-  charity: london_gaymers,
-  content: "Spend any amount of time on any popular gaming message board when the issue of LGBT+ representation raises its head, and you can guarantee there'll be someone waiting in the wings to, at the very least, remind LGBT+ players that it's 2020 and 'nobody cares they're gay anymore' - oh, and 'would you mind keeping your sexuality out of my video games?'. It's not exactly surprising then that countless LGBT+ gamers around the world are still seeking the comfort of like-minded individuals and social spaces, both in-game and in real-life, where they're free to be themselves without abuse, judgement, or fear of repercussions - and to simply enjoy the games they want to play.
+  charity_id: london_gaymers.id,
+  content: "Spend any amount of time on any popular gaming message board when the issue of LGBT+ representation raises its head, and you can guarantee there'll be someone waiting in the wings to, at the very least, remind LGBT+ players that it's 2020 and 'nobody cares they're gay anymore'...")
 
-'I think in mainstream culture there is this wishful idea that because we've had too many seasons of Will & Grace...things are just fine and dandy for the queers in our society,' Benjamin Bon Temps, founder of the long-running Rough Trade Gaming Community tells me, 'Sadly, nothing could be further from the truth. While things are better, and the average Bubba Beercan Gamer might be more open-minded and respectful, there is still the same slew of tired asshats firing off verbal fag bombs and 'this stupid dungeon is gay' type bullshit.'
+london_gaymers_article_photo = URI.open('https://s.abcnews.com/images/GMA/DigitalPrideCelebrations_v03_DAP_hpMain_16x9t_1600.jpg')
+london_gaymers_article.photo.attach(io: london_gaymers_article_photo, filename: '#{london_gaymers_article.title}.jpg', content_type: 'image/jpg')
+london_gaymers_article.save!
 
-It's a sentiment shared by Matthew Hardwick, co-founder of the on- and offline LGBT+ community London Gaymers; 'Online spaces can be generally quite a negative experience for minorities as it is,' he says, 'but with insults like 'fag', 'queer', and 'gay' often thrown around in a derogatory manner, it can be particularly hard for LGBT people.' By way of illustration, Hardwick relates one of his own experiences, when someone he'd played online with for over a year immediately bombarded him with abuse on finding out he was gay in party chat. '[He] said I should 'die of AIDS' and 'ass cancer' before threatening to come to my home to murder me.")
+london_gaymers_article_two = Article.create!(
+  title: "Meet the London collective amplifying the voices of LGBTQI+ gamers",
+  date: '2018-04-19',
+  url: "https://www.redbull.com/gb-en/meet-the-london-gaymers",
+  charity_id: london_gaymers.id,
+  content: "London Gaymers is a 3,000-strong community helping to change attitudes in gaming. Here, five regulars at their Stratford meet-ups explain just why the group is so vital...")
+
+london_gaymers_article_photo_two = URI.open('https://blogmedia.evbstatic.com/wp-content/uploads/wpmulti/sites/8/2019/06/London-Gaymers-at-London-Pride-march-2018.png')
+london_gaymers_article_two.photo.attach(io: london_gaymers_article_photo_two, filename: '#{london_gaymers_article_two.title}.jpg', content_type: 'image/jpg')
+london_gaymers_article_two.save!
+
 
 girls_who_code_article = Article.create!(
   title: "Groundbreaking Research From Girls Who Code and Accenture Outlines Steps to Double Women in Tech in 10 Years",
   date: '2020-11-20',
   url: "https://girlswhocode.com/news/groundbreaking-research-from-girls-who-code-and-accenture-outlines-steps-to-double-women-in-tech-in-10-years",
-  charity: girls_who_code,
+  charity_id: girls_who_code.id,
   content: "According to research, SHROs twice as likely as female employees to say that it is easy for women to thrive in tech
 
-Joint report indicates that more inclusive company cultures could drop annual attrition rate of women in tech by 70 percent, leading to 3 million women in tech by 2030
+Joint report indicates that more inclusive company cultures could drop annual attrition rate of women in tech by 70 percent...")
 
-NEW YORK (September 29, 2020) – Girls Who Code, the international non-profit leading efforts to close the gender gap in tech, today released a report in partnership with Accenture (NYSE: ACN) indicating an inclusive culture is key to unlocking opportunities for women who are studying and working in technology,
+girls_who_code_article_photo = URI.open('https://girlswhocode.com/assets/images/craft-prod/images/3-2/GWC-REPORT_COVER.jpg')
+girls_who_code_article.photo.attach(io: girls_who_code_article_photo, filename: '#{girls_who_code_article.title}.jpg', content_type: 'image/jpg')
+girls_who_code_article.save!
 
-Importantly, the report pointed to a disconnect between what women experience in their roles and what Senior Human Resource Officers (SHROs) believe about their organizations. Specifically, SHROs (45%) are twice as likely as women (21%) to say that it is easy for women to thrive in technology. In fact, just 38% of SHROs identify building a more inclusive culture as an effective way to retain and advance women in technology roles.
+girls_who_code_article_two = Article.create!(
+  title: "A Message from Girls Who Code CEO & COO: #BlackLivesMatter and the Fight for Racial Justice",
+  date: '2020-06-01',
+  url: "https://medium.com/@GirlsWhoCode/a-message-from-our-ceo-coo-blacklivesmatter-and-the-fight-for-racial-justice-92a370a1dd8a",
+  charity_id: girls_who_code.id,
+  content: "We are writing to you after a very challenging weekend, preceded by an extremely difficult period of time marked by intense violence─physical, psychological, and emotional. Like many of you, we are grieving, we are angry, and we are in pain...")
 
-The research showed that a cultural reset would have far-reaching positive results. The analysis highlighted that if every company scored high on measures of an inclusive culture — specifically, if they were on par with those in the top 20% of the study — the annual attrition rate of women in technology would drop 70%.
+girls_who_code_article_photo_two = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Black_Lives_Matter_logo.svg/1200px-Black_Lives_Matter_logo.svg.png')
+girls_who_code_article_two.photo.attach(io: girls_who_code_article_photo_two, filename: '#{girls_who_code_article.title}.jpg', content_type: 'image/jpg')
+girls_who_code_article_two.save!
 
-“Girls Who Code has 80,000 college-aged alumni, and more on the way, who will be entering the tech workforce in the coming years—and we’re committed to making sure they’re set up for success,” said Reshma Saujani, founder and CEO of Girls Who Code. “Thanks to this partnership with Accenture, we’re able to provide companies and colleges with concrete steps to retain and advance women in technology. And it all starts with creating an inclusive culture.”
-
-The report, “Resetting Tech Culture,” analyzed the journey for women in IT, from college to successful mid-career. It uncovered specific environment characteristics to help women in technology advance and thrive. The research revealed that, while women leave technology for various reasons, a non-inclusive company culture accounts for 37% of those — making it the number one cause.
-
-“Our research over the past three years has identified three pillars of an inclusive culture: bold leadership, comprehensive action and an empowering environment. We hope to inspire other companies to understand that with a stronger focus on these pillars, the more likely women are to thrive,” said Kathryn Ross, global Open Innovation lead and the Black Founders Development Program lead for Accenture Ventures. “By raising awareness through our findings and action through our recommendations, we hope to advance gender equality in the workplace.”
-
-A nationwide adoption of five cultural practices could help retain 1.4 million young women in tech roles by 2030, which include:
-
-Make it a metric: Set external goals and targets to increase diversity and hold leaders accountable.
-Promote equal parenting: Encourage all parents to take leave and make sure they see senior leaders doing the same
-Send reinforcements: Provide women with targeted workplace support including mentors, sponsors and employee resource networks
-Encode creativity: Reward employees for creativity and innovation as many women who enter technology seek fulfillment and to make a difference in the world
-Provide inclusive networking: Schedule opportunities to promote networking with colleagues and senior leaders when everyone can join
-Research Methodology
-
-The results are based on three online surveys combined with Accenture’s inclusive workplace culture model. The surveys were conducted online between February and July 2019 and cover three distinct groups across the United States: 1,990 tech employees; 500 senior HR leaders in companies employing people in technology roles; and 2,700 college students.
-
-About Girls Who Code
-
-Girls Who Code is an international nonprofit organization working to close the gender gap in technology, and leading the movement to inspire, educate and equip young women with the computing skills needed to pursue 21st century opportunities. Since launching in 2012, Girls Who Code has reached 500 million people through its work and 300,000 girls through its in-person programming. College-aged alumni of Girls Who Code are declaring majors in computer science and related fields at 15 times the U.S. average. In 2019, the organization was named the #1 Most Innovative Non-Profit on Fast Company’s Most Innovative Companies list. Follow the organization on social media @GirlsWhoCode.
-
-")
 
 marsha_pj_inst_article = Article.create!(
   title: "No pride without liberation",
   date: '2020-11-20',
   url: "https://marshap.org/yahoo-news-heres-why-black-trans-women-are-essential-to-both-lgbtq-equality-and-black-lives-matter-movements/",
-  charity: marsha_pj_inst,
-  content: "This year, Pride month is taking place in the midst of a growing Black Lives Matter revolution — so there’s no better time to amplify the importance of trans Black lives, as was done last weekend in a massive show of support in Brooklyn and as will happen with a similar demonstration in London on Saturday. To keep it going, Yahoo Life spoke with some of the activists who have been advocating for Black trans visibility for years.
+  charity_id: marsha_pj_inst.id,
+  content: "This year, Pride month is taking place in the midst of a growing Black Lives Matter revolution — so there’s no better time to amplify the importance of trans Black lives, as was done last weekend in a massive show of support in Brooklyn and as will happen with a similar demonstration in London on Saturday. To keep it going, Yahoo Life spoke with some of the activists who have been advocating for Black trans visibility for years...")
 
-…
+marsha_pj_inst_article_photo = URI.open('https://marshap.org/wp-content/uploads/2020/06/pride_draft_1.jpg')
+marsha_pj_inst_article.photo.attach(io: marsha_pj_inst_article_photo, filename: '#{marsha_pj_inst_article.title}.jpg', content_type: 'image/jpg')
+marsha_pj_inst_article.save!
 
-Elle Hearns, founder and the executive director of the Marsha P. Johnson Institute, explains to Yahoo Life that Black people cannot be excluded from a movement they started. “The reality is Pride was started during the civil rights movement. … There was no way to disassociate the Stonewall rebellion with the rebellion of the acts and sacrifices of Black people. During that time, a lot of the tactics that Stonewall utilized in the fight for gay liberation were the tactics that were utilized from the civil rights movement.” The organization, named after the Stonewall pioneer, works to “protect and defend the human rights of black transgender people here in the United States.”")
+marsha_pj_inst_article_two = Article.create!(
+  title: "Pyer Moss partners with Marsha P. Johnson Institute",
+  date: '2020-11-20',
+  url: "https://theglowup.theroot.com/the-category-is-alive-pyer-moss-partners-with-the-mar-1845716892",
+  charity_id: marsha_pj_inst.id,
+  content: "Pyer Moss is launching the third installment of “Exist to Resist”, the latest being in partnership with the Marsha P. Johnson Institute for Transgender Day of Remembrance. T limited-edition genderless T-shirt retails exclusively for 100 dollars on Pyer Moss’ website, featuring an image of Marsha P...")
+
+marsha_pj_inst_article_photo_two = URI.open('https://fashionunited.uk/news/fashion/pyer-moss-partners-with-marsha-p-johnson-institute/2020112052128')
+marsha_pj_inst_article_two.photo.attach(io: marsha_pj_inst_article_photo_two, filename: '#{marsha_pj_inst_article_two.title}.jpg', content_type: 'image/jpg')
+marsha_pj_inst_article_two.save!
 
 every_mother_article = Article.create!(
   title: "We all must be accountable.",
   date: '2020-11-20',
   url: "https://everymothercounts.org/on-the-front-lines/we-all-must-be-accountable/",
-  charity: every_mother_counts,
-  content: "In the week since the devastating death of George Floyd, we’ve borne witness to an unbelievable spectrum of emotions play out across our country. With despair pouring out from aching hearts everywhere, many of us find ourselves asking: where is the humanity? What we can do? How can we take greater accountability toward change? Is change even possible?
+  charity_id: every_mother_counts.id,
+  content: "In the week since the devastating death of George Floyd, we’ve borne witness to an unbelievable spectrum of emotions play out across our country. With despair pouring out from aching hearts everywhere, many of us find ourselves asking: where is the humanity?")
 
-All of us at EMC believe that change is, indeed, possible. But we must start by changing ourselves and addressing the systems that have allowed the injustice to reach this point. We must move beyond intention toward actionable impact. We not only have the power to change, we have the potential. The time is now and we must recognize that this is long overdue.
+every_mother_article_photo = URI.open('https://thefoldmag.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTYzNzM2NjQxNDc4MDc2MzUz/image-2_christy_in_haiti.jpg')
+every_mother_article.photo.attach(io: every_mother_article_photo, filename: '#{every_mother_article.title}.jpg', content_type: 'image/jpg')
+every_mother_article.save!
 
-So, that’s what we’re doing…we’re starting. Here’s how.
+every_mother_article_two = Article.create!(
+  title: "Designers and Artists Come Together for an Auction Benefitting Maternal Health.",
+  date: '2020-11-20',
+  url: "https://www.vogue.com/article/art-for-mom-maternal-health-auction",
+  charity_id: every_mother_counts.id,
+  content: "One woman, every two minutes, dies from complications with pregnancy or childbirth. Read that again. One woman every two minutes. That is more than 700 women every day. Natalia Swarz learned this harsh reality after a 16-week pregnancy that resulted in a late miscarriage...")
 
-
-We’re examining our language.
-Words are critical, and for years we’ve been hearing that “race affects maternal health experiences and outcomes.” The truth is, race does NOT affect experiences and outcomes. Racism does. It is exposure to implicit bias and structural and interpersonal racism that makes pregnancy and childbirth more dangerous for Black and Indigenous mothers.
-
-We’re getting comfortable with being uncomfortable.
-Having real conversations can be hard, and hard conversations are uncomfortable. This week, we’re doing both. Instead of focusing our annual staff retreat on the usual subjects of budgets, strategies and roadmaps, our team will participate in a day-long (virtual) workshop this week focused on achieving equity and justice in all its forms.
-
-We’re taking accountability.
-Change requires accountability which begins with taking responsibility. We are re-examining what it means to be a responsible non-profit organization in this day and age, and will work harder than ever to replace outdated colonial models with trust-based giving and shared decision-making, listening to partners from marginalized communities every step of the way.
-
-We’re uplifting and amplifying our partners.
-For years, we have supported community-based organizations on the front lines of racial and birth justice—partners that include Ancient Song Doula Services, Changing Woman Initiative, SisterWeb and Village Birth International. Our job is not only to help sustain their work to have the greatest possible impact for mothers, everywhere, but to uplift and amplify our partners as leading examples of equitable, compassionate care to be emulated.
-
-We’re centering the voices of Black, Indigenous, People of Color communities.
-To do our work transparently and inclusively, we must continuously center the voices of individuals and communities historically harmed by systems of oppression. We are renewing our commitment to create front-and-center space at a collective table for all stakeholders, not just our own community, in all we do.
-
-We’re taking action.
-We know that there is a direct relationship between racism and the disproportionate rates of maternal deaths among Black and Brown communities in the United States—the only developed country in the world with a worsening maternal mortality rate. To end this inexcusable trend, we must relentlessly demand better from our leaders. Take action today by joining us in calling on State and Federal leaders to act to protect and uplift the needs of mothers and families.
-
-As members of our community and supporters of our work, we welcome you to join us. And if you’re not sure where to start, we’ve put together this Black Maternal Health reading list as a starting point for self-education.
-
-With gratitude,
-
-Christy Turlington Burns
-
-Founder, Every Mother Counts")
-
+every_mother_article_photo_two = URI.open('https://assets.vogue.com/photos/5fb055b1dc2f8779d6161819/master/w_2560%2Cc_limit/unnamed%252520(14).jpg')
+every_mother_article_two.photo.attach(io: every_mother_article_photo_two, filename: '#{every_mother_article_two.title}.jpg', content_type: 'image/jpg')
+every_mother_article_two.save!
 
 orchid_project_article = Article.create!(
   title: "We all must be accountable.",
   date: '2020-10-20',
   url: "https://www.orchidproject.org/different-evidence-same-community-putting-female-genital-cutting-research-into-practice/",
-  charity: orchid_project,
+  charity_id: orchid_project.id,
   content:"Translating research evidence into practice can be a protracted, complicated process.  We need sufficient funds to do it effectively, and have buy-in from those implementing the changes; changes that must be seen as acceptable and achievable by our target audiences.
 
-Cultural, religious and gender-based sensitivities, such as those we see around female genital cutting (FGC), complicate that process further, as does the perception that the type of evidence is important, too.  A divide has traditionally existed between ‘academic’ and ‘community-based’ research.  Academic research is often maligned for its lack of real-world relevance and applicability beyond rarefied scholarly conferences or obscure journals littering dusty library bookshelves.
+Cultural, religious and gender-based sensitivities...")
 
-But it doesn’t have to be that way. It’s a deliberate choice and choices aren’t fixed. Academic and community-based research aren’t necessarily polar opposites.  When conducted well, the data they produce can echo each other, producing synergised lessons and harmonised action points that can be implemented in community-level programmes.
+orchid_project_article_photo = URI.open('https://www.orchidproject.org/wp-content/uploads/2019/02/005_low_res_DSC_3142.jpg')
+orchid_project_article.photo.attach(io: orchid_project_article_photo, filename: '#{orchid_project_article.title}.jpg', content_type: 'image/jpg')
+orchid_project_article.save!
 
-As part of a five-year FGC research programme funded by the United Kingdom’s Department for International Development—the Evidence to End FGM/C: Research to Help Girls and Women Thrive—primary data was collected on the practice in Somaliland by academics from Population Council. The headline findings from that work, and how it resonated with existing community-based research, suggest how they can be implemented in communities to end FGC.
+orchid_project_article_two = Article.create!(
+  title: "Women’s leadership, COVID-19 & female genital cutting",
+  date: '2020-11-20',
+  url: "https://www.orchidproject.org/womens-leadership-covid-19-female-genital-cutting/",
+  charity_id: orchid_project.id,
+  content:"This is the much quoted phrase from the beloved Ruth Bader Ginsburg; the trailblazing lawyer and justice of the Supreme Court of the United States who sadly passed away this week. She was an icon of women’s leadership who broke down barrier after barrier for the advancement of gender equality, and a personal hero of mine...")
 
-Against a background of near-universal prevalence of female genital cutting in Somaliland, two studies conducted between 2016-19 sought to determine if there were any attitudinal or behavioural changes in the practice and the drivers of those changes. Among their main findings were a two-fold change in the practice for health reasons:
+orchid_project_article_photo_two = URI.open('https://www.orchidproject.org/wp-content/uploads/2020/09/Women_leadership_COVID_Female_Genital_Cutting_header-400x300.png')
+orchid_project_article_two.photo.attach(io: orchid_project_article_photo_two, filename: '#{orchid_project_article_two.title}.jpg', content_type: 'image/jpg')
+orchid_project_article_two.save!
 
-The type of cut was changing —moving from the pharaonic (WHO type III) to what was referred to as the Sunna cut (WHO type I or IV – even though this was interpreted differently among people), especially in urban areas.
-This change was attributed to awareness generation and sensitisation in the community by healthcare workers and religious leaders. Most respondents were convinced the change was a positive development, improving the health of girls by minimising harmful health complications; despite the fact that all forms of cutting are harmful and a violation of human rights. It remained unknown whether this change could lead to total abandonment of the practice.
-
-The cut was being medicalised—linked to the Sunna cut—with health professionals as cutters and cutting occurring at facilities or at individuals’ homes.
-Underpinning these changes was a parental need—produced by the medical narrative of anti-FGC campaigns and spiritual leaders promoting the Sunna cut—to find an acceptable balance between health preservation of girls and the socio-cultural and religious normative expectation that a cut is undertaken.
-
-Crucially, only 2% of community members supported abandoning female genital cutting entirely. Changes are happening to the practice but only in the sense that the Sunna cut has emerged as a new norm, a more socially acceptable type of FGC that is justified by religious teachings and perceived health messaging. Consequently, the study found that while existing FGC norms are being contested in Somaliland, there is a need to engage at the community level with religious leaders, health professionals, older members of society (especially influential grandmothers) and young people.
-
-The research conducted by Population Council at the academic level is vital, and it’s crucial to the movement to end female genital cutting that more research is carried out so we understand the scale, impacts and changing dynamics of the practice at a local, national and global level. Crucially it can also complement and validate community-originated research—such as that conducted by the Somaliland Family Health Association (SOFHA) with Orchid Project support—that can be more easily applied within programming.")
 
 dress_article = Article.create!(
   title: "Dress for Success Worldwide CEO Joi Gordon Discusses Going Virtual with ABC News",
   date: '2020-10-20',
   url: "https://dressforsuccess.org/news/dress-for-success-worldwide-ceo-joi-gordon-discusses-going-virtual-with-abc-news/",
-  charity: dress_for_success,
+  charity_id: dress_for_success.id,
   content:"Dress for Success Worldwide CEO Joi Gordon discusses providing virtual programming in response to the COVID-19 pandemic and how Dress for Success Oklahoma City plans to rebuild after being vandalized in the midst of nationwide civil unrest.")
+
+dress_article_photo = URI.open('https://sanfordbernsteincenter.org/sites/default/files/civicrm/persist/contribute/images/Joi%20Gordon%20Dress%20for%20Success%20CEO%20Headshot.jpg')
+dress_article.photo.attach(io: dress_article_photo, filename: '#{dress_article.title}.jpg', content_type: 'image/jpg')
+dress_article.save!
+
+dress_article_two = Article.create!(
+  title: "Vionic Supports Dress for Success with a Charitable Partnership on Giving Tuesday",
+  date: '2020-12-01',
+  url: "https://www.prnewswire.com/news-releases/vionic-supports-dress-for-success-with-a-charitable-partnership-on-giving-tuesday-301182829.html",
+  charity_id: dress_for_success.id,
+  content:"On December 1, Vionic will donate one percent of gross sales from vionicshoes.com to benefit the national chapter of Dress for Success, assisting women across the U.S. This will be followed by additional initiatives throughout the 2020 holiday season benefitting Dress for Success' San Francisco chapter.")
+
+dress_article_photo_two = URI.open('https://i.pinimg.com/280x280_RS/26/65/c9/2665c9680d7110ee4d6d52d8810ea563.jpg')
+dress_article_two.photo.attach(io: dress_article_photo_two, filename: '#{dress_article_two.title}.jpg', content_type: 'image/jpg')
+dress_article_two.save!
 
 gnb_article = Article.create!(
   title: "We are not longer alone",
   date: '2020-10-20',
   url: "https://www.girlsnotbrides.org/girls-adolescents-young-women-and-injustice-in-lac/",
-  charity: gnb,
+  charity_id: gnb.id,
   content:"I still remember when I was a girl – small, taciturn and shy – slipping unnoticed through the crowd. From that small child, I’ve grown into a woman who knows the strength of her own voice, and who speaks out against injustices.
 
-Being around and learning from other women has been key to my personal development and liberation, helping me to feel I belong to a group and know that – even from a distance – my friends stand with me in the struggle.
-
-Growing up and becoming more aware of my reality brought indignation and anger, but also a desire to take action. I was spurred by the cold facts and painful stories of the girls, adolescents, young women and women whose bodies have been cut through by the violence of a patriarchal and sexist system. And the racism and classism that are rooted in our justice systems and societies affect us Indigenous women more seriously. The COVID-19 pandemic is laying bare the precarious reality of Latin America and the Caribbean. It’s highlighting social and economic inequalities and shedding light on the marginalisation, repression and subjugation of women and Indigenous peoples.
-
-Lockdowns affect us all differently. The number of girls, adolescents, young women and women being sexually assaulted has increased. Communities have been criminalised and supressed for defending their natural resources, as other forces seek to further their territorial control. Access to services such as water is still a privilege, and Indigenous women’s access to justice – through its bureaucratic and monolingual processes – is coloured by discrimination and racism. Our justice officials are co-opted and distanced from our communities, making it difficult to file complaints and access information.
-
-On top of this, girls, adolescents, young women and women shoulder more household chores, including providing food and care. This discrimination – which is aggravated by lockdowns – is a significant driver of child, early and forced marriages and unions (CEFMU).
-
-I am aware of the challenges, but also believe the pandemic could be a window of opportunity for analysing how we’ve been living and the nature of our justice and government systems – do they work or have they created impoverished societies and weak institutions?
-
-I firmly believe we can make progress and positive changes in our territories. Knowing that we are no longer alone fuels my hope: even at a distance, we stand together as girls, adolescents, young women and women, and there are more of us every day.
-
-As long as there are voices speaking out against injustice, there’s hope. Girls, adolescents, young women and women play a fundamental role in these processes. That’s why we need to help others recognise the strength of their voices, encourage them to get involved and create spaces for participation.
-
-As a girl I was indifferent to the world of activism, but gaining access to information changed my life. Since then, I’ve worked on community and national advocacy, in processes that bring together stakeholders, educators, field experts and young women to raise awareness and take actions that favour girls and adolescents in Guatemala.
-
-That’s why I think we need to strengthen a generation of empowered women who recognise themselves as political subjects and agents of change; who demand that their States take responsibility for guaranteeing better living conditions for the girls, adolescents, young women and women of Latin America and the Caribbean, legislating and investing in – rather than against – their interests.
-
-Despite the murky outlook, I find a beacon of hope in those who denounce, rebel and speak out, resisting in different ways: in the streets; through journalism, research, art and youth collectives; as Indigenous, Garífuna and Xinca women; as feminists; in academia; on the radio and social media; and – for those who have been unjustly imprisoned for defending their territories – from jail.
-
-As long as there are voices speaking out, there’s hope. It’s so important that we form networks and that there are more of us every day.
+Being around and learning from other women has been key to my personal development and liberation, helping me to feel I belong to a group and know that – even from a distance – my friends stand with me in the struggle...
 
 ")
+
+gnb_article_photo = URI.open('https://www.girlsnotbrides.org/wp-content/uploads/2020/11/Jovenas-Latidas_Ketzali-768x768.png')
+gnb_article.photo.attach(io: gnb_article_photo, filename: '#{gnb_article.title}.jpg', content_type: 'image/jpg')
+gnb_article.save!
+
+
+gnb_article_two = Article.create!(
+  title: "RESOURCES TO HELP DURING COVID-19: OUR TOP RECOMMENDED ACROSS HEALTH, EDUCATION, HUMANITARIAN CONTEXTS, ECONOMIC IMPACTS AND FUNDRAISING",
+  date: '2020-10-29',
+  url: "https://www.girlsnotbrides.org/resources-to-help-during-covid-19-recommended/",
+  charity_id: gnb.id,
+  content:"We know that girls and women – particularly among the poorest and socially marginalised groups – are the most affected by the ongoing pandemic. We need to work together as a partnership to make sure that girls at risk of child marriage and married girls are at the centre of the COVID-19 response and recovery efforts...")
+
+gnb_article_photo_two = URI.open('https://gnb-test.imgix.net/wp-content/uploads/2020/05/puertobarrios_livingston_pmora274-1.jpg?crop=faces&w=901&h=506.8125&fit=crop&fm=pjpg')
+gnb_article_two.photo.attach(io: gnb_article_photo_two, filename: '#{gnb_article_two.title}.jpg', content_type: 'image/jpg')
+gnb_article_two.save!
 
 
 puts "Creating supports..."

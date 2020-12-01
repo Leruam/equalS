@@ -10,16 +10,12 @@
 	position: relative;
 }
 
-.slider-wrapper div {position: relative;}
-.slider-wrapper {
-}
 .slide-image {
   height: 350px;
   // box-shadow: 2px 2px 12px 0px #bfbbbb;
 }
 .slide-image img {width: 350px; cursor: pointer;}
 .slide-content {
- position: relative;
  width: 35em;
  padding-right: 10%;
  padding-left: 5%;
@@ -36,19 +32,24 @@
 
 .slide-title {
 	font-weight: 500;
+	font-size: 20px;
     color: $green-text;
     padding-bottom: 30px;
 }
 
 .slide-text {
 	font-weight: 300;
+	height: 200px; 
     padding-bottom: 30px;
+    text-align: justify;
 }
 
-div.overlay-blue {width: 100%; height: 100%; position: absolute; top: 0; transition: 0.5s ease all;}
-div.overlay-blue:hover {background-color: rgba(13, 27, 43, 0.5);}
+.read-more {
+	position: absolute;
+	bottom: 30px;
+}
 
-.arrows{width: 3.5vw; position: absolute; left: 70%; bottom: 20%;}
+.arrows{width: 3.5vw; position: absolute; left: 70%; bottom: 13%;}
 .arrow {display: inline-block; position: absolute; width: 1.2vw; height: 1.2vw; background: transparent; text-indent: -9999px; border-top: 0.15vw solid $purple-text ; border-left: 0.15vw solid $purple-text; transition: all .1s ease-in-out; text-decoration: none; color: transparent;
 }
 .arrow:hover {border-color: #0A8ACB; border-width: 0.25vw;
