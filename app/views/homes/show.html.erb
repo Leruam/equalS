@@ -7,7 +7,7 @@
         <%= render 'shared/searchbar' %>
       </div>
       <div class="d-flex flex-column align-items-center text-under-search">
-        <h1 id="counter"><%= number_with_delimiter(@global_money_count, :delimiter => ',') %>€</h1>
+        <h1 id="counter"><%= number_with_delimiter(@global_money, :delimiter => ',') %>€</h1>
         <div id="sentence">
           <p>raised to support equality on <span class="green-text">Earth</span>
           thanks to your <span class="green-text"><%= number_with_delimiter(@global_search_count, :delimiter => ',') %> </span >searches.</p>
