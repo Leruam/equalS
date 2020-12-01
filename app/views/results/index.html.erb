@@ -15,6 +15,14 @@
       <%= render "results/result_card", result: result %>
     <% end %>
 
+    <!-- ici mettre une structure du type:  -->
+  <!--   1 résultat web : @webpages_results[0] -->
+    <!-- 3 news (s'il y en a) : @news_restults - render une carte news -->
+    <!-- 2 résultats web: @webpages_results[1] et @webpages_results[2] -->
+    <!-- 3 vidéos (s'il y en a) : @videos_results - render une carte video -->
+    <!-- le reste des résultats web: @webpages_results[3-fin] -->
+
+
   </div>
   <div class="focus-40">
       <%= render "results/result_entity_card", result: @entities_results.first unless @entities_results.empty?%>
