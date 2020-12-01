@@ -1,5 +1,7 @@
 class ResultsController < ApplicationController
 
+  skip_before_action :authenticate_user!, only: :index
+
   def index
     access_key = ENV["BING_ACCESS_KEY"] # va chercher le token dans le fichier .env
     uri = "https://api.bing.microsoft.com"
@@ -29,7 +31,7 @@ class ResultsController < ApplicationController
         { title: search["name"], link: search["url"], link_display: search["displayUrl"], snippet: search["snippet"] }
         # on pourra rajouter les deeplinks plus tard au besoin deeplinks: search["deepLinks"]
       end
-  end
+   end
 end
 
   # JSON::pretty_generate(JSON(response.body)) --> pour voir le resultat de la requete en JSON dans le terminal

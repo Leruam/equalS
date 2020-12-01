@@ -1,9 +1,39 @@
-<%= render 'shared/searchbar' %>
 
-<br>
-<br>
 
 <div class="container">
+  <div class="results mb-3">
+    <%= render 'shared/searchbar' %>
+  </div>
+
+  <div class="results navbar-container">
+    <ul class="navbar-tabs">
+      <li class="navbar-item navbar-item-vertical navbar-item-active" data-track-id="nav_web">
+        <%= link_to search_path(q: params[:q]), class: "navbar-link" do %>
+        Web
+
+        <% end %>
+      </li>
+      <li class="navbar-item navbar-item-vertical navbar-item-active" data-track-id="nav_web">
+        <%= link_to search_path(q: params[:q]), class: "navbar-link" do %>
+        Images
+
+        <% end %>
+      </li>
+      <li class="navbar-item navbar-item-vertical navbar-item-active" data-track-id="nav_web">
+        <%= link_to search_path(q: params[:q]), class: "navbar-link" do %>
+        Videos
+
+        <% end %>
+      </li>
+      <li class="navbar-item navbar-item-vertical navbar-item-active" data-track-id="nav_web">
+        <%= link_to search_path(q: params[:q]), class: "navbar-link" do %>
+        News
+
+        <% end %>
+      </li>
+    </ul>
+  </div>
+
   <div class="results">
     <% @webpages_results.each do |result|%>
       <%= render "results/result_card", result: result %>
@@ -14,3 +44,5 @@
 
   </div>
 </div>
+
+
