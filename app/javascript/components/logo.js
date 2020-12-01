@@ -1,8 +1,11 @@
-// document.querySelector("#.searchbar").addEventListener("mouseover", changeClassLogo);
-// const logo = querySelector(".logo")
+const fixeLogo = function() {
+	const searchBar = document.querySelector('.searchbar')
 
-//  function changeClassLogo() {
-//  	setTimeout(function) {logo.classList.toggle("stick-logo"); 1000}	
-// }
+    searchBar.addEventListener('mouseover', function() {
+ 	let logo = document.querySelector('#logo-js')
+    logo.classList.add('stick-logo');
+ 	console.log('done')
+    });
+};
 
-// export { changeClassLogo };
+export { fixeLogo };
