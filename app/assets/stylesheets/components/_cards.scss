@@ -227,16 +227,22 @@
 }
 
 .card-about {
-  width: 50%;
-  background-color: white;
-  height: 500px;
-  padding: 20px;
-  margin-top: 20px;
-  @include boxShadow($purple-other, 5);
-  font-weight: 300;
-  p {
-    margin: 30px auto;
+  display: flex;
+  color: $green-text;
+  text-align: center;
+  height: 330px;
+  padding: 0px 50px;
+  font-weight: 400;
+  div {
+    margin: auto auto
   }
 }
+
+.card-video {
+  font-weight: 300;
+  margin-top: 5px;
+  padding-right: 10px;
+}
+
 
 

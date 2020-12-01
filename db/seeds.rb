@@ -71,8 +71,9 @@ le_refuge = Charity.create!(
     name: "Le refuge",
     description: "Fondation Le Refuge is a French state-approved foundation whose mission is to offer temporary accommodation and social, medical, psychological and legal support to young boys and girls of legal age who are victims of homophobia and transphobia, including within the framework of their own family.",
     address: "Montpellier, France",
-    category: "lgbt+",
-    website:"https://www.le-refuge.org/"
+    category: "LGBT+",
+    website:"https://www.le-refuge.org/",
+    video: "https://www.youtube.com/embed/LxGzLfOkIYg"
     )
 
 le_refuge_logo = URI.open('https://upload.wikimedia.org/wikipedia/commons/4/41/Logo_de_la_Fondation_Le_Refuge.jpg')
@@ -87,8 +88,9 @@ osez_le_feminisme = Charity.create!(
     name: "0sez le féminisme",
     description: "Osez le féminisme! is an association founded in 2009 to raise the level of feminism in society, and to contribute to the fight against gender inequality. We organize awareness campaigns on gender equality, distribute a newspaper sent to our members, organize weekends of activist training, intervene in the public debate, to advance women's rights. We have 26 branches throughout France. We are members of the High Committee for Equality since 2013.",
     address: "Paris, France",
-    category: "feminist",
-    website:"http://osezlefeminisme.fr/"
+    category: "Feminist",
+    website:"http://osezlefeminisme.fr/",
+    video: "https://www.youtube.com/embed/O8czZH6dYt8",
     )
 
 osez_le_feminisme_logo = URI.open('https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/126430517_10158848310339510_1482260284427430573_n.png?_nc_cat=111&ccb=2&_nc_sid=85a577&_nc_ohc=_6pJllLsrjsAX801DDc&_nc_ht=scontent-cdg2-1.xx&oh=8fea265297acd3e131e367c12e51a0d7&oe=5FE86E8A')
@@ -104,8 +106,9 @@ causette = Charity.create!(
     name: "Causette",
     description: "Causette magazine appeared on newsstands on March 8, 2009. It has a circulation of 20,000 copies and is distributed throughout France by subscription. Initially bimonthly, the magazine has been published every month since September 2011. In February 2012 Causette became the first and only women's magazine declared a publication of political and general interest by the Ministry of Culture.",
     address: "Paris France",
-    category: "feminist",
-    website:"https://www.causette.fr/"
+    category: "Feminist",
+    website:"https://www.causette.fr/",
+    video:"https://player.vimeo.com/video/154063467",
     )
 
 causette_logo = URI.open("https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/29133315_1911830475503144_3564836144684385822_n.png?_nc_cat=111&ccb=2&_nc_sid=85a577&_nc_ohc=bWQVDPCTXr4AX_kRm4A&_nc_ht=scontent-cdg2-1.xx&oh=c7437c34bd4d9340ed6cf826c4385808&oe=5FE99385")
@@ -119,9 +122,10 @@ causette.save!
 solidarites_femmes = Charity.create!(
     name: "Solidarités femmes",
     description: "Solidarité Femmes is a network of associations specializing in the reception, support and accommodation of women victims of violence.",
-    address: "Paris France",
-    category: "domestic violence",
-    website:"https://www.solidaritefemmes.org/"
+    address: "Paris, France",
+    category: "Domestic violence",
+    website:"https://www.solidaritefemmes.org/",
+    video: "https://vimeo.com/vimeo/295607946"
     )
 
 solidarites_femmes_logo = URI.open('https://ideas.asso.fr/wp-content/uploads/2019/07/LogoFNSF-profilTW2.png')
@@ -135,9 +139,10 @@ solidarites_femmes.save!
 nous_toutes = Charity.create!(
     name: "Collectif Nous toutes",
     description: "The collective #NousToutes is a feminist collective committed against sexist, sexual, economic, psychological, verbal and physical violence against women. It brings together individuals, associations, trade unions and political organizations.",
-    address: "Paris France",
-    category: "feminist",
-    website:"https://www.noustoutes.org/"
+    address: "Paris, France",
+    category: "Feminist",
+    website:"https://www.noustoutes.org/",
+    video: "https://www.youtube.com/embed/ppev6jw4tFc"
     )
 
 nous_toutes_logo = URI.open('https://pbs.twimg.com/profile_images/1017339129691037696/54oU7ppZ_400x400.jpg')
@@ -151,9 +156,10 @@ nous_toutes.save!
 happy_period = Charity.create!(
     name: "Happy Period",
     description: "Periods are something anyone with a uterus experiences, and while it can be annoying for many, it’s a real problem for the homeless and anyone else without access to supplies. Happy Period builds kits for distribution and gets the community involved to help destigmatize periods and raise awareness.",
-    address: "Los Angeles, California, USA",
-    category: "feminist",
-    website:"https://hashtaghappyperiod.org/"
+    address: "Los Angeles, USA",
+    category: "Feminist",
+    website:"https://hashtaghappyperiod.org/",
+    video: "https://www.youtube.com/embed/goBUjr5-dRA"
     )
 
 happy_period_logo = URI.open('https://pbs.twimg.com/profile_images/1268936001084207104/PD3UAlDI_400x400.jpg')
@@ -168,8 +174,9 @@ pro_mujer = Charity.create!(
     name: "Pro Mujer",
     description: "This organization for women in South and Central America provides resources like financial services, business and leadership training, and health care, so women can break free from poverty’s vicious cycle. Pro Mujer was founded in 1990 based on microlending, and became a major force for women’s development.",
     address: "Mexico, Mexico",
-    category: "feminist",
-    website:"https://promujer.org/"
+    category: "Feminist",
+    website:"https://promujer.org/",
+    video: "https://player.vimeo.com/video/331079073"
     )
 
 pro_mujer_logo = URI.open('https://pbs.twimg.com/profile_images/930202066680606720/7zY1yL0t_400x400.jpg')
@@ -182,10 +189,11 @@ pro_mujer.save!
 
 world_pulse = Charity.create!(
     name: "World Pulse",
-    description: "This organization’s goal is to harness social media and technology for good. On the social network, women can connect, share their stories and ideas, and more. It currently has users in 190 countries. Programs with World Pulse include Voices of the Future, which helps train and educate women on using technology and digital media.",
+    description: "With a decade of experience using the power of technology to grow women’s leadership across the globe, we've created a safe digital refuge where women unite to courageously tell their stories, share resources, start businesses, run for office, and launch movements. Together, we’re creating a world — both online and off — where all women thrive.",
     address: "Portland, Oregon, USA",
-    category: "feminist",
-    website:"https://www.worldpulse.com/"
+    category: "Feminist",
+    website:"https://www.worldpulse.com/",
+    video: "https://player.vimeo.com/video/301671001"
     )
 
 world_pulse_logo = URI.open('https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/15094289_10154508048795041_6149651786243851136_n.png?_nc_cat=101&ccb=2&_nc_sid=85a577&_nc_ohc=mmfstdQKijsAX-BZPFC&_nc_ht=scontent-cdt1-1.xx&oh=d2bbf2ae7466be85a91e5eb97f7b65eb&oe=5FE8C47B')
@@ -200,8 +208,9 @@ london_gaymers = Charity.create!(
     name: "London Gaymers",
     description: "London Gaymers is the UK’s biggest LGBT+ gaymer community. London Gaymers was established in 2012 as a social group to help LGBT+ gamers in London to find and make new friends in a safe and welcoming environment. Since then we have continued to grow into a thriving gaymer community. We hold regular meet ups every month, online tournaments and have an active Discord server where you’ll find other gaymers to play with. We always ensure we retain the friendly and accepting values that make London Gaymers such a great place to hang out and meet new people.",
     address: "London, UK",
-    category: "lgbt+",
-    website:"https://www.londongaymers.co.uk/"
+    category: "LGBT+",
+    website:"https://www.londongaymers.co.uk/",
+    video: "https://player.vimeo.com/video/362782122"
     )
 
 lg_logo = URI.open('https://scontent-cdt1-1.xx.fbcdn.net/v/t31.0-8/19477731_1329797300406924_685468511506910776_o.png?_nc_cat=106&ccb=2&_nc_sid=174925&_nc_ohc=cQB6RtvsKAYAX-DY3v3&_nc_ht=scontent-cdt1-1.xx&oh=fd25ebe55106de14bfe9090d6fcc8649&oe=5FE7DDFF')
@@ -216,8 +225,9 @@ girls_who_code = Charity.create!(
     name: "Girls Who Code",
     description: "Girls Who Code is a nonprofit organization which aims to support and increase the number of women in computer science by equipping young women with the necessary computing skills to pursue 21st century opportunities.",
     address: "New-York NY, USA",
-    category: "feminist",
-    website:"https://girlswhocode.com/"
+    category: "Feminist",
+    website:"https://girlswhocode.com/",
+    video: "https://www.youtube.com/embed/UQanaiSxQqw"
     )
 
 girls_who_code_logo = URI.open('https://pbs.twimg.com/profile_images/1256217094745657344/G8Byq6Ws_400x400.jpg')
@@ -233,8 +243,9 @@ marsha_pj_inst = Charity.create!(
     name: "The Marsha P. Johnson Institute",
     description: "The Marsha P. Johnson Institute defends the rights of Black transgender people all over. This type of service is needed right now. Johnson was a crucial piece of the Stonewall uprising in 1969 and lives on as an important part of BIPOC LGBTQ+ history.",
     address: "Richmond, California, USA",
-    category: "lgbt+",
-    website:"https://marshap.org/"
+    category: "LGBT+",
+    website:"https://marshap.org/",
+    video: "https://player.vimeo.com/video/481897613?color=f3ba16&title=0&byline=0&portrait=0"
     )
 
 marsha_logo = URI.open('https://pbs.twimg.com/profile_images/1240662361477992448/zN5M2k4x_400x400.jpg')
@@ -250,8 +261,9 @@ every_mother_counts = Charity.create!(
     name: "Every Mother Counts",
     description: "Every Mother Counts works to make pregnancy and childbirth safe for every mother, everywhere. We raise awareness, invest in solutions and mobilize aciton.",
     address: "New York NY, USA",
-    category: "feminist",
-    website:"https://everymothercounts.org/"
+    category: "Feminist",
+    website:"https://everymothercounts.org/",
+    video: "https://www.youtube.com/embed/2rghfSwj8tU"
     )
 
 every_mother_logo = URI.open('https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/45513361_1982139005167505_6141686629212880896_o.jpg?_nc_cat=105&ccb=2&_nc_sid=85a577&_nc_ohc=NEEoJSbAQ-MAX8owSuf&_nc_ht=scontent-cdt1-1.xx&oh=48e3da58723bf2a654cb0bd6491e986d&oe=5FEA87A0')
@@ -266,8 +278,9 @@ orchid_project = Charity.create!(
     name: "Orchid Project",
     description: "Orchid Project is a British charity which works to end to female genital cutting. Orchid Project is based in London and primarily works to advocate for increased resources towards ending FGC and raising awareness about how the practice can end.",
     address: "London, UK",
-    category: "feminist",
-    website:"https://www.orchidproject.org/"
+    category: "Feminist",
+    website:"https://www.orchidproject.org/",
+    video: "https://www.youtube.com/embed/19fcxg75SIw"
     )
 
 op_logo = URI.open('https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/10298776_1155681691124582_5417372005681807827_n.jpg?_nc_cat=108&ccb=2&_nc_sid=85a577&_nc_ohc=o94wEC9TiPEAX8ikXn7&_nc_ht=scontent-cdg2-1.xx&oh=218cd68b7495afc6c3452b146d4ef97d&oe=5FEC3425')
@@ -284,8 +297,9 @@ dress_for_success = Charity.create!(
     name: "Dress For Success",
     description: "The mission of Dress for Success is to empower women to achieve economic independence by providing a network of support, professional attire and the development tools to help women thrive in work and in life.",
     address: "New York NY, USA",
-    category: "feminist",
-    website:"https://dressforsuccess.org/"
+    category: "Feminist",
+    website:"https://dressforsuccess.org/",
+    video: "https://www.youtube.com/embed/cpJOSXdZ3Bs"
     )
 
 dress_logo = URI.open('https://pbs.twimg.com/profile_images/2857266807/ae0282a5d0eb825fa613ab02f01ad884_400x400.jpeg')
@@ -300,9 +314,10 @@ dress_for_success.save!
 gnb = Charity.create!(
     name: "Girls Not Brides",
     description: "Girls Not Brides: The Global Partnership to End Child Marriage is an international non-governmental organization with the mission to end child marriage throughout the world. The organization was created by The Elders to enable small groups from around the world to address the common issue of early marriage.",
-    address: "London UK",
-    category: "feminist",
-    website:"https://www.girlsnotbrides.org/"
+    address: "London, UK",
+    category: "Feminist",
+    website:"https://www.girlsnotbrides.org/",
+    video: "https://www.youtube.com/embed/hSn0cFM1ebU"
     )
 
 gnb_logo = URI.open('https://pbs.twimg.com/profile_images/752782027448020993/txV3-cFF_400x400.jpg')
