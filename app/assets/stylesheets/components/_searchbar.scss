@@ -21,6 +21,7 @@
   font-size: 44px;
   font-family: 'Archivo', sans-serif;
   }
+
 }
 
 .searchbar-form {
@@ -82,4 +83,37 @@
 
 #new_search .form-group {
   flex: 1; // ça fait du flex-grow et flex-shrink en mm temps
+}
+
+.stick-logo {
+      #E{
+    color: white;
+    @include boxShadow(#6200de, 55);
+    transition-duration: 0.5s
+    }
+    #Q{
+    color: white;
+    @include boxShadow(#f9db6d, 55);
+    transition-duration: 0.5s
+    }
+    #U{
+    color: white;
+    @include boxShadow(#36827f, 55);
+    transition-duration: 0.5s
+    }
+    #A{
+    color: white;
+    @include boxShadow(#d57a66, 55);
+    transition-duration: 0.5s
+    }
+    #L{
+    color: white;
+    @include boxShadow(#74a4bc, 55);
+    transition-duration: 0.5s
+    }
+    #S{
+    color: white;
+    @include boxShadow(#6200de, 55);
+    transition-duration: 0.5s
+    }
 }
