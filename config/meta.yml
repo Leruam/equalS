@@ -1,0 +1,7 @@
+# config/meta.yml
+
+meta_product_name: "EqualS"
+meta_title: "EqualS - Search for Equality"
+meta_description: "EqualS is a search engine that gives 80% of its profits to gender equality and LGBT+ charities."
+meta_image: "cover.png" # should exist in `app/assets/images/`
+twitter_account: "@EqualS_search"   # required for Twitter Cards
