@@ -8,9 +8,10 @@ class ResultsController < ApplicationController
     path = "/v7.0/search"
     term = params[:q]
     language = "&setLang=fr" # pour la langue de recherche
+    market = "&mkt=fr-FR"
     count = "&count=15" # pour le nombre de resultats renvoyes (par defaut 10)
     offset = "&offset=0" # pour le premier resultat renvoye
-    uri = URI(uri + path + "?q=" + CGI.escape(term) + language + count + offset)
+    uri = URI(uri + path + "?q=" + CGI.escape(term) + language + market + count + offset)
     # URI.escape gere les backslash/la structure d'une requete html (redondant?)
     request = Net::HTTP::Get.new(uri) # construit une requete GET avec l'url "uri"
     request['Ocp-Apim-Subscription-Key'] = access_key # specifie un element du header
@@ -49,10 +50,10 @@ class ResultsController < ApplicationController
       []
       :
       bing_entities.map do |search|
-        { title: search["name"],
-          image: search["image"]["thumbnailUrl"],
-          snippet: search["description"],
-          link: search["image"]["provider"].first["url"] }
+        { title: (search["name"].nil? ? nil : search["name"]),
+          image: ((search["image"].nil? || search["image"]["thumbnailUrl"].nil?) ? nil : search["image"]["thumbnailUrl"]),
+          snippet: (search["description"]),
+          link: ((search["image"].nil? || search["image"]["provider"].nil? || search["image"]["provider"].first["url"].nil?) ? nil : search["image"]["provider"].first["url"]) }
       end
 
     # images //
@@ -102,7 +103,7 @@ class ResultsController < ApplicationController
         { title: search["name"],
           link: search["url"],
           date: search["datePublished"],
-          image: (search["image"].nil? ? nil : search["image"]["contentUrl"]) }
+          image: ((search["image"].nil? || search["image"]["contentUrl"].nil?) ? nil : search["image"]["contentUrl"]) }
       end
     end
 
