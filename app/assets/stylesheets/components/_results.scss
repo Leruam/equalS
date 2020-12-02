@@ -13,7 +13,7 @@
 }
 
 .result-card-web  h3 {
-  color: #00644d;
+  color: $green-text;
   font-size: 13px;
   text-decoration: none;
 }
@@ -41,12 +41,20 @@
 }
 
 .navbar-item {
-  padding: 0px 10px 0px 0px;
+  padding: 0px 10px 10px 10px;
 }
 
 .navbar-item-active {
+  a {
+    color: $green-text;
+  }
+  border-bottom-style: solid;
+  border-width: medium;
+  border-color: $green-text;
   // classe à rajouter en js
-  // probablement mettre le surlignage violet
+  // envent listener click, on ajoute dans le html cliqué la classe active
+  // document.queryselector(div qui contient tous les endroits --> ul)
+  // dessus on ajoute un addeventlistner clic
 }
 
 .navbar-link {
@@ -56,7 +64,7 @@
 
 .navbar-link:hover {
   text-decoration: none;
-  color: $purple-text;
+  color: $green-text;
 }
 
 .grid-images {
