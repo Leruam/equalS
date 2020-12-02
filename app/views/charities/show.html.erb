@@ -6,7 +6,7 @@
 	  	<div class=info-principal style="width:88%">
         <div class="d-flex justify-content-between">
 	  	    <h4 class="underline"><%= @charity.name %></h4>
-          <%= link_to "Back to profile", user_path(current_user), class: "btn-second" %>
+          <%= link_to "BACK TO PROFILE", user_path(current_user), class: "btn-second" %>
         </div>
 	  	 <ul class=info-list>
 	  	 	<li><p><%= @charity.category %></p></li>
@@ -21,7 +21,7 @@
           <% end %>
 	      <a class="btn-second" target="_blank" href= <%=@charity.website%> >WEBSITE</a>
 	      </div>
-	      <p><span id="amount">10340$</span> recolted for <span class="association"><%= @charity.name %></span></p>
+	      <p><span id="amount"><%= number_with_delimiter(@charity.money_charity, :delimiter => ',') %> €</span> collected for <span class="association"><%= @charity.name %></span></p>
 	      </div>
 		</div>
 	</div>
