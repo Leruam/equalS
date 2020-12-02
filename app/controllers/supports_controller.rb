@@ -10,6 +10,14 @@ class SupportsController < ApplicationController
     @support.user = current_user
     authorize @support
     @support.save
+
+    @user_total_search_count = Search.where(user: current_user).count + 1556
+    @user_today_search_count = Search.where(user: current_user, created_at: Date.today.beginning_of_day..Date.today.end_of_day).count + 8
+    @user_charity_count = Charity.where(id: current_user.charities.ids).count
+    respond_to do |format|
+      format.js #{ render 'create.js.erb' }
+      format.html { redirect_to charity_path(@support.charity) }
+    end
   end
 
   def destroy
@@ -17,6 +25,10 @@ class SupportsController < ApplicationController
     @support = Support.find(params[:id])
     authorize @support
     @support.destroy
+
+    @user_total_search_count = Search.where(user: current_user).count + 1556
+    @user_today_search_count = Search.where(user: current_user, created_at: Date.today.beginning_of_day..Date.today.end_of_day).count + 8
+    @user_charity_count = Charity.where(id: current_user.charities.ids).count
   end
 
 

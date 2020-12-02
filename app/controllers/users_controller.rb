@@ -11,3 +11,4 @@ class UsersController < ApplicationController
     @global_search_count_today = global_search_today
   end
 end
+

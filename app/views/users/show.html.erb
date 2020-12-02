@@ -2,10 +2,7 @@
   <div class="container-profil">
     <div class=container-insights>
       <div class="card-insights">
-          <h4 class="underline">Your contribution</h4>
-          <div class="topline"><p><strong style="color: #1c6a75; font-size: 17px;"><%= number_with_delimiter(@user_total_search_count, :delimiter => ',') %></strong> searches in total</p></div>
-          <p><strong style="color: #1c6a75; font-size: 17px;"><%= @user_today_search_count %></strong> searches today</p>
-          <p><strong style="color: #1c6a75; font-size: 17px;"><%= @user_charity_count %></strong>  charities supported</p>
+        <%= render "users/user_charity_count", user: current_user %>
       </div>
       <div class="card-insights">
         <h4 class="underline">Our community</h4>
