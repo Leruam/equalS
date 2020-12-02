@@ -61,17 +61,22 @@
 
 .grid-images {
   display: flex;
-  align-item: flex-start;
   flex-wrap: wrap;
-  padding: 10px;
-}
-
-.grid-image {
+  padding: 2rem;
+  .grid-image {
+  margin: 0 0.5rem 0.5rem 0;
   text-decoration: none;
   color: $grey-text;
+  flex: 1 0 auto;
   margin: 10px;
-  width: auto;
+  }
+  p {
+   color: $grey-text;
+   font-weight: 300;
+   font-size: 15px;
+  }
 }
+
 
 .grid-image:hover {
   text-decoration: none;
@@ -79,14 +84,9 @@
 }
 
 .card-image {
-  width: 100%;
   img {
     height: 200px;
-    width: auto;
-  }
-  p {
-    font-size: 14px;
-    width: auto;
+    line-height: 200px;
   }
 }
 

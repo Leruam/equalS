@@ -1,7 +1,12 @@
 
-<%= link_to result[:link], class: "grid-image" do %>
-  <div class="card-image">
-    <%= image_tag result[:link_thumbnail], alt: result[:title] %>
-    <p> <%= result[:title] %> </p>
+<div class= "grid-image">
+<%= link_to result[:link] do %>
+  <div class= "card-image">
+  	<%= image_tag result[:link_thumbnail], alt: result[:title], class: "image-size" %>
   </div>
+  <div class="title">
+  <% real_width = ((result[:thumbnail_size]["width"] * 200) / result[:thumbnail_size]["height"]) %>
+  	<p><%= result[:title].truncate(( real_width / 8).round) %></p>  
+</div>
 <% end %>
+</div>
