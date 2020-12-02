@@ -4,10 +4,11 @@
     <%= render 'shared/searchbar' %>
   </div>
   <%= render 'results/navbar_results' %>
-
-  <div class="images-grid">
-    <% @images_results.each do |result|%>
-      <%= render "results/image_result_card", result: result %>
-    <% end %>
-  </div>
 </div>
+
+<div class="grid-images">
+  <% @images_results.each do |result|%>
+    <%= render "results/image_result_card", result: result %>
+  <% end %>
+</div>
+

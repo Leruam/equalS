@@ -59,14 +59,35 @@
   color: $purple-text;
 }
 
-.images-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 10px;
+.grid-images {
+  display: flex;
+  align-item: flex-start;
+  flex-wrap: wrap;
+  padding: 10px;
 }
 
-.images-results-grid {
-  width: 200px;
+.grid-image {
+  text-decoration: none;
+  color: $grey-text;
+  margin: 10px;
+  width: auto;
+}
+
+.grid-image:hover {
+  text-decoration: none;
+  color: $grey-text;
+}
+
+.card-image {
+  width: 100%;
+  img {
+    height: 200px;
+    width: auto;
+  }
+  p {
+    font-size: 14px;
+    width: auto;
+  }
 }
 
 @media(max-width: 992px) {

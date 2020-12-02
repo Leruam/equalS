@@ -1,7 +1,7 @@
 
-<%= link_to result[:link], class: "images-results-grid" do %>
-  <%= image_tag result[:link_thumbnail], alt: result[:title], width: 200 %>
-  <div>
-    <%= result[:title] %>
+<%= link_to result[:link], class: "grid-image" do %>
+  <div class="card-image">
+    <%= image_tag result[:link_thumbnail], alt: result[:title] %>
+    <p> <%= result[:title] %> </p>
   </div>
 <% end %>

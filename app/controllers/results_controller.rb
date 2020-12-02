@@ -7,20 +7,23 @@ class ResultsController < ApplicationController
     uri = "https://api.bing.microsoft.com"
     path = "/v7.0/search"
     term = params[:q]
-    uri = URI(uri + path + "?q=" + CGI.escape(term))
+    language = "&setLang=fr" # pour la langue de recherche
+    count = "&count=15" # pour le nombre de resultats renvoyes (par defaut 10)
+    offset = "&offset=0" # pour le premier resultat renvoye
+    uri = URI(uri + path + "?q=" + CGI.escape(term) + language + count + offset)
     # URI.escape gere les backslash/la structure d'une requete html (redondant?)
-
     request = Net::HTTP::Get.new(uri) # construit une requete GET avec l'url "uri"
     request['Ocp-Apim-Subscription-Key'] = access_key # specifie un element du header
-
     response = Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == 'https') do |http| # start la requete
       http.request(request) # lance la requete request qu'on a construit avant et renvoi le JSON dans "response"
     end
-    bing_webpages = JSON(response.body)["webPages"]["value"] # renvoie un array de hashes
-    # pour entities:
-    #   entities_results = JSON(response.body)["entities"]["value"]
-    # on pourra rajouter les images et les videos plus tard
 
+    # webpages //
+    if JSON(response.body)["webPages"].nil?
+      bing_webpages = []
+    else
+      bing_webpages = JSON(response.body)["webPages"]["value"] # renvoie un array de hashes
+    end
     # cree un tableau avec un hash par resultat
     # mapper les keys qu'on veut recuperer
     # mettre dans variable d'instance qu'on passera a la view
@@ -28,10 +31,80 @@ class ResultsController < ApplicationController
       []
       :
       bing_webpages.map do |search|
-        { title: search["name"], link: search["url"], link_display: search["displayUrl"], snippet: search["snippet"] }
+        { title: search["name"],
+          link: search["url"],
+          link_display: search["displayUrl"],
+          snippet: search["snippet"] }
         # on pourra rajouter les deeplinks plus tard au besoin deeplinks: search["deepLinks"]
       end
-  end
+
+    # entities //
+    if JSON(response.body)["entities"].nil?
+      bing_entities = []
+    else
+      bing_entities = JSON(response.body)["entities"]["value"]
+    end
+
+    @entities_results = bing_entities.empty? ?
+      []
+      :
+      bing_entities.map do |search|
+        { title: search["name"],
+          image: search["image"]["thumbnailUrl"],
+          snippet: search["description"],
+          link: search["image"]["provider"].first["url"] }
+      end
+
+    # images //
+    if JSON(response.body)["images"].nil?
+      bing_images = []
+    else
+      bing_images = JSON(response.body)["images"]["value"]
+    end
+
+    @images_results = bing_images.empty? ?
+      []
+      :
+      bing_images.map do |search|
+        { title: search["name"],
+          link: search["contentUrl"],
+          link_thumbnail: search["thumbnailUrl"],
+          thumbnail_size: search["thumbnail"] }
+      end
+
+    # videos //
+    if JSON(response.body)["videos"].nil?
+      bing_videos = []
+    else
+      bing_videos = JSON(response.body)["videos"]["value"]
+    end
+
+    @videos_results = bing_videos.empty? ?
+      []
+      :
+      bing_videos.map do |search|
+        { title: search["name"],
+          link: search["contentUrl"],
+          date: search["datePublished"],
+          image: search["thumbnailUrl"] } # provider: search["publisher"]["name"]
+      end
+
+    # news //
+    if JSON(response.body)["news"].nil?
+      bing_news = []
+    else
+      bing_news = JSON(response.body)["news"]["value"]
+    end
+    @news_results = bing_news.empty? ?
+      []
+      :
+      bing_news.map do |search|
+        { title: search["name"],
+          link: search["url"],
+          date: search["datePublished"],
+          image: (search["image"].nil? ? nil : search["image"]["contentUrl"]) }
+      end
+    end
 
   def image_index
     access_key = ENV["BING_ACCESS_KEY"]
@@ -46,12 +119,20 @@ class ResultsController < ApplicationController
     response = Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == 'https') do |http|
       http.request(request)
     end
-    bing_images = JSON(response.body)["value"]
+
+    if JSON(response.body)["value"].nil?
+      bing_images = []
+    else
+      bing_images = JSON(response.body)["value"]
+    end
     @images_results = bing_images.empty? ?
       []
       :
       bing_images.map do |search|
-        { title: search["name"], link: search["contentUrl"], link_thumbnail: search["thumbnailUrl"], thumbnail_size: search["thumbnail"] }
+        { title: search["name"],
+          link: search["contentUrl"],
+          link_thumbnail: search["thumbnailUrl"],
+          thumbnail_size: search["thumbnail"] }
       end
   end
 end
