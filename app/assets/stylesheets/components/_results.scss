@@ -41,12 +41,17 @@
 }
 
 .navbar-item {
-  padding: 0px 10px 0px 0px;
+  padding: 0px 10px 10px 10px;
 }
 
 .navbar-item-active {
+  a {
+    color: $purple-text;
+  }
+  border-bottom-style: solid;
+  border-width: medium;
+  border-color: $purple-text;
   // classe à rajouter en js
-  // probablement mettre le surlignage violet
 }
 
 .navbar-link {

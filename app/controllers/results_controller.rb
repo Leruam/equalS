@@ -8,7 +8,7 @@ class ResultsController < ApplicationController
     path = "/v7.0/search"
     term = params[:q]
     language = "&setLang=fr" # pour la langue de recherche
-    market = "&mkt=fr-FR"
+    market = "&mkt=fr-FR" # va de pair avec language
     count = "&count=15" # pour le nombre de resultats renvoyes (par defaut 10)
     offset = "&offset=0" # pour le premier resultat renvoye
     uri = URI(uri + path + "?q=" + CGI.escape(term) + language + market + count + offset)

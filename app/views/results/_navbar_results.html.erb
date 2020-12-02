@@ -1,28 +1,34 @@
   <div class="results-60">
     <ul class="navbar-tabs">
 
-      <li class="navbar-item" data-track-id="nav_web">
-        <%= link_to search_path(q: params[:q]), class: "navbar-link" do %>
-        Web
-        <% end %>
+      <li data-track-id="nav_web">
+        <div class="navbar-item" >
+          <%= link_to search_path(q: params[:q]), class: "navbar-link" do %>
+            <i class="fas fa-search"></i>
+            Web
+          <% end %>
+        </div>
       </li>
 
       <li class="navbar-item" data-track-id="nav_images">
         <%= link_to search_images_path(q: params[:q]), class: "navbar-link" do %>
-        Images
+          <i class="fas fa-images"></i>
+          Images
         <% end %>
       </li>
 
-      <li class="navbar-item" data-track-id="nav_videos">
+      <li class="navbar-item navbar-item-active" data-track-id="nav_videos">
         <%= link_to search_images_path(q: params[:q]), class: "navbar-link" do %>
-        Videos
+          <i class="fas fa-video"></i>
+          Videos
         <% end %>
         <!-- changer le path quand on ajoutera video-->
       </li>
 
       <li class="navbar-item" data-track-id="nav_news">
         <%= link_to search_images_path(q: params[:q]), class: "navbar-link" do %>
-        News
+          <i class="fas fa-newspaper"></i>
+          News
         <% end %>
         <!-- changer le path quand on ajoutera news-->
       </li>
