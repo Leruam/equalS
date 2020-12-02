@@ -3,5 +3,4 @@ document.querySelector("#other-charities")
         .insertAdjacentHTML("beforeend",
          "<%= j render 'users/charity_card', charity: @support.charity %>")
 
-
-
+document.getElementById("user-charity-counter").innerHTML = "<%= @user_charity_count %>"

@@ -2,5 +2,5 @@ document.querySelector(".card-container-supports-badges")
         .insertAdjacentHTML("beforeend",
          "<%= j render 'users/support', support: @support %>")
 document.querySelector("#charity<%= @support.charity.id %>").remove();
-
+document.getElementById("user-charity-counter").innerHTML = "<%= @user_charity_count %>"
 
