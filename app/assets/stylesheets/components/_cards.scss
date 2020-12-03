@@ -227,20 +227,16 @@
 
 .card-about {
   display: flex;
-  color: $green-text;
+  color: black;
   text-align: justify;
   height: 330px;
-  padding: 0px 50px;
-  font-weight: 400;
-  div {
-    margin: auto auto
-  }
+  padding: 0px 35px;
+  font-weight: 300;
 }
 
 .card-video {
   font-weight: 300;
-  margin-top: 5px;
-  padding-right: 10px;
+  padding-left: 25px;
 }
 
 .card-image {

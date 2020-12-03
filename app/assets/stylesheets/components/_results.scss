@@ -1,4 +1,11 @@
 
+#results-index {
+  background-color: white;
+  #search-form-container {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15) !important;
+  }
+}
+
 .results-60 {
   width: 60%;
 }
@@ -11,9 +18,9 @@
   width: 100%;
   padding: 0;
   list-style: none;
-  border-bottom: 1px solid #e0e0e0;
   display: flex;
   justify-content: flex-start;
+  margin-bottom: 0px;
 }
 
 .navbar-item {

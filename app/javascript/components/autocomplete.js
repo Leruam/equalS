@@ -1,6 +1,10 @@
 // getSuggestion permet d'appeler l'API bing suggestion pour avoir les suggestions quand on tappe au clavier
 // cette fonction appelle les deux autres fonctions arraySuggestion et selectSuggestion
-//
+// pour cacher la clé
+// --> faire un call API dans le server side (back --> en ruby) dans un controller
+// --> controller#callsuggestion, avec une route de type /callsuggestion, qui renvoie les résultats de suggestion de l'api
+// --> appeler le fetch("/callsuggestion") au key up ici et ça fonctionne sans le problème de sécu
+
 const getSuggestion = () => {
   fetch("/get_api_key") // pour aller chercher la clé qui est dans .env, on est obligé de passer par ruby
     .then(response => response.json())

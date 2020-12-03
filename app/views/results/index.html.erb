@@ -1,5 +1,5 @@
 
-<div class="container">
+<div class="container" style="border-bottom: 1px solid #e0e0e0; padding-left: 0px;">
   <div class="results-60 mb-3">
     <%= render 'shared/searchbar' %>
   </div>
@@ -7,9 +7,9 @@
   <%= render 'results/navbar_results' %>
 </div>
 
-<div class="container d-flex">
+<div class="container d-flex" >
 
-  <div class="results-60">
+  <div class="results-60 pt-3">
 
     <% @webpages_results.each do |result|%>
       <%= render "results/result_card", result: result %>
