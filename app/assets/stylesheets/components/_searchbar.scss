@@ -117,3 +117,23 @@
     transition-duration: 0.5s
     }
 }
+
+.searchbar-form {
+  position: relative;
+  #search-suggestions { // pour les résultats de suggestion de recherche
+    position: absolute;
+    top: 46px ;
+    left: 20px;
+    right: 20px;
+    background-color: white;
+    color: black;
+    div {
+      padding: 3px 10px;
+    }
+    div:hover {
+      cursor: pointer; // main au lieu de fleche
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  }
+}
+
