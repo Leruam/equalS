@@ -32,7 +32,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
   </head>
 
-  <body>
+  <body id="<%= controller.controller_name %>-<%= controller.action_name %>">
 
     <%= render 'shared/navbar', total_search: user_signed_in? ? (current_user.searches.count + 1556) : 400 %>
     <div class="content-wraper" style="min-height: calc(100vh - 70px - 80px)">
