@@ -5,11 +5,11 @@
       <%= button_tag(type: "submit", class: "btn btn-link text-warning") do %>
         <i class="loop fa fa-search"></i>
       <% end %>
-      <div>
+      <div style="width: 93%;">
         <%= f.input :q,
           label: false,
           placeholder:"Search the web to support equality",
-          input_html: {value:params[:q], class:"border-0 bg-white rounded rounded-pill"},
+          input_html: {value:params[:q], class:"border-0 bg-white rounded rounded-pill form-control"},
           wrapper_html: { class: 'm-0'} %>
       </div>
     </div>

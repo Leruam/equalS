@@ -21,7 +21,7 @@
             <% else %>
             <%= link_to "REMOVE", support_path(@support), method: :delete, remote: true, class: "btn-principal"%>
           <% end %>
-	      <a class="btn-second" target="_blank" href= <%=@charity.website%> >WEBSITE</a>
+	      <a class="btn-external" target="_blank" href= <%=@charity.website%> >WEBSITE</a>
 	      </div>
 	      <p><span id="amount"><%= number_with_delimiter(@charity.money_charity, :delimiter => ',') %> €</span> collected for <span class="association"><%= @charity.name %></span></p>
 	      </div>
