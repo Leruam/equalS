@@ -1,5 +1,10 @@
 
-<%= link_to result[:link], class: "result-card-web" do %>
-  <h2> <%= result[:title] %>  </h2>
-  <p> <%= result[:snippet] %> </p>
+<%= link_to result[:link], class: "result-card-entity", target: "_blank" do %>
+  <div class="p-2">
+    <div class= "card-image-entity">
+      <%= image_tag result[:image], alt: result[:title], class: "image-size" %>
+    </div>
+    <h2> <%= result[:title] %>  </h2>
+    <p> <%= result[:snippet] %> </p>
+  </div>
 <% end %>
