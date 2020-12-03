@@ -4,22 +4,23 @@
     <% end %>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto w-500">
       <% if user_signed_in? %>
-      <li class="counter nav-item dropdown">
+      <li class="counter nav-item dropdown d-flex align-items-center">
         <%= link_to user_path(current_user), class: "nav-link", id: "container-counter" do %>
        <!--  <a href="#" class="nav-link" id="container-counter"> -->
             <span class="item" id="count">
               <% if total_search  != nil %>
-                <%= total_search %>
+                <div style="font-weight: bold; font-size: 15px;"><%= total_search %> <span class="item fas fa-venus"></span></div>
               <% else %>
                 0
               <%end %>
             </span>
-            <span class="item fas fa-venus-double"></span>
-          </i>
-        <!-- </a> -->
-        <% end %>
+
+            <!-- <span class="item fas fa-venus-double"></span> -->
+           <!--  <span class="item fas fa-fist-raised"></span> -->
+<!--             <=%= image_tag 'fem-icon.svg' %>
+ -->              <% end %>
       </li>
       <li class="nav-item dropdown">
         <a href="#" class="nav-link"><i class="item far fa-bell"></i></a>
