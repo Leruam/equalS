@@ -4,16 +4,67 @@ body {
   background-color: white;
 }
 
-#full-screen-picture {
-  background-image: url(https://res.cloudinary.com/antoine83/image/upload/v1606406626/EqualS/DEMI-SIMONE_zz7puj.png);
-  height: 107vh;
-  background-color: $back-screen;
-  position: relative;
-  top: -110px;
+.container-full-screen-search {
+  height: 80vh;
+  top: -10vh;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+}
+
+
+.carousel {
+  height: 100vh;
+  width:100%;
+  z-index: 0;
+  position: absolute;
+  top: 0px
+}
+.carousel-inner {
+  height: 100vh;
+  width:100%;
+  z-index: 0;
+  position: absolute;
+  top: 0px;
+}
+
+.carousel-item {
+  height: 100vh;
+  width:100%;
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+}
+
+.full-screen-picture {
+  position: absolute;
+  height: 100vh;
+  top: 0px;
+  width:100%;
+  z-index: 0;
   background-size: contain;
   background-position: left;
   background-repeat: no-repeat;
-  background-position-y: 6vh;
+}
+
+#megane {
+  background-image: url(https://res.cloudinary.com/dtadudbob/image/upload/v1606996704/megane_copy_imjfwm.png);
+}
+
+#gisele {
+  background-image: url(https://res.cloudinary.com/dtadudbob/image/upload/v1606999659/gisele_copy_j9iz5e.png);
+}
+
+#alexandra {
+  background-image: url(https://res.cloudinary.com/dtadudbob/image/upload/v1606999228/alexandra_copy_nenjyb.png);
+}
+
+#jane {
+  background-image: url(https://res.cloudinary.com/dtadudbob/image/upload/v1607000005/jane_zxeois.png);
+}
+
+#katherine {
+  background-image: url(https://res.cloudinary.com/dtadudbob/image/upload/v1607000310/katerine_jo66ma.png);
 }
 
 .container-searchbar {
@@ -56,11 +107,6 @@ body {
 .legend-size p { // pour la légende sur la page d'accueil pour la photo
   font-size: 15px;
 }
-
-.container-bellow {
-  margin-top: -100px;
-}
-
 
 #image-one {
   left: 0;
