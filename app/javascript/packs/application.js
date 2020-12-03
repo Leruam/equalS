@@ -24,15 +24,17 @@ require("channels")
 
 // External imports
 import "bootstrap";
-import { Carroussel } from '../components/carroussel';
-import { fixeLogo } from '../components/logo';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
+import { Carroussel } from '../components/carroussel';
+import { fixeLogo } from '../components/logo';
+import { getSuggestion } from '../components/autocomplete';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   Carroussel();
   fixeLogo();
+  getSuggestion();
 });

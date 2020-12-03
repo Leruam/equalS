@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resources :supports, only: [:create]
   end
   resources :users, only: [:show]
+  get :get_api_key, to: 'bing#get_api_key'
 end
 
 # root to: 'pages#home' --> changé pour homes#show
