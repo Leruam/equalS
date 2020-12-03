@@ -1,5 +1,4 @@
 
-
 <%= simple_form_for Search.new, method: :post, html: {class: "searchbar-form"} do |f| %>
   <div class="p-1 bg-white rounded rounded-pill shadow-sm mb-" id="search-form-container">
     <div class="input-group ">
@@ -12,18 +11,21 @@
           placeholder:"Search the web to support equality",
           input_html: {value:params[:q], class:"border-0 bg-white rounded rounded-pill"},
           wrapper_html: { class: 'm-0'} %>
-
       </div>
     </div>
   </div>
   <div id="search-suggestions">
+    <!-- c'est une div qui permet d'afficher les résultats suggérés autocomplete.js -->
   </div>
 <% end %>
+
 
 <!-- pour le value, params[:q] permet de preremplir pour le champ d'arrivée du résults -->
 <!-- si on voulait préremplir le form de départ et celui d'arrivée on aurait fait:  -->
 <!-- params[:q].present? ? params[:q] : ‘ce que tu veux comme valeur par defaut’ -->
 
+
+<!-- tout est commenté en dessous -->
 <% if false %> <!-- ça permet de commenter tout un bloc -->
 <!-- c'est le form qu'on avait avant mais on a remplace par un simple_form -->
 <!-- https://stackoverflow.com/questions/10858582/html-code-inside-buttons-with-simple-form -->

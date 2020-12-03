@@ -1,13 +1,8 @@
 <!-- ce bout de code n'est plus utilisé mais pourra servir plus tard pour rendre le code modulable quand on voudra mettre des filtres sur les recherches -->
 
 <%= simple_form_for :search, url: form_path, method: :get, id: "search-form", remote: true do |f| %>
-  <div>
-    <%= f.input :q, label: false, input_html: {class: "d-none", value: params[:q]} %>
-    <%# d-none permet de ne pas afficher le champ dans le form  %>
-    <div id="search-suggestions">
-
-    </div>
-  </div>
+  <%= f.input :q, label: false, input_html: {class: "d-none", value: params[:q]} %>
+  <%# d-none permet de ne pas afficher le champ dans le form  %>
   <%= f.submit button_text, class: "navbar-link" %>
   <% end %>
 
