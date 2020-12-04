@@ -29,6 +29,7 @@ class SupportsController < ApplicationController
     @user_total_search_count = Search.where(user: current_user).count + 1556
     @user_today_search_count = Search.where(user: current_user, created_at: Date.today.beginning_of_day..Date.today.end_of_day).count + 8
     @user_charity_count = Charity.where(id: current_user.charities.ids).count
+    # if the user url requests includes the word users
     if request.referer.include? "users"
       redirect_to user_path(current_user)
     else
