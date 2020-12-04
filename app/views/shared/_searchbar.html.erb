@@ -9,7 +9,7 @@
         <%= f.input :q,
           label: false,
           placeholder:"Search the web to support equality",
-          input_html: {value:params[:q], class:"border-0 bg-white rounded rounded-pill form-control"},
+          input_html: { value: params[:q], autocomplete: "off", class: "border-0 bg-white rounded rounded-pill" },
           wrapper_html: { class: 'm-0'} %>
       </div>
     </div>
