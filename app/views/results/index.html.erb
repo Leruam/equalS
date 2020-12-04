@@ -13,9 +13,7 @@
 
     <div class="news-container">
       <ul>
-
           <% (0..2).each do |i| %>
-
             <% if @news_results[i] && @news_results[i].dig(:image) %>
               <%= render "results/result_news_card", result: @news_results[i] %>
             <% end %>
@@ -30,7 +28,6 @@
     </div>
 
     <!-- ici mettre une structure du type:  -->
-  <!--   1 résultat web : @webpages_results[0] -->
     <!-- 3 news (s'il y en a) : @news_restults - render une carte news -->
     <!-- 2 ou 3 résultats web: @webpages_results[1] et @webpages_results[2] -->
     <!-- 3 vidéos (s'il y en a) : @videos_results - render une carte video -->

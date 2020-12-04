@@ -13,11 +13,12 @@
         <div><%= time_ago_in_words(result.dig(:date)) %> ago</div>
       </div>
     </div>
-
   <% end %>
 </li>
 
-
-<!-- .dig(:
-&
+<!--
+.dig(:i) vs hash[:i] quand dans la chaine un crochet est nil, le code pète
+  unexpected [] for nil class
+  ça retourne nil au lieu de péter le code
+& (escape operator) - permet aussi, quand on utilise une methode sur nil, ça ne pètera pas
  -->
