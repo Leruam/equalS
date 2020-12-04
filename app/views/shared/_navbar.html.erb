@@ -11,7 +11,7 @@
        <!--  <a href="#" class="nav-link" id="container-counter"> -->
             <span class="item" id="count">
               <% if total_search  != nil %>
-                <div style="font-weight: bold; font-size: 15px;"><%= total_search %> <span class="item fas fa-venus"></span></div>
+                <div style="font-weight: bold; font-size: 15px;"><%= total_search %> <span class="item fas fa-venus" style="padding-left: 4px;"></span></div>
               <% else %>
                 0
               <%end %>
@@ -28,7 +28,7 @@
       <li class="nav-item dropdown">
         <a href="#" class="nav-link" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="item fas fa-bars"></i></a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <%= link_to "My profile", user_path(current_user), class: "dropdown-item" %>x
+          <%= link_to "My profile", user_path(current_user), class: "dropdown-item" %>
           <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
         </div>
       </li>

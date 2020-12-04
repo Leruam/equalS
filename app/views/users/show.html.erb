@@ -4,11 +4,11 @@
       <div class="card-insights">
         <%= render "users/user_charity_count", user: current_user %>
       </div>
-      <div class="card-insights">
+      <div class="card-insights" id="our-comm-card">
         <h4 class="underline">Our community</h4>
         <div class="topline"><p><strong style="color: #1c6a75; font-size: 23px;"><%= @global_charity_count %></strong> charities supported by EqualS</p></div>
-          <p><strong style="color: #1c6a75; font-size: 23px;"><%= number_with_delimiter(@global_search_count_today, :delimiter => ',') %></strong> total searches today</p>
           <p><strong style="color: #1c6a75; font-size: 23px;"><%= number_to_human(@global_search_count.round, :delimiter => ',') %></strong> total searches since EqualS inception</p>
+          <p><strong style="color: #1c6a75; font-size: 23px"><%= number_to_human(@global_money, :delimiter => ',') %> €</strong> collected since EqualS inception</p>
       </div>
     </div>
     <div class="card-container-supports">

@@ -19,7 +19,7 @@
           <% if current_user.supports.where(charity_id: params[:id]).blank? %>
             <%= link_to "SUPPORT", charity_supports_path(@charity), method: :post, class: "btn-principal"%>
             <% else %>
-            <%= link_to "REMOVE", support_path(@support), method: :delete, remote: true, class: "btn-principal"%>
+            <%= link_to "UNSUPPORT", support_path(@support), method: :delete, remote: true, class: "btn-unsupport-charity"%>
           <% end %>
 	      <a class="btn-external" target="_blank" href= <%=@charity.website%> >WEBSITE</a>
 	      </div>
