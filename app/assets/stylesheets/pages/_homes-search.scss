@@ -61,8 +61,13 @@ body {
   background-repeat: no-repeat;
 }
 
+#simone {
+  background-image: url(https://res.cloudinary.com/dtadudbob/image/upload/v1607095104/DEMI-SIMONE_gvuvsg.png);
+}
+
+
 #megane {
-  background-image: url(https://res.cloudinary.com/dtadudbob/image/upload/v1606996704/megane_copy_imjfwm.png);
+  background-image: url(https://res.cloudinary.com/dtadudbob/image/upload/v1607095578/megane_copy_v1hxue.png);
 }
 
 #gisele {
@@ -113,7 +118,8 @@ body {
 }
 
 .amount {
-  display: flex; 
+  display: flex;
+  z-index: -1; 
 }
 
 #euro {
