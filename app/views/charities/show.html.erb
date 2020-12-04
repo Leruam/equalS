@@ -19,9 +19,9 @@
           <% if current_user.supports.where(charity_id: params[:id]).blank? %>
             <%= link_to "SUPPORT", charity_supports_path(@charity), method: :post, class: "btn-principal"%>
             <% else %>
-            <%= link_to "REMOVE", support_path(@support), method: :delete, remote: true, class: "btn-principal"%>
+            <%= link_to "UNSUPPORT", support_path(@support), method: :delete, remote: true, class: "btn-unsupport-charity"%>
           <% end %>
-	      <a class="btn-second" target="_blank" href= <%=@charity.website%> >WEBSITE</a>
+	      <a class="btn-external" target="_blank" href= <%=@charity.website%> >WEBSITE</a>
 	      </div>
 	      <p><span id="amount"><%= number_with_delimiter(@charity.money_charity, :delimiter => ',') %> €</span> collected for <span class="association"><%= @charity.name %></span></p>
 	      </div>
@@ -30,12 +30,12 @@
   <div class="container-bellow-profile">
   <div class="title-one"><h4 class="underline">About <%= @charity.name %></h4></div>
   <div class = "container-about-video">
-  	<div class="card-about">
-    	<div><p> <%= @charity.description %></p></div>
-  	</div>
     <div class="card-video">
       <iframe title="vimeo-player" src="<%= @charity.video%>" width="580" height="328" frameborder="0" allowfullscreen></iframe>
     </div>
+  	<div class="card-about">
+    	<div><p> <%= @charity.description %></p></div>
+  	</div>
   </div>
 
 <div class="title-one"><h4 class="underline" >Latest News</h4></div>

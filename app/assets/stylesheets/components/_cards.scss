@@ -20,9 +20,8 @@
   display: flex;
   width: 80%;
   height: 300px;
-  margin: 150px auto;
+  margin: 55px auto;
 }
-
 
 .cards-infos {
   display: flex;
@@ -66,7 +65,7 @@
 .card-insights {
   background-color: white;
   width: 350px;
-  height: 48%;
+  height: 45%;
   padding: 20px;
   @include boxShadow($purple-other, 5);
   font-size: 15px;
@@ -122,6 +121,7 @@
     text-align: center;
     p {
       color: $purple-elements;
+      font-weight: bold;
     }
   }
 
@@ -228,20 +228,16 @@
 
 .card-about {
   display: flex;
-  color: $green-text;
+  color: black;
   text-align: justify;
   height: 330px;
-  padding: 0px 50px;
-  font-weight: 400;
-  div {
-    margin: auto auto
-  }
+  padding: 0px 35px;
+  font-weight: 300;
 }
 
 .card-video {
   font-weight: 300;
-  margin-top: 5px;
-  padding-right: 10px;
+  padding-left: 25px;
 }
 
 .card-image {
@@ -258,6 +254,10 @@
     line-height: 200px;
     border-radius: 3px;
   }
+}
+
+#our-comm-card {
+  height: 52%;
 }
 
 

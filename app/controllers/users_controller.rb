@@ -9,6 +9,8 @@ class UsersController < ApplicationController
     @global_charity_count = Charity.count
     @global_search_count = global_search
     @global_search_count_today = global_search_today
+    @global_money = global_money
+
   end
 end
 

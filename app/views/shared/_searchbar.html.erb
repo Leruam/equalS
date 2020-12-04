@@ -1,15 +1,16 @@
 
 <%= simple_form_for Search.new, method: :post, html: {class: "searchbar-form"} do |f| %>
   <div class="p-1 bg-white rounded rounded-pill shadow-sm mb-" id="search-form-container">
-    <div class="input-group ">
+    <div class="input-group">
       <%= button_tag(type: "submit", class: "btn btn-link text-warning") do %>
         <i class="loop fa fa-search"></i>
       <% end %>
-      <div>
+      <div style="width: 93%;">
         <%= f.input :q,
           label: false,
           placeholder:"Search the web to support equality",
-          input_html: {value:params[:q], class:"border-0 bg-white rounded rounded-pill"},
+          input_html: { value: params[:q], autocomplete: "off", class: "border-0 bg-white rounded rounded-pill" },
+          # autocomplete: "off" permet de forcer le navigateur à ne pas mettre en cache les recherches pour éviter un overlap avec les suggestions
           wrapper_html: { class: 'm-0'} %>
       </div>
     </div>
