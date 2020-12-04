@@ -65,7 +65,7 @@
 .card-insights {
   background-color: white;
   width: 350px;
-  height: 48%;
+  height: 45%;
   padding: 20px;
   @include boxShadow($purple-other, 5);
   font-size: 15px;
@@ -121,6 +121,7 @@
     text-align: center;
     p {
       color: $purple-elements;
+      font-weight: bold;
     }
   }
 
@@ -253,6 +254,10 @@
     line-height: 200px;
     border-radius: 3px;
   }
+}
+
+#our-comm-card {
+  height: 52%;
 }
 
 
