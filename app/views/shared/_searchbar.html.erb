@@ -9,7 +9,8 @@
         <%= f.input :q,
           label: false,
           placeholder:"Search the web to support equality",
-          input_html: {value:params[:q], class:"border-0 bg-white rounded rounded-pill form-control"},
+          input_html: { value: params[:q], autocomplete: "off", class: "border-0 bg-white rounded rounded-pill" },
+          # autocomplete: "off" permet de forcer le navigateur à ne pas mettre en cache les recherches pour éviter un overlap avec les suggestions
           wrapper_html: { class: 'm-0'} %>
       </div>
     </div>
