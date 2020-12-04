@@ -4,7 +4,7 @@ const counter = () => {
  	odometer.innerHTML = amount
 	const interval = setInterval(() => {
 	amount += 1 ;
-	odometer.innerHTML = amount ;
+	odometer.innerHTML = amount }, 2000);
     // window.addEventListener("beforeunload", (event) => {
     // 	console.log(interval)
     // 	clearInterval(interval);
