@@ -1,18 +1,23 @@
 
 <li class="news-list-item">
   <%= link_to result[:link], class: "result-card-news", target: "_blank" do %>
-
-    <div class= "card-image-news card-image-news-img" style="background-image: url(<%= image_path result[:image]%>)" alt="<%= result[:title] %>">
+    <% image_url = result.dig(:image) ? "background-image:url( #{image_path result.dig(:image)} ); height: 125px;" : "" %>
+    <div class= "card-image-news card-image-news-img" style="<%= result.dig(:image) ? image_url : "" %>" alt="<%= result.dig(:title) %>">
       <%#= image_tag result[:image], alt: result[:title] %>
     </div>
 
     <div class="p-3 d-flex flex-column justify-content-between">
-      <h2> <%= result[:title].truncate(85) %>  </h2>
+      <h2> <%= result.dig(:title)&.truncate(80) %>  </h2>
       <div class="card-news-footer">
-        <span><%= result[:media].truncate(25) %></span>
-        <div><%= time_ago_in_words(result[:date]) %> ago</div>
+        <span><%= result.dig(:media)&.truncate(25) %></span>
+        <div><%= time_ago_in_words(result.dig(:date)) %> ago</div>
       </div>
     </div>
 
   <% end %>
 </li>
+
+
+<!-- .dig(:
+&
+ -->

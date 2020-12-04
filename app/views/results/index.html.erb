@@ -13,9 +13,13 @@
 
     <div class="news-container">
       <ul>
-        <% for i in 0..2 %>
-          <%= render "results/result_news_card", result: @news_results[i] %>
-        <% end %>
+
+          <% (0..2).each do |i| %>
+
+            <% if @news_results[i] && @news_results[i].dig(:image) %>
+              <%= render "results/result_news_card", result: @news_results[i] %>
+            <% end %>
+          <% end %>
       </ul>
     </div>
 
