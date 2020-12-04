@@ -2,13 +2,16 @@
 <li class="news-list-item">
   <%= link_to result[:link], class: "result-card-news", target: "_blank" do %>
 
-    <div class= "card-image-news">
-      <%= image_tag result[:image], alt: result[:title] %>
+    <div class= "card-image-news card-image-news-img" style="background-image: url(<%= image_path result[:image]%>)" alt="<%= result[:title] %>">
+      <%#= image_tag result[:image], alt: result[:title] %>
     </div>
 
-    <div class="p-3">
-      <h2> <%= result[:title] %>  </h2>
-      <p> <%= time_ago_in_words(result[:date]) %> ago </p>
+    <div class="p-3 d-flex flex-column justify-content-between">
+      <h2> <%= result[:title].truncate(85) %>  </h2>
+      <div class="card-news-footer">
+        <span><%= result[:media].truncate(25) %></span>
+        <div><%= time_ago_in_words(result[:date]) %> ago</div>
+      </div>
     </div>
 
   <% end %>

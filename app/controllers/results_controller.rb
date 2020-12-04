@@ -103,7 +103,8 @@ class ResultsController < ApplicationController
         { title: search["name"],
           link: search["url"],
           date: search["datePublished"],
-          image: ((search["image"].nil? || search["image"]["contentUrl"].nil?) ? nil : search["image"]["contentUrl"]) }
+          media: ( (search["provider"].nil? || search["provider"].first["name"].nil?) ? nil : search["provider"].first["name"] ),
+          image: ( (search["image"].nil? || search["image"]["contentUrl"].nil?) ? nil : search["image"]["contentUrl"] ) }
       end
     end
 
